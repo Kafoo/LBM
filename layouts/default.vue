@@ -11,9 +11,9 @@
 
   <HeaderVue :head= "head" />
 
-  <v-main>
-    <slot />
-  </v-main>
+    <v-main>
+      <slot />
+    </v-main>
 
   <FooterVue/>
 
@@ -54,11 +54,6 @@ export default {
 
 <style scoped>
 
-.page-enter-from,
-.page-leave-to {
-  opacity: 0;
-  transition: all 0.15s;
-}
 
 .choose-location-absolute{
   position: absolute;

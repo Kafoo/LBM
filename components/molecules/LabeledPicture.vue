@@ -5,6 +5,7 @@
       >
         <v-img
         :src=imageSrc
+        cover
         width="240px"
         height="400px"
         ></v-img>

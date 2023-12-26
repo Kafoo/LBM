@@ -1,9 +1,9 @@
 <template>
   <div>
 
-    <v-sheet class="ma-6 mb-8"
+    <v-sheet class="ma-6 mb-8 d-flex flex-column"
     position="relative"
-    :class="mobile?'d-flex flex-column':'centering-column'">
+    :class="mobile?'':'align-center'">
         <HorizontalDivider/>
         <ClassicTitle
         class="my-4"

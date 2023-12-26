@@ -3,7 +3,8 @@ export default defineNuxtConfig({
   app: {
     "baseURL": "/",
     "buildAssetsDir": "/_nuxt/",
-    "cdnURL": ""
+    "cdnURL": "",
+    pageTransition: { name: 'page', mode: 'out-in' }
   },
   ssr: false,
   devtools: { enabled: true },

@@ -26,7 +26,7 @@
     wrap
     />
     <v-sheet
-    class="d-flex justify-center mt-5"
+    class="d-flex justify-center mt-5 canvas"
     max-width="900px"
     :class="mobile?'flex-column align-center':''"
     >

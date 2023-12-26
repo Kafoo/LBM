@@ -11,7 +11,7 @@
       :class="mobile?'mobile-location':''"
       >FR</p>
 
-      <v-card height="20px" color="background">
+      <v-card height="20px" class="divider-container">
         <v-divider class="ma-0 mb-1" color="#00000070" vertical></v-divider>
       </v-card>
 
@@ -53,4 +53,7 @@ export default defineComponent({
   font-size: 18px;
 }
 
+.divider-container{
+  background-color: black !important;
+}
 </style>

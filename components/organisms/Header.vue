@@ -1,8 +1,10 @@
 <template>
 
   <v-app-bar
+  app
+  absolute
   elevation="0"
-  height="60px"
+  height="60"
   class="mb-2 mt-0 px-4 sticky-header desktop"
   :class="head ? 'backgrounded' : 'transparent'"
   >
@@ -19,7 +21,7 @@
       <SocialsIcons class="hideOn920"/>
     </v-toolbar-items>
 
-    <Navigation/>
+    <NavigationVue/>
 
     <ChooseLocation/>
 
@@ -30,13 +32,13 @@
 <script lang="ts">
 
 import { defineComponent } from 'vue'
-import Navigation from '~/components/molecules/Navigation.vue'
+import NavigationVue from '~/components/molecules/Navigation.vue'
 import SocialsIcons from '~/components/atoms/SocialsIcons.vue'
 import ChooseLocation from '~/components/atoms/ChooseLocation.vue'
 
 export default defineComponent({
   name: 'DefaultLayout',
-  components: { Navigation, SocialsIcons, ChooseLocation },
+  components: { NavigationVue, SocialsIcons, ChooseLocation },
   props: {
     head: Boolean
   },
@@ -50,7 +52,7 @@ export default defineComponent({
 <style scoped>
 
 .sticky-header{
-  position: sticky;
+  position: sticky !important;
   top: 0;
   left: 0;
   z-index: 3;

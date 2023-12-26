@@ -3,7 +3,7 @@
 
     <div v-for="navItem in navItems" :key="navItem.name" class="d-flex mx-auto align-center">
 
-      <v-card v-if="navItem.id > 1" elevation="0" height="20px" class="my-2" color="background">
+      <v-card v-if="navItem.id > 1" elevation="0" height="20px" class="my-2 divider-container">
         <v-divider class="ma-0 mb-1" color="#00000070" vertical></v-divider>
       </v-card>
 
@@ -56,14 +56,6 @@ export default defineComponent({
 
 <style scoped>
 
-.v-toolbar-items {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  font: 120% system-ui;
-  text-align: center;
-  padding: 2rem 1rem;
-}
 
 .nuxt-link{
   font-family:'Montserrat';
@@ -72,7 +64,6 @@ export default defineComponent({
   font-weight: lighter;
   text-decoration: none;
   color: black;
-  transition: 0.1s ease-out;
 }
 
 @media (max-width: 750px) {
@@ -82,9 +73,12 @@ export default defineComponent({
 }
 }
 
-.nuxt-link:hover, .nuxt-link-active {
+.nuxt-link:hover, .router-link-active{
   font-weight: 900;
-  transition: 0.1s ease-out;
+}
+
+.divider-container{
+  background-color: black !important;
 }
 
 </style>

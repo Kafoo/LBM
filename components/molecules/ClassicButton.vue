@@ -1,9 +1,11 @@
 <template>
     <v-btn
-    class="rounded-lg ma-5 font-weight-bold"
-    :class="small?'px-3 py-4':'pa-5'"
-    :small="small"
-    outlined
+    class="rounded-lg ma-5"
+    :class="[
+    small?'px-2 py-3':'py-3 px-4',
+    bold?'font-weight-bold':'']"
+    :size="small?'small':''"
+    variant="outlined"
     :to="to"
     :color="color">
       {{text}}
@@ -17,7 +19,8 @@ export default defineComponent({
     color: { type: String, default: 'black' },
     text: { type: String },
     to: { type: String },
-    small: { type: Boolean, default: false }
+    small: { type: Boolean, default: false },
+    bold: { type: Boolean, default: false  }
   },
   data () {
     return {
@@ -32,8 +35,10 @@ export default defineComponent({
 .v-btn{
   letter-spacing: 2px;
   border: 2px solid;
+  font-size: 15px;
 }
   
+
 }
 
 </style>

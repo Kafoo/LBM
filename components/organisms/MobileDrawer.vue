@@ -3,7 +3,7 @@
 
     <v-btn
     @click.stop="drawer = !drawer"
-    class="mobile drawer-btn pa-6 ml-4 align-self-start"
+    class="mobile drawer-btn ml-4 align-self-start"
     icon
     width="70px"
     height="70px"
@@ -11,7 +11,7 @@
     >
       <v-icon
       color="black"
-      size="45px"
+      size="40px"
       >mdi-menu</v-icon>
     </v-btn>
 

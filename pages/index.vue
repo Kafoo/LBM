@@ -23,9 +23,11 @@
 
     <HomeSquare/>
 
-    <v-container>
+    <v-container class="mb-15">
       <ContactForm/>
     </v-container>
+
+    <HomeCarousel/>
 
   </div>
 
@@ -39,15 +41,15 @@ import ClassicButton from '~/components/molecules/ClassicButton.vue'
 import ContactForm from '~/components/organisms/ContactForm.vue'
 import HomeServices from '~/components/organisms/HomeServices.vue'
 import HomeSquare from '~/components/organisms/HomeSquare.vue'
+import HomeCarousel from '~/components/organisms/HomeCarousel.vue'
 
 import { isMobile } from '~/ts/functions/composition/displayHelpers'
-
 
 export default{
 
   name: 'Home',
 
-  components: { ClassicButton, HomeServices, ContactForm, HomePicture, HomeSquare },
+  components: { ClassicButton, HomeServices, ContactForm, HomePicture, HomeSquare, HomeCarousel },
 
   props: {
     text: {
@@ -76,7 +78,5 @@ export default{
 </script>
 
 <style scoped>
-
-
 
 </style>

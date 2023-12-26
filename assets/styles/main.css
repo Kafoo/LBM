@@ -139,6 +139,18 @@ p, .classic-text{
   position: relative;
 }
 
+.swiper {
+    overflow-y: visible !important;
+}
+.swiper-pagination {
+    position: absolute;
+    bottom: -40px !important;
+}
+
+.swiper-pagination-bullet-active{
+  background-color: black !important;
+}
+
 .v-select__content{
   font-family: 'Montserrat';
   border-radius: 7px !important;

@@ -129,10 +129,10 @@ p, .classic-text{
 }
 
 .centering-column{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
 }
 
 .relative{
@@ -163,6 +163,7 @@ p, .classic-text{
 .v-input .v-label{
   font-size: 13px;
   font-weight: bold;
+  opacity: 1;
 }
 
 .v-label.v-field-label--floating {

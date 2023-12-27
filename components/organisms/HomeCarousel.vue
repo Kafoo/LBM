@@ -1,7 +1,7 @@
 <template>
   <swiper
-    :slidesPerView="'auto'"
-    :spaceBetween="30"
+    :slidesPerView="mobile?'auto':'auto'"
+    :spaceBetween="mobile?0:30"
     :pagination="{
       clickable: true,
     }"
@@ -10,9 +10,8 @@
       disableOnInteraction: true,
     }"
     :modules="modules"
-    class="mySwiper"
   >
-    <swiper-slide><img src="/pictures/dior-ailes.jpg"></swiper-slide>
+    <swiper-slide v-if="!mobile"><img src="/pictures/dior-ailes.jpg"></swiper-slide>
     <swiper-slide><img src="/pictures/parachute.jpg"></swiper-slide>
     <swiper-slide><img src="/pictures/soiree-rose.jpg"></swiper-slide>
     <swiper-slide><img src="/pictures/fingers.jpg"></swiper-slide>
@@ -46,7 +45,21 @@ export default defineComponent({
 .swiper{
   height: 600px;
   width: 90%;
-  margin-bottom: 75px;
+  margin-bottom: 150px;
+}
+
+@media (max-width : 1000px) {
+  .swiper{
+    height: 500px;
+  }
+}
+
+@media (max-width : 600px) {
+  .swiper{
+    height: 400px;
+    width: 100%;
+    margin-bottom: 80px;
+  }
 }
 
 img{

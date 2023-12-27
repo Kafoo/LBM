@@ -1,7 +1,7 @@
 <template>
   <v-sheet
-  class="d-flex flex-column justify-center canvas backgrounded pa-10 mt-8 mb-8 text--text"
-  :class="mobile?'align-left':'align-center text-center'"
+  class="d-flex flex-column justify-center canvas backgrounded pa-10 mt-8 text--text"
+  :class="mobile?'align-left':'align-center text-center mb-8'"
   width="100%"
   >
     <HorizontalDivider class="mt-5 mb-2"/>

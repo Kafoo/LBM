@@ -33,7 +33,7 @@
         <v-text-field
         hide-details
         variant="underlined"
-        v-model="firstName"
+        v-model="name"
         autocomplete="LBM"
         label="Nom - Prénom"
         >
@@ -45,7 +45,7 @@
         <v-text-field
         hide-details
         variant="underlined"
-        v-model="firstName"
+        v-model="email"
         autocomplete="LBM"
         label="Email"
         >
@@ -57,7 +57,7 @@
         <v-text-field
         hide-details
         variant="underlined"
-        v-model="firstName"
+        v-model="phoneNumber"
         autocomplete="LBM"
         label="Téléphone"
         >
@@ -69,7 +69,7 @@
         <v-text-field
         hide-details
         variant="underlined"
-        v-model="firstName"
+        v-model="eventType"
         autocomplete="LBM"
         label="Type d'événement"
         >
@@ -82,6 +82,7 @@
         hide-details
         variant="underlined"
         autocomplete="LBM"
+        v-model="guests"
         label="Nombre d'invités"
         :items="['50 - 150', '150 - 300', '300 - 500', '500 +']"
         >
@@ -93,7 +94,7 @@
         <v-text-field
         hide-details
         variant="underlined"
-        v-model="firstName"
+        v-model="eventDate"
         autocomplete="LBM"
         label="Date de l'événement"
         >
@@ -106,6 +107,7 @@
         hide-details
         variant="underlined"
         autocomplete="LBM"
+        v-model="message"
         label="Votre Message"
         no-resize
         rows="2"
@@ -138,11 +140,24 @@ export default defineComponent({
   components: { ClassicButton, ClassicTitle },
 
   setup () {
-    const firstName = ref(undefined)
+    const name = ref(undefined)
+    const email = ref(undefined)
+    const phoneNumber = ref(undefined)
+    const eventType = ref(undefined)
+    const guests = ref(undefined)
+    const eventDate = ref(undefined)
+    const message = ref(undefined)
+
     const mobile = isMobile()
 
     return {
-      firstName,
+      name,
+      email,
+      phoneNumber,
+      eventType,
+      guests,
+      eventDate,
+      message,
       mobile
     }
   }

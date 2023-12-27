@@ -1,13 +1,13 @@
 <template>
     <v-sheet
-    class="d-flex flex-column justify-center align-center ma-auto "
+    class="d-flex flex-column justify-center align-center ma-auto mb-5"
     :width="mobile?'100%':'90%'"
-    height="250px">
+    :height="mobile?'280px':'250px'"
+    >
       <v-img
       width="100%"
       height="100%"
       cover
-      class="mb-3"
       src="/pictures/Home.jpg"
       ></v-img>
       <ClassicTitle

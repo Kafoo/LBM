@@ -1,12 +1,10 @@
 <template>
     <v-btn
     class="rounded-lg ma-5"
-    :class="[
-    small?'px-2 py-3':'py-3 px-4',
-    bold?'font-weight-bold':'']"
-    :size="small?'small':''"
+    :class="bold?'font-weight-bold':''"
     variant="outlined"
     :to="to"
+    size="large"
     :color="color">
       {{text}}
     </v-btn>
@@ -31,11 +29,15 @@ export default defineComponent({
 
 <style scoped>
 
+.v-btn{
+  font-size: 14px;
+}
+
 @media (max-width: 600px) {
 .v-btn{
   letter-spacing: 2px;
   border: 2px solid;
-  font-size: 15px;
+  font-size: 14px;
 }
   
 

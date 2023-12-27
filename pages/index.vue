@@ -23,11 +23,17 @@
 
     <HomeSquare/>
 
-    <v-container class="mb-15">
+    <v-container v-if="!mobile" class="mb-15">
       <ContactForm/>
     </v-container>
 
     <HomeCarousel/>
+
+    <Confiance/>
+
+    <v-container v-if="mobile" class="mb-3">
+      <ContactForm/>
+    </v-container>
 
   </div>
 
@@ -42,6 +48,7 @@ import ContactForm from '~/components/organisms/ContactForm.vue'
 import HomeServices from '~/components/organisms/HomeServices.vue'
 import HomeSquare from '~/components/organisms/HomeSquare.vue'
 import HomeCarousel from '~/components/organisms/HomeCarousel.vue'
+import Confiance from '~/components/organisms/Confiance.vue'
 
 import { isMobile } from '~/ts/functions/composition/displayHelpers'
 
@@ -49,7 +56,7 @@ export default{
 
   name: 'Home',
 
-  components: { ClassicButton, HomeServices, ContactForm, HomePicture, HomeSquare, HomeCarousel },
+  components: { ClassicButton, HomeServices, ContactForm, HomePicture, HomeSquare, HomeCarousel, Confiance },
 
   props: {
     text: {

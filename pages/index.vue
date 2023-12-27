@@ -16,7 +16,7 @@
 
       <v-sheet
       class="centering mt-6 desktop">
-        <ClassicButton text="découvrez nos créations" to="/creations"/>
+        <ClassicButton :text="$t('cta.creations')" :to="localePath('/creations')"/>
       </v-sheet>
 
     </v-container>
@@ -73,10 +73,11 @@ export default{
   },
 
   setup () {
-
     const mobile = isMobile()
+    const localePath = useLocalePath()
     return {
-      mobile
+      mobile,
+      localePath
     }
   }
 

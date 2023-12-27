@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   app: {
-    "baseURL": "/",
+    baseURL: '',
     "buildAssetsDir": "/_nuxt/",
     "cdnURL": "",
     pageTransition: { name: 'page', mode: 'out-in' }
@@ -19,8 +19,17 @@ export default defineNuxtConfig({
   },
   modules: [
     '@nuxtjs/google-fonts',
-    'nuxt-swiper'
+    'nuxt-swiper',
+    '@nuxtjs/i18n'
   ],
+  i18n: {
+    locales: ['fr', 'en'],
+    defaultLocale: 'fr',
+    detectBrowserLanguage: false,
+    //strategy: "prefix",
+    vueI18n: './i18n.config.ts'
+  },
+  
   vite: {
     define: {
       'process.env.DEBUG': false,

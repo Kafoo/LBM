@@ -14,13 +14,12 @@
       :class="mobile?'small line-height-2':'medium'"
       :right="!mobile"
       :left="mobile"
-      :text="['Besoin d\'un', 'devis pour votre', 'projet ?']"
+      :text="[$t('contact.title.line1'), $t('contact.title.line2'), $t('contact.title.line3')]"
       />
       <p
       class="classic-text mt-5"
       :class="mobile?'text-left break-max':'text-right'">
-        Nous serons ravis de vous aider que votre projet soit défini ou non !
-        Remplissez notre formulaire, nous reviendrons vers vous dans les plus brefs délais.
+        {{ $t('contact.text') }}
       </p>
     </v-sheet>
 
@@ -35,9 +34,8 @@
         variant="underlined"
         v-model="name"
         autocomplete="LBM"
-        label="Nom - Prénom"
-        >
-          <template v-slot:prepend-inner>
+        :label="$t('contact.form.name')"        >
+          <template v-if="!mobile" v-slot:prepend-inner>
             <v-icon size="20">mdi-account</v-icon>
           </template>
         </v-text-field>
@@ -47,9 +45,8 @@
         variant="underlined"
         v-model="email"
         autocomplete="LBM"
-        label="Email"
-        >
-          <template v-slot:prepend-inner>
+        :label="$t('contact.form.email')"        >
+          <template v-if="!mobile" v-slot:prepend-inner>
             <v-icon size="20">mdi-email</v-icon>
           </template>
         </v-text-field>
@@ -59,9 +56,8 @@
         variant="underlined"
         v-model="phoneNumber"
         autocomplete="LBM"
-        label="Téléphone"
-        >
-          <template v-slot:prepend-inner>
+        :label="$t('contact.form.phone')"        >
+          <template v-if="!mobile" v-slot:prepend-inner>
             <v-icon size="20">mdi-phone</v-icon>
           </template>
         </v-text-field>
@@ -71,9 +67,8 @@
         variant="underlined"
         v-model="eventType"
         autocomplete="LBM"
-        label="Type d'événement"
-        >
-          <template v-slot:prepend-inner>
+        :label="$t('contact.form.eventType')"        >
+          <template v-if="!mobile" v-slot:prepend-inner>
             <v-icon size="20">mdi-star</v-icon>
           </template>
         </v-text-field>
@@ -83,10 +78,10 @@
         variant="underlined"
         autocomplete="LBM"
         v-model="guests"
-        label="Nombre d'invités"
+        :label="$t('contact.form.guests')"
         :items="['50 - 150', '150 - 300', '300 - 500', '500 +']"
         >
-          <template v-slot:prepend-inner>
+          <template v-if="!mobile" v-slot:prepend-inner>
             <svg height="20" viewBox="0 -960 960 960" width="20"><path d="M720-400v-120H600v-80h120v-120h80v120h120v80H800v120h-80Zm-360-80q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM40-160v-112q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v112H40Z"/></svg>
           </template>
         </v-select>
@@ -96,9 +91,8 @@
         variant="underlined"
         v-model="eventDate"
         autocomplete="LBM"
-        label="Date de l'événement"
-        >
-          <template v-slot:prepend-inner>
+        :label="$t('contact.form.date')"        >
+          <template v-if="!mobile" v-slot:prepend-inner>
             <v-icon size="20">mdi-calendar-month</v-icon>
           </template>
         </v-text-field>
@@ -108,16 +102,15 @@
         variant="underlined"
         autocomplete="LBM"
         v-model="message"
-        label="Votre Message"
-        no-resize
+        :label="$t('contact.form.message')"        no-resize
         rows="2"
         >
-          <template v-slot:prepend-inner>
+          <template v-if="!mobile" v-slot:prepend-inner>
             <svg height="20" viewBox="0 -960 960 960" width="20"><path d="M320-520q17 0 28.5-11.5T360-560q0-17-11.5-28.5T320-600q-17 0-28.5 11.5T280-560q0 17 11.5 28.5T320-520Zm160 0q17 0 28.5-11.5T520-560q0-17-11.5-28.5T480-600q-17 0-28.5 11.5T440-560q0 17 11.5 28.5T480-520Zm160 0q17 0 28.5-11.5T680-560q0-17-11.5-28.5T640-600q-17 0-28.5 11.5T600-560q0 17 11.5 28.5T640-520ZM80-80v-720q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H240L80-80Z"/></svg>
           </template>
         </v-textarea>
         <div class="submit-container">
-          <ClassicButton text="Envoyer"
+          <ClassicButton :text="$t('contact.form.submit')"
           :class="mobile?'mt-10':'mt-5'"
           bold/>
         </div>

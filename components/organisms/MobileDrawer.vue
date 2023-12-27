@@ -52,7 +52,7 @@
         v-for="navItem in navItems"
         :key="navItem.name"
         >
-          <v-card v-if="navItem.id > 1" elevation="0" width="20px" class="my-2" color="background">
+          <v-card v-if="navItem.id > 1" elevation="0" width="20px" class="my-2" color="black">
             <v-divider class="ma-0 mb-1 ml-3" color="#00000070"></v-divider>
           </v-card>
           <div class="ma-2 my-3">
@@ -86,26 +86,28 @@ export default defineComponent({
   setup () {
     const drawer = ref(false)
 
+    const localePath = useLocalePath()
+
     const navItems = [
       {
         id: 1,
-        name: 'notre expertise',
-        path: '/expertise'
+        name: 'expertise',
+        path: localePath('/expertise')
       },
       {
         id: 2,
-        name: 'nos créations',
-        path: '/creations'
+        name: 'creations',
+        path: localePath('/creations')
       },
       {
         id: 3,
-        name: 'qui sommes nous',
-        path: '/nous'
+        name: 'nous',
+        path: localePath('/nous')
       },
       {
         id: 4,
         name: 'contact',
-        path: '/contact'
+        path: localePath('/contact')
       }
     ]
 

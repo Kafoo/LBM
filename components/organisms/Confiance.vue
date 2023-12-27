@@ -5,7 +5,7 @@
     <hr class="mb-4 mt-0"/>
 
       <v-sheet class="centering-column">
-        <span class="Montserrat--text text-uppercase">Ils nous ont fait confiance</span>
+        <span class="Montserrat--text text-uppercase">{{ $t('confiance') }}</span>
       </v-sheet>
 
     <hr class="mt-4 mb-13
@@ -28,11 +28,11 @@
   <v-sheet 
   v-else
   class="backgrounded">
-    <hr class="mb-4 mt-3"/>
+    <hr class="mb-6 mt-3"/>
 
       <v-sheet class="centering-column">
-        <span class="Montserrat--text text-uppercase confiance-mobile-title mb-4 mt-1">
-          Ils nous ont fait confiance
+        <span class="Montserrat--text text-uppercase confiance-mobile-title mb-6 mt-1">
+          {{ $t('confiance') }}
         </span>
       </v-sheet>
 
@@ -55,7 +55,7 @@
         </swiper-slide>
       </swiper>
 
-    <hr class="mt-5 mb-0"/>
+    <hr class="mt-7 mb-0"/>
 
   </v-sheet>
 

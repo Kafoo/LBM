@@ -11,7 +11,7 @@
       class="nuxt-link text-uppercase ma-2 text-no-wrap"
       :to="navItem.path"
       exact>
-        {{navItem.name}}
+        {{ $t(`navigation.${navItem.name}`) }}
       </nuxt-link>
 
     </div>
@@ -21,37 +21,43 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-export default defineComponent({
+
+export default {
   props: {
 
   },
   data () {
+
+    const localePath = useLocalePath()
+
+    const navItems = [
+      {
+        id: 1,
+        name: 'expertise',
+        path: localePath('/expertise')
+      },
+      {
+        id: 2,
+        name: 'creations',
+        path: localePath('/creations')
+      },
+      {
+        id: 3,
+        name: 'nous',
+        path: localePath('/nous')
+      },
+      {
+        id: 4,
+        name: 'contact',
+        path: localePath('/contact')
+      }
+    ]
+
     return {
-      navItems: [
-        {
-          id: 1,
-          name: 'notre expertise',
-          path: '/expertise'
-        },
-        {
-          id: 2,
-          name: 'nos créations',
-          path: '/creations'
-        },
-        {
-          id: 3,
-          name: 'qui sommes nous',
-          path: '/nous'
-        },
-        {
-          id: 4,
-          name: 'contact',
-          path: '/contact'
-        }
-      ]
+      navItems
     }
   }
-})
+}
 </script>
 
 <style scoped>

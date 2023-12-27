@@ -27,7 +27,7 @@
 
         <ClassicButton
         class="mt-7"
-        text="découvrez notre expertise"
+        :text="$t('cta.expertise')"
         to="/expertise"
         color="white"
         />

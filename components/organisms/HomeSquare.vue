@@ -14,14 +14,12 @@
     />
     <HorizontalDivider class="mt-1 mb-5"/>
     <span class="classic-text py-5 mb-5">
-      Nous transformons vos désirs en réalité, avec un engagement particulier pour dépasser vos attentes.
-      Notre approche collaborative permet de créer l’événement de manière à refléter fidèlement l’essence même de
-      nos clients et de les surprendre.
+      {{ $t('home.square.text') }}
     </span>
     <ClassicTitle
     color='text'
     left
-    :text="['Pourquoi travailler ensemble ?']"
+    :text="[$t('home.square.why')]"
     class="xsmall mt-3 mb-5 wrap-text"
     wrap
     />
@@ -35,26 +33,26 @@
         <span
         class="classic-text text-center checked-text px-2 py-1"
         :class="mobile?'font-weight-bold':''"
-        >Pour notre parfaite connaissance de l’industrie du travel retail.</span>
+        >{{ $t('home.square.reason1') }}</span>
       </div>
       <div class="d-flex flex-column align-center mb-5">
         <v-icon color="black" size="40px" class="mb-1">mdi-check-circle-outline</v-icon>
         <span
         class="classic-text text-center checked-text px-2 py-1"
         :class="mobile?'font-weight-bold':''"
-        >Pour notre connaissance approfondie des codes et des exigences de votre secteur d’activité.</span>
+        >{{ $t('home.square.reason2') }}</span>
       </div>
       <div class="d-flex flex-column align-center mb-5">
         <v-icon color="black" size="40px" class="mb-1">mdi-check-circle-outline</v-icon>
         <span
         class="classic-text text-center checked-text px-2 py-1"
         :class="mobile?'font-weight-bold':''"
-        >Pour le serieux et la légitimité d’une agence reconnue dans le milieu depuis plus de 25 ans.</span>
+        >{{ $t('home.square.reason3') }}</span>
       </div>
     </v-sheet>
     <ClassicButton class="mt-4"
-    text="Contactez-nous"
-    to="/contact"/>
+    :text="$t('cta.contact')"
+    :to="localePath('/contact')"/>
   </v-sheet>
 </template>
 
@@ -70,8 +68,10 @@ export default defineComponent({
   name: 'HomeSquare',
   setup () {
     const mobile = isMobile()
+    const localePath = useLocalePath()
     return {
-      mobile
+      mobile,
+      localePath
     }
   },
   components: { HorizontalDivider, ClassicTitle, ClassicButton }

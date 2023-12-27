@@ -7,8 +7,10 @@
       <p
       min-width="0"
       text
-      class="px-1 ma-0 cursor location active-location"
-      :class="mobile?'mobile-location':''"
+      class="px-1 ma-0 cursor location"
+      :class="[mobile?'mobile-location':'',
+      locale=='fr'?'active-location':'']"
+      @click.stop="changeLocale('fr')"
       >FR</p>
 
       <v-card height="20px" class="divider-container">
@@ -19,23 +21,45 @@
       min-width="0"
       text
       class="px-1 ma-0 cursor location"
-      :class="mobile?'mobile-location':''"
+      :class="[mobile?'mobile-location':'',
+      locale=='en'?'active-location':'']"
+      @click.stop="changeLocale('en')"
       >US</p>
 
     </v-toolbar-items>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-export default defineComponent({
+
+export default {
   props: {
     mobile: { type:Boolean }
   },
-  data () {
+
+  methods: {
+    changeLocale(newLocale:string) {
+      const switchLocalePath = useSwitchLocalePath()
+      this.$i18n.locale = newLocale;
+      ////Then pushing...
+      //this.$router.replace({ path: switchLocalePath(newLocale) }).preventDefault;
+      ////...Or just changing url
+      history.pushState(
+        {},
+        '',
+        switchLocalePath(newLocale)
+      )
+    }
+  },
+
+  setup () {
+    let locale = useI18n().locale
+
     return {
+      locale
     }
   }
-})
+
+}
 </script>
 
 <style scoped>

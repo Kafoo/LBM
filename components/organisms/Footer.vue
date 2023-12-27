@@ -12,7 +12,7 @@
     class="d-flex justify-center flex-grow-1 align-center"
     :class="mobile?'flex-column':''"
     >
-      <v-sheet class="ma-5">
+      <v-sheet class="ma-5 mb-0">
         <v-img
         src="/HeadTextLogo.png"
         width="160px"
@@ -21,7 +21,7 @@
       </v-sheet>
 
       <v-sheet class='footer-infos mx-3 mb-9 d-flex flex-column align-center'>
-        <v-sheet class="font-weight-bold mb-5">PARIS - CANNES - BARCELONE</v-sheet>
+        <v-sheet class="font-weight-bold mb-5 footer-locations">PARIS - CANNES - BARCELONE</v-sheet>
         <v-icon class="ma-2" color="black">mdi-cellphone</v-icon>
         <v-sheet class="mb-3">+33 (0)6 84 58 67 64</v-sheet>
         <v-icon class="ma-2" color="black">mdi-email</v-icon>
@@ -35,11 +35,10 @@
       v-if="mobile"
       class="mx-2 mb-3 d-flex flex-wrap footer-activities">
         <span
-        v-for="activity in activities"
-        :key="activity.name"
+        v-for="n in 10"
         class="mr-2"
         >
-          - {{ activity.name }}
+          - {{$t('footer.activities['+(n-1)+']')}}
         </span>
       </v-sheet>
     </div>
@@ -50,7 +49,7 @@
     :class="mobile?'':'text-center justify-space-around'"
     >
       <div>
-        site officiel : tous droits réservés les bonnes manières - © 2023 - <u>mentions légales</u>
+        {{ $t('footer.legal') }}<u>{{ $t('footer.uLegal') }}</u>
       </div>
     </v-footer>
   </v-sheet>
@@ -70,28 +69,22 @@ export default defineComponent({
   name: 'DefaultLayout',
   setup () {
     const mobile = isMobile()
-
-    const activitesColumn1 = [
-      { name: 'Concept créatif' },
-      { name: 'Stratégie digitale, physique, hybride' },
-      { name: 'Création de contenu' },
-      { name: 'Design graphique' },
-      { name: 'Pop-up store' }
+    const { t } = useI18n()
+    const activities = [
+      { name: t('footer.activities[0]') },
+      { name: t('footer.activities[1]') },
+      { name: t('footer.activities[2]') },
+      { name: t('footer.activities[3]') },
+      { name: t('footer.activities[4]') },
+      { name: t('footer.activities[5]') },
+      { name: t('footer.activities[6]') },
+      { name: t('footer.activities[7]') },
+      { name: t('footer.activities[8]') },
+      { name: t('footer.activities[9]') },
     ]
-    const activitesColumn2 = [
-      { name: 'Scénographie et design d’espace' },
-      { name: 'Logistique et Production' },
-      { name: 'Technique' },
-      { name: 'Soirées corporate' },
-      { name: 'Séminaires d’entreprise' }
-    ]
-
-    const activities = activitesColumn1.concat(activitesColumn2)
 
     return {
       mobile,
-      activitesColumn1,
-      activitesColumn2,
       activities
     }
   }
@@ -110,6 +103,11 @@ hr{
 .v-footer{
   font-family: 'Montserrat';
   font-size: small;
+}
+
+.footer-locations{
+  font-size: 10px;
+  font-weight: bolder;
 }
 
 .mentions-légales{

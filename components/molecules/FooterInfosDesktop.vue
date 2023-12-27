@@ -23,10 +23,10 @@
         class="d-flex justify-center flex-grow-1 align-center footer-activities my-3"
         >
           <v-sheet class="mx-3 mr-5 d-flex flex-column">
-            <span v-for="activity in activitesColumn1" :key="activity.name">- {{activity.name}}</span>
+            <span v-for="n in 5">- {{$t('footer.activities['+(n-1)+']')}}</span>
           </v-sheet>
           <v-sheet class="mx-3 d-flex flex-column">
-            <span v-for="activity in activitesColumn2" :key="activity.name">- {{activity.name}}</span>
+            <span v-for="n in 5">- {{$t('footer.activities['+(n+4)+']')}}</span>
           </v-sheet>
         </v-sheet>
 
@@ -45,26 +45,22 @@ export default defineComponent({
   components: { SocialsIcons },
 
   setup () {
-    const activitesColumn1 = [
-      { name: 'Concept créatif' },
-      { name: 'Stratégie digitale, physique, hybride' },
-      { name: 'Création de contenu' },
-      { name: 'Design graphique' },
-      { name: 'Pop-up store' }
-    ]
-    const activitesColumn2 = [
-      { name: 'Scénographie et design d’espace' },
-      { name: 'Logistique et Production' },
-      { name: 'Technique' },
-      { name: 'Soirées corporate' },
-      { name: 'Séminaires d’entreprise' }
+    const { t } = useI18n()
+    const activities = [
+      { name: t('footer.activities[0]') },
+      { name: t('footer.activities[1]') },
+      { name: t('footer.activities[2]') },
+      { name: t('footer.activities[3]') },
+      { name: t('footer.activities[4]') },
+      { name: t('footer.activities[5]') },
+      { name: t('footer.activities[6]') },
+      { name: t('footer.activities[7]') },
+      { name: t('footer.activities[8]') },
+      { name: t('footer.activities[9]') },
     ]
 
-    const activities = activitesColumn1.concat(activitesColumn2)
 
     return {
-      activitesColumn1,
-      activitesColumn2,
       activities
     }
   }

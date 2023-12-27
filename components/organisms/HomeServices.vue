@@ -7,7 +7,7 @@
         <HorizontalDivider/>
         <ClassicTitle
         class="my-4"
-        :text="['Nos services']"
+        :text="[$t('home.services.title')]"
         :class="mobile?'medium':''"
         :left="mobile"/>
         <HorizontalDivider/>
@@ -18,10 +18,8 @@
       <p
       class="text-black"
       :class="mobile?'text-left':''"
-      >Les Bonnes Manières est une agence événementielle qui s’associe aux plus grands acteurs du luxe pour créer des
-        événements hors du commun. Notre engagement réside dans l’art de penser et de façonner chacun de vos événements en
-        une expérience inoubliable, plaçant avec soin le client au coeur de chacun de nos choix.
-        <br> <b>Découvrez l’art de la célébration avec Les Bonnes Manières !</b>
+      >{{ $t('home.services.text') }}
+        <br> <b>{{ $t('home.services.last') }}</b>
       </p>
     </v-sheet>
 
@@ -36,7 +34,7 @@
       cover
       >
         <div class="carousel-title-container d-flex justify-center align-center">
-          <div class="carousel-title text-uppercase text-center">Soirées d'entreprise et lancement de produits</div>
+          <div class="carousel-title text-uppercase text-center">{{ $t('home.services.picture1') }}</div>
         </div>
       </v-carousel-item>
 
@@ -45,7 +43,7 @@
       cover
       >
         <div class="carousel-title-container d-flex justify-center align-center">
-          <div class="carousel-title text-uppercase text-center">Séminaires d'entreprise</div>
+          <div class="carousel-title text-uppercase text-center">{{ $t('home.services.picture2') }}</div>
         </div>
       </v-carousel-item>
 
@@ -54,7 +52,7 @@
       cover
       >
         <div class="carousel-title-container d-flex justify-center align-center">
-          <div class="carousel-title text-uppercase text-center">Lieux éphémères / Stands</div>
+          <div class="carousel-title text-uppercase text-center">{{ $t('home.services.picture3') }}</div>
         </div>
       </v-carousel-item>
 
@@ -65,9 +63,9 @@
     class="d-flex justify-center align-start mt-8"
     :class="mobile ?'flex-column':''">
 
-      <LabeledPicture imageSrc="/pictures/Dior-303.jpg" text="Soirées d'entreprise et lancement de produit"/>
-      <LabeledPicture imageSrc="/pictures/Dior-784.jpg" text="Séminaires d'entreprise"/>
-      <LabeledPicture imageSrc="/pictures/alban_pichon_107.jpg" text="Lieux éphémères / Stands"/>
+      <LabeledPicture imageSrc="/pictures/Dior-303.jpg" :text="$t('home.services.picture1')"/>
+      <LabeledPicture imageSrc="/pictures/Dior-784.jpg" :text="$t('home.services.picture2')"/>
+      <LabeledPicture imageSrc="/pictures/alban_pichon_107.jpg" :text="$t('home.services.picture3')"/>
 
     </v-sheet>
 

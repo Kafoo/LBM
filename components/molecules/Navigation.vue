@@ -9,7 +9,7 @@
 
       <nuxt-link
       class="nuxt-link text-uppercase ma-2 text-no-wrap"
-      :to="navItem.path"
+      :to="localePath(navItem.path)"
       exact>
         {{ $t(`navigation.${navItem.name}`) }}
       </nuxt-link>
@@ -34,22 +34,22 @@ export default {
       {
         id: 1,
         name: 'expertise',
-        path: localePath('/expertise')
+        path: '/expertise'
       },
       {
         id: 2,
         name: 'creations',
-        path: localePath('/creations')
+        path: '/creations'
       },
       {
         id: 3,
         name: 'nous',
-        path: localePath('/nous')
+        path: '/nous'
       },
       {
         id: 4,
         name: 'contact',
-        path: localePath('/contact')
+        path: '/contact'
       }
     ]
 

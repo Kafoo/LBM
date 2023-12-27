@@ -39,7 +39,7 @@
 
       <v-btn
       icon
-      to="/"
+      :to="localePath('/')"
       width="50px"
       height="50px"
       class="ma-1 home-btn">
@@ -52,15 +52,13 @@
         v-for="navItem in navItems"
         :key="navItem.name"
         >
-          <v-card v-if="navItem.id > 1" elevation="0" width="20px" class="my-2" color="black">
-            <v-divider class="ma-0 mb-1 ml-3" color="#00000070"></v-divider>
-          </v-card>
+          <hr v-if="navItem.id > 1" class="ma-0 mb-1 ml-2"/>
           <div class="ma-2 my-3">
             <nuxt-link
             class="nuxt-link text-uppercase text--text"
-            :to="navItem.path"
+            :to="localePath(navItem.path)"
             exact>
-              {{navItem.name}}
+              {{ $t(`navigation.${navItem.name}`) }}
             </nuxt-link>
           </div>
         </div>
@@ -92,28 +90,29 @@ export default defineComponent({
       {
         id: 1,
         name: 'expertise',
-        path: localePath('/expertise')
+        path: '/expertise'
       },
       {
         id: 2,
         name: 'creations',
-        path: localePath('/creations')
+        path: '/creations'
       },
       {
         id: 3,
         name: 'nous',
-        path: localePath('/nous')
+        path: '/nous'
       },
       {
         id: 4,
         name: 'contact',
-        path: localePath('/contact')
+        path: '/contact'
       }
     ]
 
     return {
       drawer,
-      navItems
+      navItems,
+      localePath
     }
   }
 })
@@ -121,6 +120,10 @@ export default defineComponent({
 </script>
 
 <style scoped>
+
+hr{
+  width: 30px;
+}
 
 .drawer-btn{
   position: fixed;

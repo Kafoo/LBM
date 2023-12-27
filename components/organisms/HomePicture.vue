@@ -28,7 +28,7 @@
         <ClassicButton
         class="mt-7"
         :text="$t('cta.expertise')"
-        to="/expertise"
+        :to="localePath('/expertise')"
         color="white"
         />
       </div>
@@ -64,9 +64,10 @@ export default defineComponent({
 
   setup () {
     const mobile = isMobile()
-    
+    const localePath = useLocalePath()
     return {
-      mobile
+      mobile,
+      localePath
     }
   },
   components: { ClassicTitle, ClassicButton, ArrowIcon }

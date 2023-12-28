@@ -26,7 +26,8 @@
     <v-sheet
     :width="mobile?'90%':'300px'"
     :max-width="mobile?'350px':''"
-    class="backgrounded Montserrat--text text--text font-weight-bold mt-5">
+    class="Montserrat--text text--text font-weight-bold mt-5"
+    :class="backgrounded?'backgrounded':''">
       <v-form @submit.prevent>
 
         <v-text-field
@@ -131,6 +132,10 @@ export default defineComponent({
   name: 'ContactForm',
 
   components: { ClassicButton, ClassicTitle },
+
+  props: {
+    backgrounded: { type:Boolean, default: false}
+  },
 
   setup () {
     const name = ref(undefined)

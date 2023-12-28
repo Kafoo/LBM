@@ -4,10 +4,9 @@
 
 <script lang="ts">
 
-import { defineComponent } from 'vue'
 import { isMobile } from '~/ts/functions/composition/displayHelpers';
 
-export default defineComponent({
+export default {
 
   name: '',
 
@@ -17,7 +16,7 @@ export default defineComponent({
       mobile
     }
   }
-})
+}
 
 </script>
 

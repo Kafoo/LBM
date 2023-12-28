@@ -31,7 +31,15 @@
 
 .v-application{
   background-image: url(/lines/HomeLine.svg) !important;
-  background-size: cover !important;
+  background-size: 170% !important;
+  background-position: 70% !important;
+  background-repeat: no-repeat !important;
+}
+
+@media (max-width:600px) {
+  .v-application{
+    background-image: none !important;
+  }
 }
 
 .backgrounded, .v-menu__content {
@@ -60,6 +68,10 @@
             user-select: text; /* Non-prefixed version, currently*/
 }
 
+.canvas{
+  background-color: #F1EFE6 !important;
+}
+
 h1{
   font-weight: normal;
   font-family: 'Yeseva One';
@@ -85,6 +97,10 @@ p, .classic-text{
   line-height: 26px;
   max-width: 550px;
   color: #3A3D51;
+}
+
+.classic-title{
+  letter-spacing: 0.5px;
 }
 
 .medium .classic-title{

@@ -4,7 +4,7 @@
   elevation="0"
   width="100%"
   class="pa-9 d-flex justify-center"
-  :class="mobile?'pb-2 pt-6':''"
+  :class="mobile?'pb-2 pt-6 mb-3':''"
   v-intersect="onIntersect"
   >
     <router-link :to="localePath('/')">

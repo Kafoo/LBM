@@ -5,7 +5,7 @@
   absolute
   elevation="0"
   height="60"
-  class="mb-2 mt-0 px-4 sticky-header desktop"
+  class="mt-0 mb-2 px-4 sticky-header desktop"
   :class="head ? 'backgrounded' : 'transparent'"
   >
 
@@ -35,18 +35,27 @@ import { defineComponent } from 'vue'
 import NavigationVue from '~/components/molecules/Navigation.vue'
 import SocialsIcons from '~/components/atoms/SocialsIcons.vue'
 import ChooseLocation from '~/components/atoms/ChooseLocation.vue'
+import { isMobile } from '~/ts/functions/composition/displayHelpers'
 
-export default defineComponent({
+export default {
+
   name: 'DefaultLayout',
+
   components: { NavigationVue, SocialsIcons, ChooseLocation },
+
   props: {
     head: Boolean
   },
+
   data () {
+
+    const mobile = isMobile()
+
     return {
+      mobile
     }
   }
-})
+}
 </script>
 
 <style scoped>

@@ -11,7 +11,7 @@
     ]"
     class="classic-title"
     >
-      {{ line }}
+      <span v-if="quote">“</span>{{ line }}<span v-if="quote">“</span>
     </h1>
   </div>
 </template>
@@ -20,9 +20,9 @@
 
 import { defineComponent } from 'vue'
 
-export default defineComponent({
+export default {
 
-  name: '',
+  name: 'ClassicTitle',
 
   props: {
     text: {
@@ -35,13 +35,14 @@ export default defineComponent({
     color: { type: String, default: 'text' },
     wrap: { type: Boolean, default: true },
     right: { type: Boolean, default: false },
-    left: { type: Boolean, default: false }
+    left: { type: Boolean, default: false },
+    quote: { type: Boolean, default: false },
   },
   setup () {
     return {
     }
   }
-})
+}
 
 </script>
 

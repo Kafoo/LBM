@@ -12,7 +12,7 @@ export const isSm = () =>
     return breakpoint === 'sm'
   })
 
-export const windowWidth = () =>
+export const useWindowWidth = () =>
   computed(() => {
     return useDisplay().width.value
   })

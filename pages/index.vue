@@ -2,9 +2,7 @@
 
   <div class="relative">
 
-    <HomePicture
-    v-if="mobile"
-    class="mt-3"/>
+    <HomePicture v-if="mobile" />
 
     <v-container v-else>
       <HomePicture/>
@@ -24,7 +22,7 @@
     <HomeSquare/>
 
     <v-container v-if="!mobile" class="mb-15">
-      <ContactForm/>
+      <ContactForm backgrounded/>
     </v-container>
 
     <HomeCarousel/>
@@ -32,7 +30,7 @@
     <Confiance/>
 
     <v-container v-if="mobile" class="mb-3">
-      <ContactForm/>
+      <ContactForm backgrounded/>
     </v-container>
 
   </div>

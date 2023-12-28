@@ -2,7 +2,7 @@
 
   <v-row class="centering">
     <v-card elevation="0" class="centering mt-8 pt-8" width="80%" height="500px">
-      <h1 class="centering">Nos Créations</h1>
+      <h1 class="centering text-capitalize">{{ $t('navigation.creations') }}</h1>
     </v-card>
   </v-row>
 

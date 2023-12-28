@@ -1,5 +1,5 @@
 <template>
-  <v-sheet>
+  <v-sheet class="backgrounded">
 
     <hr v-if="!mobile" class="mb-4"/>
 

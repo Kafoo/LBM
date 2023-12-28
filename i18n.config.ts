@@ -2,13 +2,16 @@ export default defineI18nConfig(() => ({
   legacy: false,
 
   messages: {
+
     en: {
+
       navigation: {
         expertise: 'our expertise',
         creations: 'our creations',
         nous: 'who are we',
         contact: 'contact'
       },
+
       home: {
         services: {
           title: 'Our services',
@@ -26,6 +29,41 @@ export default defineI18nConfig(() => ({
           reason3 : 'For our reliability and legitimacy AS an agency recognized for over 25 years.'
         }
       },
+
+      expertise:{
+        title: 'We create exclusive experiences that transcend borders and combine unique refinement and creativity.',
+        blocs:[
+          {
+            title: 'Corporate seminars', 
+            text: 'We create  exclusive experiences tailored around your needs and products and your company DNA that transcend borders and combine refinement and uniqueness . From the concept to the execution, we organize corporate seminars that reflect your image, where elegance and conviviality come together to create outstanding memorable experiences.',
+            image: '/pictures/soiree-terrasse.jpg',
+            cta: 'Discover our seminars'
+          },
+          {
+            title: 'Corporate events and product launches', 
+            text: 'We handle every step of your event with integrity, passion and precision. Our dedicated team is committed to creating exceptional moments where professionalism, creativity and uniqueness come together to create an unforgettable experience.',
+            image: '/pictures/caviar.jpg',
+            cta: 'Discover our corporate events'
+          },
+          {
+            title: 'Ephemeral spaces', 
+            text: 'We design elegant, custom-made stands and pop-up stores for every one of our customers. No matter what the occasion , we are committed to sublimate your spaces to leave a lasting impression in the mind of your guests.',
+            image: '/pictures/scooter.jpg',
+            cta: 'Discover our activations'
+          },
+          {
+            title: 'Our technical expertise', 
+            text: 'Our team takes care of all the services required for your event, from the technical to the artistic, location, catering… Nothing is left to chance. Our aim is to offer you a high-performance scenography and optimal rendering.',
+            image: '/pictures/regie.jpg',
+            cta: 'Discover our corporate events'
+          },
+        ],
+        square: {
+          title:'Our little extra ?',
+          text:'We put exceptional locations at your disposal, frequently offering you the privilege of being among the first to experience it.'
+        }
+      },
+
       contact: {
         title: {
           line1: 'Need a quote',
@@ -44,12 +82,14 @@ export default defineI18nConfig(() => ({
           submit: 'Send'
         }
       },
+
       confiance: 'They trusted us',
       cta: {
         expertise: 'discover our expertise',
         creations: 'discover our creations',
         contact: 'contact us'
       },
+
       footer: {
         activities:[
           'Creative concept',
@@ -69,18 +109,20 @@ export default defineI18nConfig(() => ({
     },
 
     fr: {
+
       navigation: {
         expertise: 'notre expertise',
         creations: 'nos créations',
         nous: 'qui sommes nous',
         contact: 'contact'
       },
+
       home: {
         services: {
           title: 'Nos services',
           text: 'Les Bonnes Manières est une agence événementielle qui s’associe aux plus grands acteurs du luxe pour créer des événements hors du commun. Notre engagement réside dans l’art de penser et de façonner chacun de vos événements en une expérience inoubliable, plaçant avec soin le client au coeur de chacun de nos choix.',
           last: 'Découvrez l’art de la célébration avec Les Bonnes Manières !',
-          picture1: 'Soirées d’entreprise et lancements de produit',
+          picture1: 'Soirées d’entreprise et lancement de produits',
           picture2: 'Séminaires d’entreprise',
           picture3: 'Lieux éphémères / Stands',
         },
@@ -92,6 +134,41 @@ export default defineI18nConfig(() => ({
           reason3 : 'Pour le serieux et la légitimité d’une agence reconnue dans le milieu depuis plus de 25 ans.'
         }
       },
+
+      expertise:{
+        title: 'Nous concevons des expériences exclusives qui transcendent les frontières et allient raffinement et créativité.',
+        blocs:[
+          {
+            title: 'Séminaires d’entreprise', 
+            text: 'Nous concevons des expériences exclusives qui transcendent les frontières et allient raffinement et créativité. De la conception à l’exécution, nous créons des séminaires d’entreprise à votre image où élégance et convivialité se rencontrent pour des expériences professionnelles hors du commun.',
+            image: '/pictures/soiree-terrasse.jpg',
+            cta: 'Découvrez nos séminaires'
+          },
+          {
+            title: 'Corporate events et lancement de produits', 
+            text: 'Nous nous occupons de chaque étape de vos événements avec passion et précision. Notre équipe dévouée se consacre à concevoir des moments exceptionnels où le professionnalisme, la créativité et la singularité s’allient pour vous offrir un moment inoubliable.',
+            image: '/pictures/caviar.jpg',
+            cta: 'Découvrez nos soirées d’entreprise'
+          },
+          {
+            title: 'Lieux éphémères', 
+            text: 'Nous concevons des stands et pop-up stores élégants, sur mesure pour chacun de nos clients. Peu importe l’occasion, nous nous engageons à sublimer vos espaces pour marquer les esprits de vos invités.',
+            image: '/pictures/scooter.jpg',
+            cta: 'Découvrez nos animations'
+          },
+          {
+            title: 'Notre expertise technique', 
+            text: 'Notre équipe prend en charge l’ensemble des prestations nécessaires à la réalisation de votre événement. Nous assurons la direction artistique et technique sur la globalité du projet. Notre objectif est de vous proposer une scénographie performante et un rendu optimal.',
+            image: '/pictures/regie.jpg',
+            cta: 'Découvrez nos soirées d’entreprise'
+          },
+        ],
+        square: {
+          title:'Notre petit plus ?',
+          text:'Nous mettons à votre disposition des lieux d’exception, vous offrant fréquemment le privilège d’être parmi les premiers à les utiliser.'
+        }
+      },
+
       contact: {
         title: {
           line1: 'Besoin d’un',
@@ -110,12 +187,15 @@ export default defineI18nConfig(() => ({
           submit: 'Envoyer'
         }
       },
+
       confiance: 'Ils nous ont fait confiance',
+
       cta: {
         expertise: 'Découvrez notre expertise',
         creations: 'Découvrez nos créations',
         contact: 'contactez nous'
       },
+
       footer: {
         activities:[
           'Concept créatif',

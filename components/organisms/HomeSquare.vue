@@ -58,13 +58,12 @@
 
 <script lang="ts">
 
-import { defineComponent } from 'vue'
 import HorizontalDivider from '../atoms/HorizontalDivider.vue'
 import ClassicTitle from '../atoms/ClassicTitle.vue'
 import ClassicButton from '../molecules/ClassicButton.vue'
 import { isMobile } from '~/ts/functions/composition/displayHelpers'
 
-export default defineComponent({
+export default {
   name: 'HomeSquare',
   setup () {
     const mobile = isMobile()
@@ -75,15 +74,12 @@ export default defineComponent({
     }
   },
   components: { HorizontalDivider, ClassicTitle, ClassicButton }
-})
+}
 
 </script>
 
 <style scoped>
 
-.canvas{
-  background-color: #F1EFE6 !important;
-}
 .checked-text{
   max-width: 250px;
 }

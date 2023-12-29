@@ -50,6 +50,7 @@
         >
           <v-img
           :src="'/brands/'+brand.name+'.svg'"
+          :height="brand.size*88"
           :width="brand.size*150"
           ></v-img>
         </swiper-slide>

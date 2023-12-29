@@ -45,7 +45,7 @@
 
     <!--------- IMAGE --------->
     <v-sheet :width="mobile?'95%':'370px'" style="position: relative;">
-      <v-img :src="img"/>
+      <v-img aspect-ratio="1" cover :src="img"/>
       <div v-if="mobile" class="mobile-creation-title text-uppercase">{{ title }}</div>
     </v-sheet>
   

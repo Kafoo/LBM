@@ -2,15 +2,16 @@
   <div>
       <v-sheet
       class="d-flex flex-column picture-container"
+      :class="short?'short':''"
       >
         <v-img
         :src=imageSrc
         cover
-        width="240px"
-        height="400px"
+        :width="short&&mobile?'100%':'240px'"
+        :height="short&&mobile?'440px':short?'320px':'400px'"
         ></v-img>
         <v-sheet
-        :class="sm?'mt-1':'mt-3'">
+        :class="mobile?'px-7 mt-2':sm?'mt-1':'mt-3'">
           <p class="text-uppercase Yeseva--text sous-image mt-3">{{ text }}</p>
         </v-sheet>
       </v-sheet>
@@ -19,20 +20,23 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { isSm } from '~/ts/functions/composition/displayHelpers'
+import { isSm, isMobile } from '~/ts/functions/composition/displayHelpers'
 
-export default defineComponent({
+export default {
   props: {
     imageSrc: { type: String, default: "/pictures/Dior-303.jpg" },
-    text: String
+    text: { type: String, default: '' },
+    short: { type:Boolean, default: false }
   },
   setup () {
-    const sm = isSm(window)
+    const sm = isSm()
+    const mobile = isMobile()
     return {
-      sm
+      sm,
+      mobile
     }
   }
-})
+}
 </script>
 
 <style scoped>
@@ -50,14 +54,14 @@ export default defineComponent({
 }
 
 @media (max-width: 960px) {
-  .picture-container{
+  .picture-container:not(.short){
     margin-left: 12px;
     margin-right: 12px;
   }
 }
 
 @media (max-width: 820px) {
-  .picture-container{
+  .picture-container:not(.short){
     margin-left: 8px;
     margin-right: 8px;
     max-width: 210px;
@@ -65,11 +69,19 @@ export default defineComponent({
 }
 
 @media (max-width: 700px) {
-  .picture-container{
+  .picture-container:not(.short){
     margin-left: 3px;
     margin-right: 3px;
     max-width: 180px;
   }
+}
+
+@media (max-width: 600px) {
+  .picture-container.short{
+    margin: 0;
+    max-width: 100%;
+  }
+
 }
 
 </style>

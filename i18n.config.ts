@@ -59,9 +59,43 @@ export default defineI18nConfig(() => ({
           },
         ],
         square: {
-          title:'Our little extra ?',
-          text:'We put exceptional locations at your disposal, frequently offering you the privilege of being among the first to experience it.'
+          title: 'Our little extra ?',
+          text: 'We put exceptional locations at your disposal, frequently offering you the privilege of being among the first to experience it.'
         }
+      },
+
+      creations: {
+        title: 'Our Creations',
+        subtitle: 'A picture is worth a thousand words.',
+        text: 'Every collaboration is unique, and that’s what we focus on.',
+        last: 'Discover our latest events',
+        images:[
+          {
+            title: 'Unique artistic creation',
+            src: '/pictures/couple.jpg',
+          },
+          {
+            title: 'Executing priceless memories',
+            src: '/pictures/villa.jpg',
+          },
+          {
+            title: 'Immersive sensorial experience',
+            src: '/pictures/dessert.jpg',
+          },
+          {
+            title: 'The sky is the limit',
+            src: '/pictures/feux.jpg',
+          },
+          {
+            title: 'A unique decor that stimulates the senses',
+            src: '/pictures/fleurs.jpg',
+          },
+          {
+            title: 'Detail oriented',
+            src: '/pictures/livres.jpg',
+          }
+        ],
+        catch: 'Exclusive events, priceless memories'
       },
 
       contact: {
@@ -164,9 +198,43 @@ export default defineI18nConfig(() => ({
           },
         ],
         square: {
-          title:'Notre petit plus ?',
-          text:'Nous mettons à votre disposition des lieux d’exception, vous offrant fréquemment le privilège d’être parmi les premiers à les utiliser.'
+          title: 'Notre petit plus ?',
+          text: 'Nous mettons à votre disposition des lieux d’exception, vous offrant fréquemment le privilège d’être parmi les premiers à les utiliser.'
         }
+      },
+
+      creations: {
+        title: 'Nos créations',
+        subtitle: 'Une image vaut mille mots.',
+        text: 'Chaque collaboration est unique, et c’est ce que nous faisons ressortir lors de vos événements.',
+        last: 'Découvrez nos dernières réalisations',
+        images:[
+          {
+            title: 'Création artistique unique',
+            src: '/pictures/couple.jpg',
+          },
+          {
+            title: 'Offrir des souvenirs qui n’ont pas de prix',
+            src: '/pictures/villa.jpg',
+          },
+          {
+            title: 'Expérience sensorielle immersive',
+            src: '/pictures/dessert.jpg',
+          },
+          {
+            title: 'The sky is the limit',
+            src: '/pictures/feux.jpg',
+          },
+          {
+            title: 'Une décoration unique qui stimule les sens',
+            src: '/pictures/fleurs.jpg',
+          },
+          {
+            title: 'Le sens du détail',
+            src: '/pictures/livres.jpg',
+          }
+        ],
+        catch: 'Des événements exclusifs, des souvenirs inestimables'
       },
 
       contact: {

@@ -6,6 +6,6 @@
   </v-app>
 </template>
 
-<script>
+<script setup>
 
 </script>

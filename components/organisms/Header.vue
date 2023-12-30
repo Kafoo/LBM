@@ -11,11 +11,14 @@
 
     <v-toolbar-items class="centering" style="position: absolute; left: 10px;">
       <v-img
+      style="cursor: pointer;"
+      class="mr-3"
       :class="
       head ? 'visible' : 'invisible'"
       src="/HeadLogo.png"
       width="40px"
-      class="mr-3"
+      height="60px"
+      @click.stop="goHome"
       >
       </v-img>
       <SocialsIcons class="hideOn920"/>
@@ -50,9 +53,20 @@ export default {
   data () {
 
     const mobile = isMobile()
+    const localePath = useLocalePath()
+
+    const goHome = () => {
+      const path = this.$router.currentRoute.value.path 
+      if (path == '/' || path == '/en') {
+        window.scrollTo(0,0);
+      } else {
+        this.$router.push({ path: localePath('/') })
+      }
+    }
 
     return {
-      mobile
+      mobile,
+      goHome
     }
   }
 }

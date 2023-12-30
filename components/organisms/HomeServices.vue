@@ -1,6 +1,7 @@
 <template>
   <div>
 
+    <!--------- TITLE --------->
     <v-sheet class="ma-6 mb-8 d-flex flex-column"
     position="relative"
     :class="mobile?'':'align-center'">
@@ -14,6 +15,7 @@
 
     </v-sheet>
 
+    <!--------- TEXT --------->
     <v-sheet class="centering text-center ma-6 mb-12">
       <p
       class="text-black"
@@ -23,6 +25,7 @@
       </p>
     </v-sheet>
 
+    <!--------- MOBILE CAROUSEL --------->
     <v-carousel
     v-if="mobile"
     height="600px"
@@ -58,6 +61,7 @@
 
     </v-carousel>
 
+    <!--------- DESKTOP IMAGES --------->
     <v-sheet
     v-else
     class="d-flex justify-center align-start mt-8"

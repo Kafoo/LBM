@@ -38,16 +38,20 @@ export default {
 
   methods: {
     changeLocale(newLocale:string) {
+  
       const switchLocalePath = useSwitchLocalePath()
-      this.$i18n.locale = newLocale;
       ////Then pushing...
-      //this.$router.replace({ path: switchLocalePath(newLocale) }).preventDefault;
+      this.$router.push({ path: switchLocalePath(newLocale) });
+      setTimeout(() => {
+        this.$i18n.finalizePendingLocaleChange()
+      }, 150);
       ////...Or just changing url
-      history.pushState(
-        {},
-        '',
-        switchLocalePath(newLocale)
-      )
+      // this.$i18n.locale = newLocale
+      // history.pushState(
+      //   {},
+      //   '',
+      //   switchLocalePath(newLocale)
+      // )
     }
   },
 

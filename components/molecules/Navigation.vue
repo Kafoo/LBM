@@ -1,16 +1,17 @@
 <template>
   <v-toolbar-items class="d-flex mx-auto align-center">
 
-    <div v-for="navItem in navItems" :key="navItem.name" class="d-flex mx-auto align-center">
+    <div v-for="navItem in navItems" :key="navItem.id" class="d-flex mx-auto align-center">
 
-      <v-card v-if="navItem.id > 1" elevation="0" height="20px" class="my-2 divider-container">
+      <v-card v-if="navItem.id > 0" elevation="0" height="20px" class="my-2 divider-container">
         <v-divider class="ma-0 mb-1" color="#00000070" vertical></v-divider>
       </v-card>
 
       <nuxt-link
       class="nuxt-link text-uppercase ma-2 text-no-wrap"
       :to="localePath(navItem.path)"
-      exact>
+      exact
+      >
         {{ $t(`navigation.${navItem.name}`) }}
       </nuxt-link>
 
@@ -20,7 +21,6 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
 
 export default {
   props: {
@@ -28,26 +28,24 @@ export default {
   },
   data () {
 
-    const localePath = useLocalePath()
-
     const navItems = [
       {
-        id: 1,
+        id: 0,
         name: 'expertise',
         path: '/expertise'
       },
       {
-        id: 2,
+        id: 1,
         name: 'creations',
         path: '/creations'
       },
       {
-        id: 3,
+        id: 2,
         name: 'nous',
         path: '/nous'
       },
       {
-        id: 4,
+        id: 3,
         name: 'contact',
         path: '/contact'
       }

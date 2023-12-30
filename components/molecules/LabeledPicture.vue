@@ -8,10 +8,10 @@
         :src=imageSrc
         cover
         :width="short&&mobile?'100%':'240px'"
-        :height="short&&mobile?'440px':short?'320px':'400px'"
+        :height="short&&mobile?'460px':short?'320px':'400px'"
         ></v-img>
         <v-sheet
-        :class="mobile?'px-7 mt-2':sm?'mt-1':'mt-3'">
+        :class="mobile?'px-6 mt-2':sm?'mt-1':'mt-3'">
           <p class="text-uppercase Yeseva--text sous-image mt-3">{{ text }}</p>
         </v-sheet>
       </v-sheet>
@@ -44,6 +44,11 @@ export default {
 .sous-image{
   letter-spacing: 3px;
   font-size: 12px;
+}
+
+.short .sous-image{
+  letter-spacing: 2px;
+  font-size: 15px;
 }
 
 .picture-container{

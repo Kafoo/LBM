@@ -26,6 +26,7 @@ export default defineNuxtConfig({
     locales: ['fr', 'en'],
     defaultLocale: 'fr',
     detectBrowserLanguage: false,
+    skipSettingLocaleOnNavigate: true,
     //strategy: "prefix",
     vueI18n: './i18n.config.ts'
   },

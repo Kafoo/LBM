@@ -1,6 +1,6 @@
 export default defineI18nConfig(() => ({
   legacy: false,
-
+  skipSettingLocaleOnNavigate: true,
   messages: {
 
     en: {
@@ -24,8 +24,8 @@ export default defineI18nConfig(() => ({
         square: {
           text: 'We make your dreams come true, with a special commitment to exceed your expectations. Our collaborative approach allows us to create events that reflect the essence of our customers while surprising them at the same time.',
           why: 'Why should we work together ?',
-          reason1: 'For our strong knowledge and expertise of the travel retail industry.',
-          reason2 : 'For our in-depth commitment to  the codes and requirements of the sector.',
+          reason1 : 'For our in-depth commitment to  the codes and requirements of the sector.',
+          reason2: 'For our strong knowledge and expertise of the travel retail industry.',
           reason3 : 'For our reliability and legitimacy AS an agency recognized for over 25 years.'
         }
       },
@@ -65,7 +65,7 @@ export default defineI18nConfig(() => ({
       },
 
       creations: {
-        title: 'Our Creations',
+        title: 'Our creations',
         subtitle: 'A picture is worth a thousand words.',
         text: 'Every collaboration is unique, and that’s what we focus on.',
         last: 'Discover our latest events',
@@ -96,6 +96,20 @@ export default defineI18nConfig(() => ({
           }
         ],
         catch: 'Exclusive events, priceless memories'
+      },
+
+      nous: {
+        title: 'Who are we ?',
+        nadia: {
+          name: 'Nadia Skouri',
+          fonction: 'Founder and President',
+          description: 'With more than 20 years’ experience in marketing, travel retail and the luxury sector at an international scale, Nadia understands and masters the imperatives of high standards, innovation and perfection that the luxury industry requires.'
+        },
+        marc: {
+          name: 'Marc Ruiz',
+          fonction: 'Partner',
+          description: 'Thanks to his unique approach and meticulous execution, Marc has successfully developed, for more than 20 years, a recognized group in the event industry: Creative spirit has produced over 1000 events to date.'
+        }
       },
 
       contact: {
@@ -163,8 +177,8 @@ export default defineI18nConfig(() => ({
         square: {
           text: 'Nous transformons vos désirs en réalité, avec un engagement particulier pour dépasser vos attentes. Notre approche collaborative permet de créer l’événement de manière à refléter fidèlement l’essence même de nos clients et de les surprendre.',
           why: 'Pourquoi travailler ensemble ?',
-          reason1: 'Pour notre parfaite connaissance de l’industrie du travel retail.',
-          reason2 : 'Pour notre connaissance approfondie des codes et des exigences de votre secteur d’activité.',
+          reason1 : 'Pour notre connaissance approfondie des codes et des exigences de votre secteur d’activité.',
+          reason2: 'Pour notre parfaite connaissance de l’industrie du travel retail.',
           reason3 : 'Pour le serieux et la légitimité d’une agence reconnue dans le milieu depuis plus de 25 ans.'
         }
       },
@@ -194,7 +208,7 @@ export default defineI18nConfig(() => ({
             title: 'Notre expertise technique', 
             text: 'Notre équipe prend en charge l’ensemble des prestations nécessaires à la réalisation de votre événement. Nous assurons la direction artistique et technique sur la globalité du projet. Notre objectif est de vous proposer une scénographie performante et un rendu optimal.',
             image: '/pictures/regie.jpg',
-            cta: 'Découvrez nos soirées d’entreprise'
+            cta: 'Découvrez notre expertise'
           },
         ],
         square: {
@@ -235,6 +249,20 @@ export default defineI18nConfig(() => ({
           }
         ],
         catch: 'Des événements exclusifs, des souvenirs inestimables'
+      },
+
+      nous: {
+        title: 'Qui sommes-nous ?',
+        nadia: {
+          name: 'Nadia Skouri',
+          fonction: 'Fondatrice et présidente',
+          description: 'Avec 20 ans d’expérience dans le marketing, le travel Retail et l’univers du luxe au niveau international, Nadia comprend et maîtrise les impératifs d’exigence, d’innovation et de perfection que nécessitent le luxe.'
+        },
+        marc: {
+          name: 'Marc Ruiz',
+          fonction: 'Partenaire',
+          description: 'Grâce à son approche unique et son sens du détail, Marc a développé avec succès, depuis plus de 20 ans, un groupe reconnu dans le milieu de l’événementiel : Creative Spirit revendique ainsi plus de 1000 événements à son actif'
+        }
       },
 
       contact: {

@@ -1,37 +1,8 @@
 <template>
   <div class="mb-15">
   
-    <!--------- DESKTOP TITLE --------->
+    <PageTitle :text="$t('creations.title')"/>
 
-    <v-sheet
-    v-if="!mobile"
-    class="ma-6 mt-15 mb-10 d-flex flex-column align-center"
-    position="relative">
-        <HorizontalDivider/>
-        <ClassicTitle
-        class="my-4"
-        :text="[$t('creations.title')]"
-        :class="mobile?'medium':''"
-        :left="mobile"/>
-        <HorizontalDivider/>
-
-    </v-sheet>
-
-    <!--------- MOBILE TITLE -------->
-
-    <v-sheet
-    v-else
-    class="ma-6 mt-15 mb-10 d-flex flex-column align-center"
-    position="relative">
-        <hr/>
-        <h1
-        class="creations-mobile-title text-text text-uppercase my-4"
-        >
-          {{ $t('creations.title') }}
-        </h1>
-        <hr/>
-
-    </v-sheet>
     <!--------- SUBTITLE --------->
 
     <v-sheet class="mx-8 mt-0 mb-0 d-flex flex-column"
@@ -124,7 +95,6 @@
     <div class="centering">
       <ClassicButton class="mt-4 mx-auto"
       bold
-      :small="!MobileDrawer"
       :text="$t('cta.contact')"
       :to="localePath('/contact')"/>
     </div>
@@ -139,13 +109,13 @@ import ArrowIcon from '~/components/atoms/ArrowIcon.vue';
 import LabeledPicture from '~/components/molecules/LabeledPicture.vue';
 import HorizontalDivider from '~/components/atoms/HorizontalDivider.vue';
 import ClassicButton from '~/components/molecules/ClassicButton.vue';
-import MobileDrawer from '~/components/organisms/MobileDrawer.vue';
+import PageTitle from '~/components/atoms/PageTitle.vue';
 
 export default {
 
   name: 'CreationsPage',
 
-  components: { ClassicTitle, ArrowIcon, LabeledPicture, HorizontalDivider, ClassicButton },
+  components: { ClassicTitle, ArrowIcon, LabeledPicture, HorizontalDivider, ClassicButton, PageTitle },
 
   setup () {
     const mobile = isMobile()
@@ -159,24 +129,8 @@ export default {
 
 <style scoped>
 
-hr {
-  border: none;
-  border-top: 3px solid black;
-  color: #333;
-  height: 4px;
-  width: 25px;
-}
-
 .creation-labeled-picture{
   margin: 0 0 50px 0;
-}
-
-.creations-mobile-title{
-  font-size: 18px;
-  font-family: 'Montserrat';
-  letter-spacing: 7px;
-  font-weight: bolder;
-  text-shadow: 1px 0px 0 black;
 }
 
 .arrow-container{
@@ -195,7 +149,8 @@ hr {
   
   
   .creations-text p{
-    line-height: 28px;
+    line-height: 27px;
+    font-size: 17px;
   }
 
   .creations-catch{

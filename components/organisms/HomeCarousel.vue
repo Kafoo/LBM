@@ -1,5 +1,6 @@
 <template>
   <swiper
+    class="home-carousel"
     :slidesPerView="mobile?'auto':'auto'"
     :spaceBetween="mobile?0:30"
     :pagination="{

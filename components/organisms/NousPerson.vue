@@ -24,7 +24,7 @@
       class="mt-8 nous-description backgrounded"
       :class="mobile?'mx-3':''"
       >{{ description }}</span>
-    <ClassicButton class="ml-0 mt-5"
+    <ClassicButton class="ml-0 mt-5 backgrounded"
     :text="$t('cta.contact')"
     :to="localePath('/contact')"
     small

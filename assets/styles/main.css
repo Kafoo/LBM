@@ -91,6 +91,10 @@ h3{
   font-size: 21pt;
 }
 
+.mb-100{
+  margin-bottom: 120px !important;
+}
+
 p, .classic-text{
   font-family: 'Montserrat';
   font-size: 15px;
@@ -158,13 +162,27 @@ p, .classic-text{
 .swiper {
     overflow-y: visible !important;
 }
-.swiper-pagination {
+
+.home-carousel .swiper-pagination,
+.engagements-carousel .swiper-pagination {
     position: absolute;
     bottom: -40px !important;
 }
 
+.nous-carousel .swiper-pagination {
+    position: absolute;
+    bottom: -5px !important;
+}
+
 .swiper-pagination-bullet-active{
   background-color: black !important;
+}
+
+@media (max-width:600px){
+  .home-carousel .swiper-pagination,
+  .nous-carousel .swiper-pagination{
+      display: none !important;
+  }
 }
 
 .v-select__content{

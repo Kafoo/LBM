@@ -57,6 +57,7 @@
             <nuxt-link
             class="nuxt-link text-uppercase text--text"
             :to="localePath(navItem.path)"
+            @click="drawer=false"
             exact>
               {{ $t(`navigation.${navItem.name}`) }}
             </nuxt-link>

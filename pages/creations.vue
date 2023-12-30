@@ -79,7 +79,7 @@
 
     </v-sheet>
 
-    <!--------- DESKTOP CATCH --------->
+    <!--------- CATCH --------->
 
     <v-sheet
     class="ma-6 d-flex flex-column creations-catch"

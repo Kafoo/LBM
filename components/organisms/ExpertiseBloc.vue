@@ -46,7 +46,7 @@
     <!--------- IMAGE --------->
     <v-sheet :width="mobile?'95%':'370px'" style="position: relative;">
       <v-img aspect-ratio="1" cover :src="img"/>
-      <div v-if="mobile" class="mobile-creation-title text-uppercase">{{ title }}</div>
+      <div v-if="mobile" class="mobile-expertise-title text-uppercase">{{ title }}</div>
     </v-sheet>
   
   </v-sheet>
@@ -60,7 +60,7 @@ import HorizontalDivider from '../atoms/HorizontalDivider.vue';
 
 export default {
 
-  name: 'CreationBloc',
+  name: 'ExpertiseBloc',
 
   components: { ClassicTitle, HorizontalDivider },
 
@@ -95,7 +95,7 @@ export default {
 }
 }
 
-.mobile-creation-title{
+.mobile-expertise-title{
   font-family: 'Yeseva One';
   font-size: 27px;
   letter-spacing: 4px;

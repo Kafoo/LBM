@@ -109,7 +109,20 @@ export default defineI18nConfig(() => ({
           name: 'Marc Ruiz',
           fonction: 'Partner',
           description: 'Thanks to his unique approach and meticulous execution, Marc has successfully developed, for more than 20 years, a recognized group in the event industry: Creative spirit has produced over 1000 events to date.'
-        }
+        },
+        ensemble: 'Together they created Les Bonnes Manières',
+        equipe: {
+          title: 'The team',
+          text: 'Les Bonnes Manières agency stands out for its values and a unique state of mind. Our sense of commitment and service, shared by a close-knit team, guarantees you total involvement in your project, both in France and abroad. Each member of our team makes it a priority to honor and build a privileged relationship with the customer, because we are convinced that the best projects are the result of a collaboration based on trust, transparency, and mutual goodwill.',
+          last: 'At Les Bonnes Manières, you’ll find a team spirit like nowhere else.'
+        },
+        engagements: {
+          title: 'Our commitments',
+          engag1: 'Innovation',
+          engag2: 'Precision',
+          engag3: 'Wonders',
+        },
+        end: '“We use our signature as a guarantee of quality.“'
       },
 
       contact: {
@@ -262,7 +275,20 @@ export default defineI18nConfig(() => ({
           name: 'Marc Ruiz',
           fonction: 'Partenaire',
           description: 'Grâce à son approche unique et son sens du détail, Marc a développé avec succès, depuis plus de 20 ans, un groupe reconnu dans le milieu de l’événementiel : Creative Spirit revendique ainsi plus de 1000 événements à son actif'
-        }
+        },
+        ensemble: 'ensemble ils fondent les bonnes manières',
+        equipe: {
+          title: 'L’équipe',
+          text: 'L’Agence « Les Bonnes Manières » se démarque grâce à ses valeurs et son état d’esprit unique. Notre sens de l’engagement et du service, partagé par une équipe unie et soudée, vous garantit une implication totale dans votre projet tant en France qu’à l’international. Chaque membre de l’équipe met un point d’honneur à tisser des liens privilégiés et de confiance avec son client car nous sommes convaincus que les meilleurs projets résultent d’une collaboration dans la confiance, la transparence, et la bienveillance mutuelle.',
+          last: 'Chez Les Bonnes Manières, vous trouverez un esprit d’équipe comme nulle part ailleurs.'
+        },
+        engagements: {
+          title: 'Nos engagements',
+          engag1: 'Innovation',
+          engag2: 'Précision',
+          engag3: 'Émerveillement',
+        },
+        end: '“Nous apposons notre signature comme gage de qualité.“'
       },
 
       contact: {

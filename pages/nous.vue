@@ -32,7 +32,7 @@
       <HorizontalDivider/>
       <ClassicTitle
       class="my-4 small"
-      :text="['Nos engagements']"
+      :text="[$t('nous.engagements.title')]"
       :class="mobile?'medium':''"
       :left="mobile"/>
       <HorizontalDivider/>
@@ -48,7 +48,7 @@
       >
         <div
         class="child"
-        :class="engagement.name">
+        :class="engagement.slug">
         </div>
         <span class="engagement-title">{{engagement.name}}</span>
       </div>
@@ -70,35 +70,27 @@
       }"
       :modules="modules"
     >
-      <swiper-slide v-for="engagement in engagements">
-        <v-img :src="engagement.image"></v-img>
+      <swiper-slide
+      v-for="engagement in engagements">
+        <v-img
+        width="100%"
+        aspect-ratio="3/2"
+        :src="engagement.image"></v-img>
         <span class="engagement-title engagement-mobile-title">{{engagement.name}}</span>
       </swiper-slide>
     </swiper>
     
 
-    <!--------- LAST DESKTOP --------->
+    <!--------- LAST --------->
     <v-sheet
     class="d-flex flex-column nous-catch"
     :max-width="mobile?'':'600px'"
     :class="mobile?'canvas backgrounded mx-6 pa-4':'mx-auto mb-0 mt-10 align-center'">
         <ClassicTitle
         class="my-4 small"
-        :text="['“Nous apposons notre signature comme gage de qualité.“']"/>
+        :text="[$t('nous.end')]"/>
 
     </v-sheet>
-<!--
-    <v-sheet
-    :class="mobile?'mx-5 text-center':'ma-auto'"
-    max-width="600px">
-      <ClassicTitle
-      class="my-4 small line-height-2"
-      :text="['“Nous apposons notre signature comme gage de qualité.“']"
-      :class="mobile?'medium':''"
-      :left="mobile"/>
-    </v-sheet>
--->
-    <!--------- LAST MOBILE --------->
 
 
   </div>
@@ -125,19 +117,22 @@ export default {
   setup () {
 
     const mobile = isMobile()
-
+    const { t } = useI18n()
     const engagements = [
       {
-        name: 'Innovation',
-        image: '/pictures/innovation.jpg'
+        name: t('nous.engagements.engag1'),
+        image: '/pictures/innovation.jpg',
+        slug: 'innovation'
       },
       {
-        name: 'Précision',
-        image: '/pictures/precision.jpg'
+        name: t('nous.engagements.engag2'),
+        image: '/pictures/precision.jpg',
+        slug: 'precision'
       },
       {
-        name: 'Émerveillement',
-        image: '/pictures/emerveillement.jpg'
+        name: t('nous.engagements.engag3'),
+        image: '/pictures/emerveillement.jpg',
+        slug: 'emerveillement'
       },
     ]
 
@@ -165,26 +160,17 @@ export default {
 
 .engagement-title{
   position: absolute;
-  top: 45%;
+  top: 42%;
   width: 100%;
   text-align: center;
   color:white;
   font-weight: bolder;
   letter-spacing: 2px;
   font-size: 19px;
-  text-shadow:
-  1px 1px 30px black,
-  1px 1px 30px black,
-  1px 1px 30px black,
-  1px 1px 30px black,
-  1px 1px 30px black;
 }
 
 .engagement-mobile-title{
   font-size: 30px;
-  text-shadow:
-  1px 1px 30px black,
-  1px 1px 30px black;
 }
 
 .parent {
@@ -209,15 +195,15 @@ export default {
   transition: 0.2s;
 }
 
-.child.Innovation{
+.child.innovation{
   background-image: url("public/pictures/innovation.jpg");
 }
 
-.child.Précision{
+.child.precision{
   background-image: url("public/pictures/precision.jpg");
 }
 
-.child.Émerveillement{
+.child.emerveillement{
   background-image: url("public/pictures/emerveillement.jpg");
 }
 

@@ -2,6 +2,7 @@
   <div :class="mobile?'mt-0':'mt-8'">
     <v-img
     :width="mobile?'95%':'100%'"
+    :height="windowWidth<750?'200px':'300px'"
     class="contact-image mx-auto"
     cover
     :position="windowWidth>900?'0 40%':windowWidth>600?'0 48%':'0 58%'"
@@ -49,16 +50,5 @@ export default{
 </script>
 
 <style scoped>
-
-
-.contact-image{
-  height: 300px;
-}
-
-@media (max-width:750px) {
-.contact-image{
-  height: 200px;
-}
-}
 
 </style>

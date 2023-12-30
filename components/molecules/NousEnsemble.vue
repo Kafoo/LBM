@@ -8,10 +8,10 @@
     <v-sheet class="ensemble-text-container backgrounded pb-3 pt-1 mx-5">
       <v-sheet
       class="ensemble-text text-text text-center text-uppercase py-3"
-      >Ensemble ils fondent les bonnes manières</v-sheet>
+      >{{ $t('nous.ensemble') }}</v-sheet>
     </v-sheet>
     <v-img
-    src="ensemble.svg"
+    src="/ensemble.svg"
     height="100%"
     max-width="90%"
     ></v-img>

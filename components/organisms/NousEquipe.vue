@@ -22,7 +22,7 @@
         <HorizontalDivider/>
         <ClassicTitle
         class="mt-3 mb-4 small"
-        :text="['L équipe']"
+        :text="[$t('nous.equipe.title')]"
         :class="mobile?'medium':''"
         :left="mobile"
         :right="!mobile"/>
@@ -32,22 +32,11 @@
         <p
         class="bloc-text mt-8"
         :class="mobile?'text-left':'text-right'"
-        >
-          L’Agence « Les Bonnes Manières » se démarque grâce à ses
-valeurs et son état d’esprit unique.
-Notre sens de l’engagement et du service, partagé par une
-équipe unie et soudée, vous garantit une implication totale dans
-votre projet tant en France qu’à l’international.
-Chaque membre de l’équipe met un point d’honneur à tisser des
-liens privilégiés et de confiance avec son client car nous sommes
-convaincus que les meilleurs projets résultent d’une collaboration
-dans la confiance, la transparence, et la bienveillance mutuelle.
-        </p>
+        >{{ $t('nous.equipe.text') }}</p>
         <p
         class="bloc-text mt-1"
         :class="mobile?'text-left':'text-right'"
-        ><b>Chez Les Bonnes Manières, vous trouverez un esprit d’équipe
-comme nulle part ailleurs.</b></p>
+        ><b>{{ $t('nous.equipe.last') }}</b></p>
 
       </v-sheet>
     </v-sheet>

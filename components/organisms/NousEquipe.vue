@@ -21,7 +21,7 @@
         <!--------- TITLE --------->
         <HorizontalDivider/>
         <ClassicTitle
-        class="mt-3 mb-4 small"
+        class="mt-3 mb-4"
         :text="[$t('nous.equipe.title')]"
         :class="mobile?'medium':''"
         :left="mobile"

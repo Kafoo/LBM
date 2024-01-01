@@ -1,6 +1,7 @@
 export default defineI18nConfig(() => ({
   legacy: false,
   skipSettingLocaleOnNavigate: true,
+  fallbackLocale: 'fr',
   messages: {
 
     en: {
@@ -164,7 +165,7 @@ export default defineI18nConfig(() => ({
           'Corporate events',
           'Corporate seminars',
         ],
-        legal: 'official website : all rights reserved les bonnes manières - © 2023 - ',
+        legal: 'Official website : Les Bonnes Manières. All rights reserved - © 2023 - ',
         uLegal: 'legal notice'
       }
     },
@@ -203,25 +204,41 @@ export default defineI18nConfig(() => ({
             title: 'Séminaires d’entreprise', 
             text: 'Nous concevons des expériences exclusives qui transcendent les frontières et allient raffinement et créativité. De la conception à l’exécution, nous créons des séminaires d’entreprise à votre image où élégance et convivialité se rencontrent pour des expériences professionnelles hors du commun.',
             image: '/pictures/soiree-terrasse.jpg',
-            cta: 'Découvrez nos séminaires'
+            cta: 'Découvrez nos séminaires',
+            carousel: {
+              name:'seminaires',
+              amount: '10'
+            }
           },
           {
             title: 'Corporate events et lancement de produits', 
             text: 'Nous nous occupons de chaque étape de vos événements avec passion et précision. Notre équipe dévouée se consacre à concevoir des moments exceptionnels où le professionnalisme, la créativité et la singularité s’allient pour vous offrir un moment inoubliable.',
             image: '/pictures/caviar.jpg',
-            cta: 'Découvrez nos soirées d’entreprise'
+            cta: 'Découvrez nos soirées d’entreprise',
+            carousel: {
+              name:'soirees',
+              amount: '10'
+            }
           },
           {
             title: 'Lieux éphémères', 
             text: 'Nous concevons des stands et pop-up stores élégants, sur mesure pour chacun de nos clients. Peu importe l’occasion, nous nous engageons à sublimer vos espaces pour marquer les esprits de vos invités.',
             image: '/pictures/scooter.jpg',
-            cta: 'Découvrez nos animations'
+            cta: 'Découvrez nos animations',
+            carousel: {
+              name:'animations',
+              amount: '8'
+            }
           },
           {
             title: 'Notre expertise technique', 
             text: 'Notre équipe prend en charge l’ensemble des prestations nécessaires à la réalisation de votre événement. Nous assurons la direction artistique et technique sur la globalité du projet. Notre objectif est de vous proposer une scénographie performante et un rendu optimal.',
             image: '/pictures/regie.jpg',
-            cta: 'Découvrez notre expertise'
+            cta: 'Découvrez notre expertise',
+            carousel: {
+              name:'technique',
+              amount: '5'
+            }
           },
         ],
         square: {
@@ -331,7 +348,7 @@ export default defineI18nConfig(() => ({
           'Soirées corporate',
           'Séminaires d’entreprise'
         ],
-        legal: 'site officiel : tous droits réservés les bonnes manières - © 2023 - ',
+        legal: 'Site officiel : tous droits réservés Les Bonnes Manières - © 2023 - ',
         uLegal: 'mentions légales'
       }
     }

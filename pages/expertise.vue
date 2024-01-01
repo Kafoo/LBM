@@ -4,7 +4,7 @@
 
     <!--------- TITLE --------->
 
-    <v-container :class="mobile?'mb-8 mt-4 line-height-2':'mb-15 mt-8'">
+    <v-container :class="mobile?'mb-8 mt-4 line-height-2 px-0':'mb-15 mt-8'">
       <ClassicTitle
       class="title-container mx-auto"
       :class="mobile?'small':''"
@@ -15,66 +15,16 @@
     </v-container>
 
     <!--------- BLOCS --------->
-
     <ExpertiseBloc
-    :title="$t('expertise.blocs[0].title')"
-    :text="$t('expertise.blocs[0].text')"    
-    :img="$t('expertise.blocs[0].image')"    
-    >
-      <template v-slot:button>
-        <ClassicButton
-        small
-        v-if="!mobile"
-        :text="$t('expertise.blocs[0].cta')"
-        class="mt-5 mr-auto mb-auto ml-0"
-        bold/>
-      </template>
-    </ExpertiseBloc>
-
-    <ExpertiseBloc
-    :title="$t('expertise.blocs[1].title')"
-    :text="$t('expertise.blocs[1].text')"    
-    :img="$t('expertise.blocs[1].image')"    
-    reverse>
-      <template v-slot:button>
-        <ClassicButton
-        small
-        v-if="!mobile"
-        :text="$t('expertise.blocs[1].cta')"
-        class="mt-5 ml-auto mb-auto mr-0"
-        bold/>
-      </template>
-    </ExpertiseBloc>
-
-    <ExpertiseBloc
-    :title="$t('expertise.blocs[2].title')"
-    :text="$t('expertise.blocs[2].text')"    
-    :img="$t('expertise.blocs[2].image')"    
-    >
-      <template v-slot:button>
-        <ClassicButton
-        small
-        v-if="!mobile"
-        :text="$t('expertise.blocs[2].cta')"
-        class="mt-5 mr-auto mb-auto ml-0"
-        bold/>
-      </template>
-    </ExpertiseBloc>
-
-    <ExpertiseBloc
-    :title="$t('expertise.blocs[3].title')"
-    :text="$t('expertise.blocs[3].text')"    
-    :img="$t('expertise.blocs[3].image')"    
-    reverse>
-      <template v-slot:button>
-        <ClassicButton
-        small
-        v-if="!mobile"
-        :text="$t('expertise.blocs[3].cta')"
-        class="mt-5 ml-auto mb-auto mr-0"
-        bold/>
-      </template>
-    </ExpertiseBloc>
+    v-for="n in 4"
+    :title="$t('expertise.blocs['+(n-1)+'].title')"
+    :text="$t('expertise.blocs['+(n-1)+'].text')"    
+    :img="$t('expertise.blocs['+(n-1)+'].image')"
+    :btnText="$t('expertise.blocs['+(n-1)+'].cta')" 
+    :carouselName="$t('expertise.blocs['+(n-1)+'].carousel.name')"
+    :carouselAmount="$t('expertise.blocs['+(n-1)+'].carousel.amount')"
+    :reverse="n%2==0"    
+    />
 
     <!--------- SQUARE --------->
     <v-sheet

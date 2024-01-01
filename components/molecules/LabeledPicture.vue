@@ -12,7 +12,7 @@
         ></v-img>
         <v-sheet
         :class="mobile?'px-6 mt-2':sm?'mt-1':'mt-3'">
-          <p class="text-uppercase Yeseva--text sous-image mt-3">{{ text }}</p>
+          <p class="text-uppercase Yeseva--text sous-image backgrounded mt-3">{{ text }}</p>
         </v-sheet>
       </v-sheet>
   </div>
@@ -44,6 +44,10 @@ export default {
 .sous-image{
   letter-spacing: 3px;
   font-size: 12px;
+  padding: 5px;
+  line-height: 20px;
+  margin-left: -5px;
+  margin-top: 0 !important;
 }
 
 .short .sous-image{

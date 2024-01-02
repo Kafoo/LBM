@@ -22,10 +22,14 @@
 
       <v-sheet class='footer-infos mx-3 mb-9 d-flex flex-column align-center'>
         <v-sheet class="font-weight-bold mb-5 footer-locations">PARIS - CANNES - BARCELONE</v-sheet>
-        <v-icon class="ma-2" color="black">mdi-cellphone</v-icon>
-        <v-sheet class="mb-3">+33 (0)6 84 58 67 64</v-sheet>
-        <v-icon class="ma-2" color="black">mdi-email</v-icon>
-        <v-sheet class="mb-7">nadia@lesbonnesmanieres.paris</v-sheet>
+        <a href="tel:+33684586764">
+          <v-icon class="ma-2" color="black">mdi-cellphone</v-icon>
+        </a>
+        <v-sheet href="tel:+33684586764" class="mb-3 selectable-text">+33 (0)6 84 58 67 64</v-sheet>
+        <a href="mailto:nadia@lesbonnesmanieres.paris">
+          <v-icon class="ma-2" color="black">mdi-email</v-icon>
+        </a>
+        <v-sheet class="mb-7 selectable-text">nadia@lesbonnesmanieres.paris</v-sheet>
         <SocialsIcons mobile/>
       </v-sheet>
     </v-sheet>

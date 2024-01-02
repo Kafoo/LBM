@@ -1,0 +1,45 @@
+.swiper {
+    overflow-y: visible !important;
+}
+
+.home-carousel .swiper-pagination,
+.engagements-carousel .swiper-pagination {
+    position: absolute;
+    bottom: -40px !important;
+}
+
+.nous-carousel .swiper-pagination {
+    position: absolute;
+    bottom: -5px !important;
+}
+
+.swiper-button-prev, .swiper-button-next{
+  color: white !important;
+}
+
+.popup-carousel .swiper-pagination {
+    position: absolute;
+    bottom: -40px !important;
+    color: white;
+    font-weight: bolder;
+}
+
+@media (max-width:600px){
+.popup-carousel .swiper-pagination {
+    position: absolute;
+    bottom: -10px !important;
+    color: white;
+    font-weight: bolder;
+}
+}
+
+.swiper-pagination-bullet-active{
+  background-color: black !important;
+}
+
+@media (max-width:600px){
+  .home-carousel .swiper-pagination,
+  .nous-carousel .swiper-pagination{
+      display: none !important;
+  }
+}

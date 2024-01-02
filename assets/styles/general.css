@@ -1,0 +1,121 @@
+.v-sheet{
+  overflow: hidden !important;
+}
+
+.v-main{
+  padding-top: 0 !important;
+}
+
+.v-sheet:not(.backgrounded),
+.v-card:not(.backgrounded),
+.v-app-bar.v-toolbar.v-sheet,
+.v-application,
+.v-toolbar{
+  background-color: transparent !important;
+}
+
+.v-application{
+  background-image: url(/lines/HomeLine.svg) !important;
+  background-size: 100% !important;
+  background-repeat: no-repeat !important;
+}
+
+@media (max-width:600px) {
+  .v-application{
+    background-image: none !important;
+  }
+}
+
+.backgrounded, .v-menu__content {
+    background-color: #ffffff !important;
+}
+
+.backgrounded-custom {
+    background-color: initial !important;
+}
+
+*{
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently*/;
+}
+
+.selectable-text, input, textarea{
+  -webkit-touch-callout: text; /* iOS Safari */
+    -webkit-user-select: text; /* Safari */
+     -khtml-user-select: text; /* Konqueror HTML */
+       -moz-user-select: text; /* Old versions of Firefox */
+        -ms-user-select: text; /* Internet Explorer/Edge */
+            user-select: text; /* Non-prefixed version, currently*/
+}
+
+.canvas{
+  background-color: #F1EFE6 !important;
+}
+
+.cursor{
+  cursor: pointer;
+}
+
+.centering{
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.centering-column{
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.relative{
+  position: relative;
+}
+
+.mb-100{
+  margin-bottom: 120px !important;
+}
+
+.v-overlay__content:not(.v-select__content){
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+@media (min-width: 601px) {
+
+  .mobile{
+    display: none !important;
+  }
+}
+
+/* .desktop{
+  display: initial !important;
+} */
+
+@media (max-width: 600px) {
+  /* .mobile{
+    display: initial !important;
+  } */
+  .desktop{
+    display: none !important;
+  }
+}
+
+@media (max-width: 1265px) {
+  .mediumScreen{
+    display: none !important;
+  }
+}
+
+@media (max-width: 920px) {
+  .hideOn920{
+    display: none !important;
+  }
+}

@@ -1,0 +1,28 @@
+.v-select__content{
+  font-family: 'Montserrat';
+  border-radius: 7px !important;
+}
+
+.v-input{
+  padding: 2px 0;
+}
+
+.v-input .v-label{
+  font-size: 13px;
+  font-weight: bold;
+  opacity: 1;
+}
+
+.v-label.v-field-label--floating {
+  font-size: 0.6em !important;
+}
+
+.v-field--variant-underlined .v-label.v-field-label--floating {
+  transform: translateY(-10px) !important;
+  margin: 0;
+  top: var(--v-input-padding-top);
+}
+
+input::placeholder{
+  font-weight: bolder;
+}

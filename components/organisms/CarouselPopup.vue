@@ -1,6 +1,6 @@
 <template>
   <v-card
-  height="80vh"
+  :height="mobile?'95vh':'80vh'"
   class="pop-up-container">
 
 
@@ -9,7 +9,7 @@
       variant="text"
       @click="$emit('close')"
     >
-      <v-icon color="white">mdi-close</v-icon>
+      <v-icon color="white" :size="mobile?'x-large':''">mdi-close</v-icon>
     </v-btn>
 
     
@@ -18,9 +18,8 @@
         class="popup-carousel mx-0"
         :slidesPerView="1"
         :spaceBetween="30"
-        :navigation="true"
+        :navigation="!mobile"
         :pagination="{
-          clickable: true,
           type: 'fraction'
         }"
         :autoplay="{
@@ -84,8 +83,23 @@ export default {
   z-index: 2;
 }
 
+@media (max-width:600px) {
+  .close {
+    right: 10px;
+    top: 15px;
+    z-index: 2;
+  }
+}
+
 .popup-carousel{
   height: 70%;
   width: 80%;
+}
+
+@media (max-width:600px) {
+  .popup-carousel{
+    height: 90%;
+    width: 90%;
+  }
 }
 </style>

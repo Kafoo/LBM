@@ -93,7 +93,8 @@
 
     <!--------- CTA CONTACT --------->
     <div class="centering">
-      <ClassicButton class="mt-4 mx-auto"
+      <ClassicButton
+      class="mt-4 mx-auto backgrounded"
       bold
       :text="$t('cta.contact')"
       :to="localePath('/contact')"/>

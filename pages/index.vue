@@ -14,7 +14,10 @@
 
       <v-sheet
       class="centering mt-6 desktop">
-        <ClassicButton :text="$t('cta.creations')" :to="localePath('/creations')"/>
+        <ClassicButton
+        class="backgrounded"
+        :text="$t('cta.creations')"
+        :to="localePath('/creations')"/>
       </v-sheet>
 
     </v-container>

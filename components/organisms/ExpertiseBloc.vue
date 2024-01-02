@@ -61,7 +61,9 @@
     <!--------- IMAGE --------->
     <v-sheet :width="mobile?'95%':'370px'" style="position: relative;">
       <v-img aspect-ratio="1" cover :src="img"/>
-      <div v-if="mobile" class="mobile-expertise-title text-uppercase">{{ title }}</div>
+      <div v-if="mobile" class="mobile-expertise-title text-uppercase cursor" @click.stop="popup = true">
+        {{ title }}
+      </div>
     </v-sheet>
   
   </v-sheet>

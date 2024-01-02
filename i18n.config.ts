@@ -141,7 +141,8 @@ export default defineI18nConfig(() => ({
           guests: 'Number of Guests',
           date: 'Date of the event',
           message: 'Your message',
-          submit: 'Send'
+          submit: 'Send',
+          dateplaceholder: 'DD / MM / YYYY'
         }
       },
 
@@ -207,7 +208,7 @@ export default defineI18nConfig(() => ({
             cta: 'Découvrez nos séminaires',
             carousel: {
               name:'seminaires',
-              amount: '10'
+              amount: '9'
             }
           },
           {
@@ -217,7 +218,7 @@ export default defineI18nConfig(() => ({
             cta: 'Découvrez nos soirées d’entreprise',
             carousel: {
               name:'soirees',
-              amount: '10'
+              amount: '8'
             }
           },
           {
@@ -227,7 +228,7 @@ export default defineI18nConfig(() => ({
             cta: 'Découvrez nos animations',
             carousel: {
               name:'animations',
-              amount: '8'
+              amount: '6'
             }
           },
           {
@@ -237,7 +238,7 @@ export default defineI18nConfig(() => ({
             cta: 'Découvrez notre expertise',
             carousel: {
               name:'technique',
-              amount: '5'
+              amount: '6'
             }
           },
         ],
@@ -323,7 +324,8 @@ export default defineI18nConfig(() => ({
           guests: 'Nombre d’invités',
           date: 'Date de l’événement',
           message: 'Votre message',
-          submit: 'Envoyer'
+          submit: 'Envoyer',
+          dateplaceholder: 'JJ / MM / AAAA'
         }
       },
 

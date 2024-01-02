@@ -13,8 +13,16 @@
 
           <v-sheet class='footer-contact mx-3'>
             <v-sheet class="font-weight-bold">PARIS - CANNES - BARCELONE</v-sheet>
-            <v-sheet><v-icon size="17px">mdi-cellphone</v-icon>+33 (0)6 84 58 67 64</v-sheet>
-            <v-sheet><v-icon size="17px">mdi-email</v-icon> nadia@lesbonnesmanieres.paris</v-sheet>
+            <v-sheet class="selectable-text">
+              <a href="tel:+33684586764">
+                <v-icon size="17px">mdi-cellphone</v-icon>
+              </a> +33 (0)6 84 58 67 64
+            </v-sheet>
+            <v-sheet class="selectable-text">
+              <a href="mailto:nadia@lesbonnesmanieres.paris">
+                <v-icon size="17px">mdi-email</v-icon>
+              </a> nadia@lesbonnesmanieres.paris
+            </v-sheet>
             <SocialsIcons/>
           </v-sheet>
         </v-sheet>

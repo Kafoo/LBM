@@ -92,6 +92,7 @@
         variant="underlined"
         v-model="eventDate"
         autocomplete="LBM"
+        :placeholder="$t('contact.form.dateplaceholder')"
         :label="$t('contact.form.date')"        >
           <template v-if="!mobile" v-slot:prepend-inner>
             <v-icon size="20">mdi-calendar-month</v-icon>
@@ -103,7 +104,8 @@
         variant="underlined"
         autocomplete="LBM"
         v-model="message"
-        :label="$t('contact.form.message')"        no-resize
+        :label="$t('contact.form.message')"
+        no-resize
         rows="2"
         >
           <template v-if="!mobile" v-slot:prepend-inner>
@@ -113,10 +115,12 @@
         <div class="submit-container">
           <ClassicButton :text="$t('contact.form.submit')"
           :class="mobile?'mt-10':'mt-5'"
-          bold/>
+          bold
+          @click.stop="submitForm"/>
         </div>
       </v-form>
     </v-sheet>
+
   </v-sheet>
 </template>
 
@@ -148,6 +152,43 @@ export default defineComponent({
 
     const mobile = isMobile()
 
+  const submitForm = () => {
+    
+    // try {
+    //   const query = useFetch('https://formie.io/form/22a5feaf-891c-4c89-a6f1-f72cf6f06cbd', {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //     },
+    //     body: {
+    //       name: name.value,
+    //       email: email.value,
+    //       phone: phoneNumber.value,
+    //       eventtype: eventType.value,
+    //       guests: guests.value,
+    //       eventdate: eventDate.value,
+    //       message: message.value,
+    //     },
+    //   });
+
+    //   query.then((response:any) =>{
+    //     console.log(response.status.value)
+    //     if (response.status.value == 'success') {
+    //       // Form submission successful, you can redirect or show a success message
+    //       console.log('Form submitted successfully');
+    //       // Redirect to success page or handle success in your way
+    //     } else {
+    //       // Form submission failed, handle errors
+    //       console.error('Form submission failed:', response);
+    //       console.log(query)
+    //     }
+    //   })
+    // } catch (error) {
+    //   console.error('An error occurred during form submission:', error);
+    //   // Handle network errors or other unexpected issues
+    // }
+  }
+
     return {
       name,
       email,
@@ -156,7 +197,8 @@ export default defineComponent({
       guests,
       eventDate,
       message,
-      mobile
+      mobile,
+      submitForm
     }
   }
 })

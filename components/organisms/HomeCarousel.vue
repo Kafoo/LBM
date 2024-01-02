@@ -12,11 +12,11 @@
     }"
     :modules="modules"
   >
-    <swiper-slide v-if="!mobile"><img src="/pictures/dior-ailes.jpg"></swiper-slide>
-    <swiper-slide><img src="/pictures/parachute.jpg"></swiper-slide>
-    <swiper-slide><img src="/pictures/soiree-rose.jpg"></swiper-slide>
-    <swiper-slide><img src="/pictures/fingers.jpg"></swiper-slide>
-    <swiper-slide><img src="/pictures/fish.jpg"></swiper-slide>
+    <swiper-slide class="slide" v-if="!mobile"><img src="/pictures/dior-ailes.jpg"></swiper-slide>
+    <swiper-slide class="slide"><img src="/pictures/parachute.jpg"></swiper-slide>
+    <swiper-slide class="slide"><img src="/pictures/soiree-rose.jpg"></swiper-slide>
+    <swiper-slide class="slide"><img src="/pictures/fingers.jpg"></swiper-slide>
+    <swiper-slide class="slide"><img src="/pictures/fish.jpg"></swiper-slide>
   </swiper>
 </template>
 
@@ -49,6 +49,8 @@ export default defineComponent({
   margin-bottom: 150px;
 }
 
+.swiper-slide { width: auto; }
+
 @media (max-width : 1000px) {
   .swiper{
     height: 500px;
@@ -57,16 +59,18 @@ export default defineComponent({
 
 @media (max-width : 600px) {
   .swiper{
-    height: 400px;
+    height: 70vw;
     width: 100%;
     margin-bottom: 80px;
+  }
+
+  .slide, .slide img{
+    width: 50vw;
   }
 }
 
 img{
   height: 100%;
 }
-
-.swiper-slide { width: auto; }
 
 </style>

@@ -168,6 +168,12 @@ export default defineI18nConfig(() => ({
         ],
         legal: 'Official website : Les Bonnes Manières. All rights reserved - © 2023 - ',
         uLegal: 'legal notice'
+      },
+
+      404: {
+        title: 'Oops',
+        text: 'It seems you got lost !',
+        home: 'go to homepage'
       }
     },
 
@@ -352,6 +358,12 @@ export default defineI18nConfig(() => ({
         ],
         legal: 'Site officiel : tous droits réservés Les Bonnes Manières - © 2023 - ',
         uLegal: 'mentions légales'
+      },
+
+      404: {
+        title: 'Oups',
+        text: 'Cette page n’existe pas !',
+        home: 'revenir à l’accueil'
       }
     }
   },

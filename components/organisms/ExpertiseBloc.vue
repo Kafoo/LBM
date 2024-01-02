@@ -138,7 +138,7 @@ export default {
   bottom: 0;
   color: rgba(255, 255, 255, 0.878);
   background-color: rgba(0, 0, 0, 0.522);
-  z-index: 3
+  z-index: 1;
 }
 
 </style>

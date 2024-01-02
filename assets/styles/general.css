@@ -81,6 +81,10 @@
   margin-bottom: 120px !important;
 }
 
+.mt-100{
+  margin-top: 120px !important;
+}
+
 .v-overlay__content:not(.v-select__content){
   margin-left: 0 !important;
   margin-right: 0 !important;

@@ -41,17 +41,15 @@ export default {
   
       const switchLocalePath = useSwitchLocalePath()
       ////Then pushing...
-      this.$router.push({ path: switchLocalePath(newLocale) });
+      if (switchLocalePath(newLocale)) {
+        this.$router.push({ path: switchLocalePath(newLocale) });
+      } else {
+        const localePath = useLocalePath()
+        this.$router.push({ path: localePath('/', newLocale) });
+      }
       setTimeout(() => {
         this.$i18n.finalizePendingLocaleChange()
       }, 150);
-      ////...Or just changing url
-      // this.$i18n.locale = newLocale
-      // history.pushState(
-      //   {},
-      //   '',
-      //   switchLocalePath(newLocale)
-      // )
     }
   },
 

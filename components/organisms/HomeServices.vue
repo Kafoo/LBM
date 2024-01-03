@@ -7,7 +7,7 @@
     :class="mobile?'':'align-center'">
         <HorizontalDivider/>
         <ClassicTitle
-        class="my-4"
+        class="my-3 pa-1 backgrounded"
         :text="[$t('home.services.title')]"
         :class="mobile?'medium':''"
         :left="mobile"/>
@@ -16,7 +16,7 @@
     </v-sheet>
 
     <!--------- TEXT --------->
-    <v-sheet class="centering text-center ma-6 mb-12">
+    <v-sheet class="centering text-center backgrounded ma-6 mb-12">
       <p
       class="text-black"
       :class="mobile?'text-left':''"

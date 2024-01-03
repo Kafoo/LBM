@@ -87,6 +87,7 @@
     :class="mobile?'canvas backgrounded mt-3 mb-5 pa-4':'mb-0 mt-10 align-center'">
         <ClassicTitle
         class="my-4 small"
+        :class="!mobile?'backgrounded':''"
         :text="[$t('creations.catch')]"/>
 
     </v-sheet>

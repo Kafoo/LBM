@@ -9,16 +9,17 @@
     :width="mobile?'90%':'350px'"
     :max-width="mobile?'350px':''"
     class="mt-8 d-flex flex-column"
-    :class="!mobile?'align-end mr-7':'align-start'">
+    :class="!mobile?'align-end mr-5':'align-start'">
       <ClassicTitle
-      :class="mobile?'small line-height-2':'medium'"
+      class="pa-1"
+      :class="[backgrounded?'backgrounded':'',mobile?'small line-height-2':'medium']"
       :right="!mobile"
       :left="mobile"
       :text="[$t('contact.title.line1'), $t('contact.title.line2'), $t('contact.title.line3')]"
       />
       <p
-      class="classic-text mt-5"
-      :class="mobile?'text-left break-max':'text-right'">
+      class="classic-text pa-1 mt-4"
+      :class="[backgrounded?'backgrounded':'',mobile?'text-left break-max':'text-right']">
         {{ $t('contact.text') }}
       </p>
     </v-sheet>
@@ -26,12 +27,14 @@
     <v-sheet
     :width="mobile?'90%':'300px'"
     :max-width="mobile?'350px':''"
-    class="Montserrat--text text--text font-weight-bold mt-5"
-    :class="backgrounded?'backgrounded':''">
+    class="Montserrat--text text--text font-weight-bold mt-6"
+    >
       <v-form @submit.prevent>
 
         <v-text-field
         hide-details
+        :class="backgrounded?'backgrounded':''"
+        class="px-1"
         variant="underlined"
         v-model="name"
         autocomplete="LBM"
@@ -43,6 +46,8 @@
 
         <v-text-field
         hide-details
+        :class="backgrounded?'backgrounded':''"
+        class="px-1"
         variant="underlined"
         v-model="email"
         autocomplete="LBM"
@@ -54,6 +59,8 @@
 
         <v-text-field
         hide-details
+        :class="backgrounded?'backgrounded':''"
+        class="px-1"
         variant="underlined"
         v-model="phoneNumber"
         autocomplete="LBM"
@@ -65,6 +72,8 @@
 
         <v-text-field
         hide-details
+        :class="backgrounded?'backgrounded':''"
+        class="px-1"
         variant="underlined"
         v-model="eventType"
         autocomplete="LBM"
@@ -76,6 +85,8 @@
 
         <v-select
         hide-details
+        :class="backgrounded?'backgrounded':''"
+        class="px-1"
         variant="underlined"
         autocomplete="LBM"
         v-model="guests"
@@ -89,6 +100,8 @@
 
         <v-text-field
         hide-details
+        :class="backgrounded?'backgrounded':''"
+        class="px-1"
         variant="underlined"
         v-model="eventDate"
         autocomplete="LBM"
@@ -101,6 +114,8 @@
 
         <v-textarea
         hide-details
+        :class="backgrounded?'backgrounded':''"
+        class="px-1"
         variant="underlined"
         autocomplete="LBM"
         v-model="message"
@@ -114,7 +129,8 @@
         </v-textarea>
         <div class="submit-container">
           <ClassicButton :text="$t('contact.form.submit')"
-          :class="mobile?'mt-10':'mt-5'"
+          :class="[backgrounded?'backgrounded':'',
+          mobile?'mt-10':'mt-5']"
           bold
           @click.stop="submitForm"/>
         </div>

@@ -3,12 +3,16 @@
 
     <div v-for="navItem in navItems" :key="navItem.id" class="d-flex mx-auto align-center">
 
-      <v-card v-if="navItem.id > 0" elevation="0" height="20px" class="my-2 divider-container">
+      <v-card
+      v-if="navItem.id > 0"
+      elevation="0"
+      height="20px"
+      class="my-2 divider-container">
         <v-divider class="ma-0 mb-1" color="#00000070" vertical></v-divider>
       </v-card>
 
       <nuxt-link
-      class="nuxt-link text-uppercase ma-2 text-no-wrap"
+      class="nuxt-link backgrounded text-uppercase ma-2 text-no-wrap"
       :to="localePath(navItem.path)"
       exact
       >

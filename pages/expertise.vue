@@ -6,7 +6,7 @@
 
     <v-container :class="mobile?'mb-8 mt-4 line-height-2 px-0':'mb-15 mt-8'">
       <ClassicTitle
-      class="title-container mx-auto"
+      class="title-container mx-auto pa-1"
       :class="mobile?'small':''"
       :text="[$t('expertise.title')]"
       :left="mobile"

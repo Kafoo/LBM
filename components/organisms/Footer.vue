@@ -1,7 +1,7 @@
 <template>
-  <v-sheet class="backgrounded">
+  <v-sheet class="backgrounded mt-6">
 
-    <hr v-if="!mobile" class="mb-4"/>
+    <hr v-if="!mobile" class="mb-4 mt-0"/>
 
     <FooterImage/>
 

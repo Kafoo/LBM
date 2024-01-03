@@ -1,7 +1,7 @@
 <template>
   <v-sheet
   position="relative"
-  class="centering ma-auto backgrounded"
+  class="centering ma-auto"
   :height="mobile?'400px':'500px'"
   :min-width="mobile?'100px':''"
   >

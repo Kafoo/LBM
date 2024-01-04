@@ -12,8 +12,8 @@
       <v-icon color="white" :size="mobile?'x-large':''">mdi-close</v-icon>
     </v-btn>
 
-    
-    <v-card class="pa-2 centering" height="100%">
+    <!---------- IF OTHER THAN TECHNIQUE ---------->
+    <v-card v-if="!technique" class="pa-2 centering" height="100%">
       <swiper
         class="popup-carousel mx-0"
         :slidesPerView="1"
@@ -43,6 +43,31 @@
       </swiper>
     </v-card>
 
+    <!---------- IF TECHNIQUE ---------->
+      <div v-if="technique" class="progress-circle centering">
+        <v-progress-circular
+        indeterminate
+        color="white"
+        ></v-progress-circular>
+      </div>
+
+
+    <v-row
+    v-if="technique"
+    class="fill-height ma-0"
+    align="center"
+    justify="center">
+      <video
+      class="technique-video"
+      src="/expertise-carousels/technique.mp4"
+      autoplay
+      loop
+      :controls="false">
+        <source src="/expertise-carousels/technique.mp4" type="video/mp4" />
+      </video>
+    </v-row>
+
+
   </v-card>
 </template>
 
@@ -56,7 +81,8 @@ export default {
   name: 'CarouselPopup',
 
   props: {
-    images: {type: Array, default: []}
+    images: {type: Array, default: []},
+    technique: { type:Boolean, default: false}
   },
 
   setup () {
@@ -79,16 +105,8 @@ export default {
 .close {
   position: absolute;
   right: 10px;
-  top: 15px;
-  z-index: 2;
-}
-
-@media (max-width:600px) {
-  .close {
-    right: 10px;
-    top: 15px;
-    z-index: 2;
-  }
+  top: 20px;
+  z-index: 3;
 }
 
 .popup-carousel{
@@ -102,4 +120,18 @@ export default {
     width: 90%;
   }
 }
+
+.technique-video{
+  height: 60vw;
+  max-height: 100%;
+  z-index: 2;
+}
+
+.progress-circle{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
 </style>

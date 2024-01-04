@@ -61,12 +61,13 @@
       class="engagements-carousel mx-5 mt-10 mb-15"
       slidesPerView="auto"
       spaceBetween="10"
+      :loop="true"
       :pagination="{
         clickable: true,
       }"
       :autoplay="{
-        delay: 4000,
-        disableOnInteraction: true,
+        delay: 2000,
+        disableOnInteraction: false,
       }"
       :modules="modules"
     >
@@ -74,7 +75,7 @@
       v-for="engagement in engagements">
         <v-img
         width="100%"
-        aspect-ratio="3/2"
+        aspect-ratio="1.6"
         :src="engagement.image"></v-img>
         <span class="engagement-title engagement-mobile-title">{{engagement.name}}</span>
       </swiper-slide>

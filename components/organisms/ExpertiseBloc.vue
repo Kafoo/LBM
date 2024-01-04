@@ -14,9 +14,9 @@
 
       <!--------- TITLE + TEXT --------->
       <v-sheet
-      :width="mobile?'95%':'370px'"
+      :width="mobile?'95%':'415px'"
       class="d-flex flex-column ma-auto pa-2 backgrounded"
-      :class="[reverse?'align-end':'align-start',
+      :class="[windowWidth<826?'align-center':reverse?'align-end':'align-start',
       mobile?'mb-5':'mt-8']">
 
         <!--------- TITLE --------->
@@ -26,14 +26,14 @@
         class="my-3 small"
         :text="[title]"
         :class="mobile?'medium':''"
-        :left="!reverse"
-        :right="reverse"/>
+        :left="!reverse&&windowWidth>825"
+        :right="reverse&&windowWidth>825"/>
         <HorizontalDivider v-if="!mobile"/>
 
         <!--------- TEXT --------->
         <p
         class="bloc-text"
-        :class="[reverse&&!mobile?'text-right':'text-left',
+        :class="[windowWidth<826&&!mobile?'text-center':reverse&&!mobile?'text-right':'text-left',
         mobile?'mt-4':'mt-8']"
         >
           {{ text }}
@@ -46,14 +46,17 @@
       v-if="!mobile"
       :text="btnText"
       class="mt-5 mb-auto backgrounded"
-      :class="reverse?'ml-auto mr-0':'mr-auto ml-0'"
+      :class="windowWidth<826?'mx-auto':reverse?'ml-auto mr-0':'mr-auto ml-0'"
       bold
       @click.stop="popup=true"
       />
 
       <!--------- CAROUSEL POPUP --------->
       <v-dialog v-model="popup">
-        <CarouselPopup @close="popup = false" :images="carouselImages"/>
+        <CarouselPopup
+        @close="popup = false"
+        :images="carouselImages"
+        :technique="technique"/>
       </v-dialog>
 
     </v-sheet>
@@ -71,7 +74,7 @@
 
 <script lang="ts">
 
-import { isMobile } from '~/ts/functions/composition/displayHelpers';
+import { isMobile, useWindowWidth } from '~/ts/functions/composition/displayHelpers';
 import ClassicTitle from '../atoms/ClassicTitle.vue';
 import HorizontalDivider from '../atoms/HorizontalDivider.vue';
 import ClassicButton from '../molecules/ClassicButton.vue';
@@ -90,11 +93,12 @@ export default {
     reverse: { type:Boolean, default: false},
     carouselName: { type:String, default: ''},
     carouselAmount: { type:String, default: ''},
-
+    technique: { type:Boolean, default: false}
   },
 
   setup (props) {
     const mobile = isMobile()
+    const windowWidth = useWindowWidth()
 
     const popup = ref(false)
 
@@ -107,7 +111,8 @@ export default {
     return {
       mobile,
       popup,
-      carouselImages
+      carouselImages,
+      windowWidth
     }
   }
 }

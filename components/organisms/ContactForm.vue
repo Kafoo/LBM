@@ -5,6 +5,7 @@
   :class="mobile?'flex-column align-center':''"
   >
 
+    <!----------- TITLE ----------->
     <v-sheet
     :width="mobile?'90%':'350px'"
     :max-width="mobile?'350px':''"
@@ -24,41 +25,52 @@
       </p>
     </v-sheet>
 
+
+    <!----------- FORM ----------->
     <v-sheet
     :width="mobile?'90%':'300px'"
     :max-width="mobile?'350px':''"
     class="Montserrat--text text--text font-weight-bold mt-6"
     >
-      <v-form @submit.prevent>
+      <v-form @submit.prevent v-model="form">
 
+        <!----------- NAME ----------->
         <v-text-field
         hide-details
+        maxlength="40"
         :class="backgrounded?'backgrounded':''"
         class="px-1"
         variant="underlined"
+        :rules="[rules.required[0]]"
         v-model="name"
         autocomplete="LBM"
-        :label="$t('contact.form.name')"        >
+        :label="$t('contact.form.name')+' *'"        >
           <template v-if="!mobile" v-slot:prepend-inner>
             <v-icon size="20">mdi-account</v-icon>
           </template>
         </v-text-field>
 
+        <!----------- EMAIL ----------->
         <v-text-field
         hide-details
+        maxlength="40"
         :class="backgrounded?'backgrounded':''"
         class="px-1"
         variant="underlined"
+        :rules="[rules.required[0], rules.email[0]]"
         v-model="email"
         autocomplete="LBM"
-        :label="$t('contact.form.email')"        >
+        :label="$t('contact.form.email')+' *'"        >
           <template v-if="!mobile" v-slot:prepend-inner>
             <v-icon size="20">mdi-email</v-icon>
           </template>
         </v-text-field>
 
+
+        <!----------- PHONE ----------->
         <v-text-field
         hide-details
+        maxlength="40"
         :class="backgrounded?'backgrounded':''"
         class="px-1"
         variant="underlined"
@@ -70,8 +82,10 @@
           </template>
         </v-text-field>
 
+        <!----------- EVENT TYPE ----------->
         <v-text-field
         hide-details
+        maxlength="40"
         :class="backgrounded?'backgrounded':''"
         class="px-1"
         variant="underlined"
@@ -83,6 +97,7 @@
           </template>
         </v-text-field>
 
+        <!----------- GUESTS ----------->
         <v-select
         hide-details
         :class="backgrounded?'backgrounded':''"
@@ -98,8 +113,10 @@
           </template>
         </v-select>
 
+        <!----------- DATE ----------->
         <v-text-field
         hide-details
+        maxlength="50"
         :class="backgrounded?'backgrounded':''"
         class="px-1"
         variant="underlined"
@@ -112,14 +129,17 @@
           </template>
         </v-text-field>
 
+        <!----------- MESSAGE ----------->
         <v-textarea
         hide-details
+        maxlength="400"
         :class="backgrounded?'backgrounded':''"
         class="px-1"
         variant="underlined"
+
         autocomplete="LBM"
         v-model="message"
-        :label="$t('contact.form.message')"
+        :label="$t('contact.form.message')+' *'"
         no-resize
         rows="2"
         >
@@ -127,15 +147,23 @@
             <svg height="20" viewBox="0 -960 960 960" width="20"><path d="M320-520q17 0 28.5-11.5T360-560q0-17-11.5-28.5T320-600q-17 0-28.5 11.5T280-560q0 17 11.5 28.5T320-520Zm160 0q17 0 28.5-11.5T520-560q0-17-11.5-28.5T480-600q-17 0-28.5 11.5T440-560q0 17 11.5 28.5T480-520Zm160 0q17 0 28.5-11.5T680-560q0-17-11.5-28.5T640-600q-17 0-28.5 11.5T600-560q0 17 11.5 28.5T640-520ZM80-80v-720q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H240L80-80Z"/></svg>
           </template>
         </v-textarea>
+
+        <!----------- SUBMIT ----------->
         <div class="submit-container">
           <ClassicButton :text="$t('contact.form.submit')"
           :class="[backgrounded?'backgrounded':'',
           mobile?'mt-10':'mt-5']"
           bold
+          :disabled="loading || !form"
+          :loading="loading"
           @click.stop="submitForm"/>
         </div>
       </v-form>
     </v-sheet>
+
+    <!----------- ALERT----------->
+
+    <Alert :alert="alert" @close="alert = undefined"/>
 
   </v-sheet>
 </template>
@@ -145,19 +173,21 @@
 import { defineComponent } from 'vue'
 import ClassicButton from '../molecules/ClassicButton.vue'
 import ClassicTitle from '../atoms/ClassicTitle.vue'
+import Alert from '../molecules/Alert.vue'
 import { isMobile } from '~/ts/functions/composition/displayHelpers'
 
 export default defineComponent({
 
   name: 'ContactForm',
 
-  components: { ClassicButton, ClassicTitle },
+  components: { ClassicButton, ClassicTitle, Alert },
 
   props: {
     backgrounded: { type:Boolean, default: false}
   },
 
   setup () {
+
     const name = ref(undefined)
     const email = ref(undefined)
     const phoneNumber = ref(undefined)
@@ -167,43 +197,111 @@ export default defineComponent({
     const message = ref(undefined)
 
     const mobile = isMobile()
+    const { t } = useI18n()
 
-  const submitForm = () => {
+    const form = ref(false)
+    const loading = ref(false)
+    const alert = ref(undefined as Object|undefined)
+
+    const resetValues = () => {
+      name.value = undefined
+      email.value = undefined
+      phoneNumber.value = undefined
+      eventType.value = undefined
+      guests.value = undefined
+      eventDate.value = undefined
+      message.value = undefined
+    }
+
+    const submitForm = () => {
     
-    // try {
-    //   const query = useFetch('https://formie.io/form/22a5feaf-891c-4c89-a6f1-f72cf6f06cbd', {
-    //     method: 'POST',
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //     },
-    //     body: {
-    //       name: name.value,
-    //       email: email.value,
-    //       phone: phoneNumber.value,
-    //       eventtype: eventType.value,
-    //       guests: guests.value,
-    //       eventdate: eventDate.value,
-    //       message: message.value,
-    //     },
-    //   });
+      loading.value = true
 
-    //   query.then((response:any) =>{
-    //     console.log(response.status.value)
-    //     if (response.status.value == 'success') {
-    //       // Form submission successful, you can redirect or show a success message
-    //       console.log('Form submitted successfully');
-    //       // Redirect to success page or handle success in your way
-    //     } else {
-    //       // Form submission failed, handle errors
-    //       console.error('Form submission failed:', response);
-    //       console.log(query)
-    //     }
-    //   })
-    // } catch (error) {
-    //   console.error('An error occurred during form submission:', error);
-    //   // Handle network errors or other unexpected issues
-    // }
-  }
+      try {
+        const query = useFetch('https://formie.io/form/22a5feaf-891c-4c89-a6f1-f72cf6f06cbd', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: {
+            name: name.value,
+            email: email.value,
+            phone: phoneNumber.value,
+            eventtype: eventType.value,
+            guests: guests.value,
+            eventdate: eventDate.value,
+            message: message.value,
+          },
+        });
+
+        query.then((response:any) =>{
+
+          // ------ SUCCESS ------ 
+          if (response.status.value == 'success') {
+            alert.value = {msg:t('alerts.form.success'), type:'success'}
+            resetValues
+
+          // ------ ERRORS ------ 
+          } else {
+            const errors = response.error.value.data.errors
+            if (errors.mail) {              
+              alert.value = {
+                msg: t('alerts.form.error.general'),
+                info: t(errors.mail[0]),
+                type: 'error'
+              }
+            } else if (errors.name) {              
+              alert.value = {
+                msg: t('alerts.form.error.general'),
+                info: t(errors.name[0]),
+                type: 'error'
+              }
+            } else if (errors.message) {              
+              alert.value = {
+                msg: t('alerts.form.error.general'),
+                info: t(errors.message[0]),
+                type: 'error'
+              }
+            } else {
+              alert.value = {
+                msg:t('alerts.form.error.general'),
+                info:t('alerts.form.error.basicInfo'),
+                type:'error'
+              }
+            }
+          }
+          loading.value = false
+          setTimeout(() => {
+            alert.value = undefined
+          }, 8000);
+        })
+
+      // ------ FAIL ------
+      } catch (error) {
+        alert.value = {
+          msg:t('alerts.form.error.general'),
+          info:t('alerts.form.error.basicInfo'),
+          type:'error'
+        }
+      }
+
+  
+    }
+
+    // ---- RULES ----
+    const required = [(v: string) => !!v || 'champs requis'];
+
+    const emailrule = [
+      (v: string) =>
+        /.+@.+\..+/.test(v) ||
+        !v ||
+        'invalid email format'
+    ];
+
+    const rules = {
+      required,
+      email: emailrule
+    }
 
     return {
       name,
@@ -214,7 +312,11 @@ export default defineComponent({
       eventDate,
       message,
       mobile,
-      submitForm
+      submitForm,
+      rules,
+      form,
+      loading,
+      alert
     }
   }
 })
@@ -241,6 +343,9 @@ svg{
   fill: grey;
 }
 
+.v-field--error svg{
+  fill: rgb(176,0,32);
+}
 .v-icon{
   margin: 0 1px
 }

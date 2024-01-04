@@ -46,20 +46,34 @@
         class="flex-grow-0 nous-carousel mx-0"
         :slidesPerView="mobile?'auto':'auto'"
         :spaceBetween="mobile?10:30"
+        :loop="true"
         :pagination="{
           clickable: true,
         }"
         :autoplay="{
-          delay: 4000,
-          disableOnInteraction: true,
+          delay: 2000,
+          disableOnInteraction: false,
         }"
         :modules="modules"
       >
-        <swiper-slide><v-img src="/pictures/equipe-1.jpg"></v-img></swiper-slide>
-        <swiper-slide><v-img src="/pictures/equipe-2.jpg"></v-img></swiper-slide>
-        <swiper-slide><v-img src="/pictures/equipe-3.jpg"></v-img></swiper-slide>
-        <swiper-slide><v-img src="/pictures/equipe-4.jpg"></v-img></swiper-slide>
-        <swiper-slide><v-img src="/pictures/equipe-5.jpg"></v-img></swiper-slide>
+        <swiper-slide>
+          <v-img class="equipe-image" src="/pictures/equipe-1.jpg"></v-img>
+        </swiper-slide>
+        <swiper-slide>
+          <v-img class="equipe-image" src="/pictures/equipe-2.jpg"></v-img>
+        </swiper-slide>
+        <swiper-slide>
+          <v-img class="equipe-image" src="/pictures/equipe-3.jpg"></v-img>
+        </swiper-slide>
+        <swiper-slide>
+          <v-img class="equipe-image" src="/pictures/equipe-4.jpg"></v-img>
+        </swiper-slide>
+        <swiper-slide>
+          <v-img class="equipe-image" src="/pictures/equipe-5.jpg"></v-img>
+        </swiper-slide>
+        <swiper-slide>
+          <v-img class="equipe-image" src="/pictures/equipe-6.jpg"></v-img>
+        </swiper-slide>
       </swiper>
   
   </v-sheet>
@@ -135,4 +149,13 @@ export default {
   }
 }
 
+.equipe-image{
+  max-height: 372px;
+}
+
+@media (max-width : 600px) {
+  .equipe-image{
+    max-height: 68vw;
+  }
+}
 </style>

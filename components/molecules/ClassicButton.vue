@@ -6,7 +6,10 @@
     variant="outlined"
     :to="to"
     :size="small?'default':'large'"
-    :color="color">
+    :color="color"
+    :disabled="disabled"
+    :loading="loading"
+    >
       {{text}}
     </v-btn>
 </template>
@@ -19,7 +22,9 @@ export default {
     text: { type: String },
     to: { type: String },
     small: { type: Boolean, default: false },
-    bold: { type: Boolean, default: false  }
+    bold: { type: Boolean, default: false  },
+    loading: { type: Boolean, default: false  },
+    disabled: { type: Boolean, default: false  }
   },
   data () {
     return {

@@ -3,16 +3,18 @@
     class="home-carousel"
     :slidesPerView="mobile?'auto':'auto'"
     :spaceBetween="mobile?0:30"
+    :loop="mobile"
     :pagination="{
-      clickable: true,
+      clickable: true
     }"
     :autoplay="{
-      delay: 4000,
-      disableOnInteraction: true,
+      delay: 2000,
+      disableOnInteraction: !mobile
     }"
     :modules="modules"
   >
     <swiper-slide class="slide" v-if="!mobile"><img src="/pictures/dior-ailes.jpg"></swiper-slide>
+    <swiper-slide class="slide" v-if="mobile"><img src="/pictures/bar.jpg"></swiper-slide>
     <swiper-slide class="slide"><img src="/pictures/parachute.jpg"></swiper-slide>
     <swiper-slide class="slide"><img src="/pictures/soiree-rose.jpg"></swiper-slide>
     <swiper-slide class="slide"><img src="/pictures/fingers.jpg"></swiper-slide>

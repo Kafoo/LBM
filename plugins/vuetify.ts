@@ -20,7 +20,8 @@ export default defineNuxtPlugin(nuxtApp => {
           primary: '#FFFCF5',
           text: '#3A3D51',
           secondary: '#3A3D51',
-          black: '#000000'
+          black: '#000000',
+          error: '#992525'
         }
       }
     }

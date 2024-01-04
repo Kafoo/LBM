@@ -2,6 +2,7 @@ export default defineI18nConfig(() => ({
   legacy: false,
   skipSettingLocaleOnNavigate: true,
   fallbackLocale: 'fr',
+
   messages: {
 
     en: {
@@ -170,11 +171,28 @@ export default defineI18nConfig(() => ({
         uLegal: 'legal notice'
       },
 
+      alerts: {
+        form: {
+          success : 'Your contact form has been sent.',
+          error : {
+            general : 'Sorry, something went wrong',
+            basicInfo: 'You can try again, or contact us by phone or email.'
+          },
+        }
+      },
+
       404: {
         title: 'Oops',
         text: 'It seems you got lost !',
         home: 'go to homepage'
-      }
+      },
+
+      //FORMIE RESPONSES
+      'The email field is required.': 'The email field is required.',
+      'The message field is required.': 'The message field is required.',
+      'The name field is required.': 'The name field is required.',
+      'The email must be a valid email address.': 'The email must be a valid email address.'
+
     },
 
     fr: {
@@ -214,7 +232,7 @@ export default defineI18nConfig(() => ({
             cta: 'Découvrez nos séminaires',
             carousel: {
               name:'seminaires',
-              amount: '9'
+              amount: '7'
             }
           },
           {
@@ -224,17 +242,17 @@ export default defineI18nConfig(() => ({
             cta: 'Découvrez nos soirées d’entreprise',
             carousel: {
               name:'soirees',
-              amount: '8'
+              amount: '7'
             }
           },
           {
             title: 'Lieux éphémères', 
             text: 'Nous concevons des stands et pop-up stores élégants, sur mesure pour chacun de nos clients. Peu importe l’occasion, nous nous engageons à sublimer vos espaces pour marquer les esprits de vos invités.',
             image: '/pictures/scooter.jpg',
-            cta: 'Découvrez nos animations',
+            cta: 'Découvrez quelques réalisations',
             carousel: {
               name:'animations',
-              amount: '6'
+              amount: '5'
             }
           },
           {
@@ -244,7 +262,7 @@ export default defineI18nConfig(() => ({
             cta: 'Découvrez notre expertise',
             carousel: {
               name:'technique',
-              amount: '6'
+              amount: '4'
             }
           },
         ],
@@ -360,11 +378,28 @@ export default defineI18nConfig(() => ({
         uLegal: 'mentions légales'
       },
 
+      alerts: {
+        form: {
+          success : 'Votre formulaire de contact a bien été envoyé.',
+          error : {
+            general : 'Erreur lors de l’envoie du formulaire.',
+            basicInfo: 'Vous pouvez réessayer, ou nous contacter par téléphone et mail.'
+          },
+        }
+      },
+
       404: {
         title: 'Oups',
         text: 'Cette page n’existe pas !',
         home: 'revenir à l’accueil'
-      }
+      },
+
+      //FORMIE RESPONSES
+      'The email field is required.': 'Email requis.',
+      'The message field is required.': 'Message requis.',
+      'The name field is required.': 'Nom requis.',
+      'The email must be a valid email address.': 'Email invalide.'
+
     }
   },
 }))

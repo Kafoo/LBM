@@ -34,7 +34,6 @@
 
 <script lang="ts">
 
-import { defineComponent } from 'vue'
 import NavigationVue from '~/components/molecules/Navigation.vue'
 import SocialsIcons from '~/components/atoms/SocialsIcons.vue'
 import ChooseLocation from '~/components/atoms/ChooseLocation.vue'

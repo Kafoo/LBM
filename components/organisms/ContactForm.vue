@@ -136,7 +136,7 @@
         :class="backgrounded?'backgrounded':''"
         class="px-1"
         variant="underlined"
-
+        :rules="[rules.required[0]]"
         autocomplete="LBM"
         v-model="message"
         :label="$t('contact.form.message')+' *'"
@@ -239,7 +239,7 @@ export default defineComponent({
           // ------ SUCCESS ------ 
           if (response.status.value == 'success') {
             alert.value = {msg:t('alerts.form.success'), type:'success'}
-            resetValues
+            resetValues()
 
           // ------ ERRORS ------ 
           } else {

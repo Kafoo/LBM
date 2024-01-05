@@ -15,53 +15,64 @@
       >mdi-menu</v-icon>
     </v-btn>
 
+
+    <!-- DRAWER -->
     <v-navigation-drawer
+      class="drawer-mobile pt-15"
       app
       fixed
+      location="top"
       temporary
       v-model="drawer"
-      class="pt-15"
     >
 
       <v-btn
-      @click.stop="drawer = false"
       class="ma-1 drawer-cross"
       icon
-      width="50px"
-      height="50px"
+      width="60px"
+      height="60px"
       elevation="0"
+      @click.stop="drawer = false"
       >
         <v-icon
         color="black"
-        size="30px"
+        size="50px"
         >mdi-close</v-icon>
       </v-btn>
 
-      <v-btn
-      icon
-      :to="localePath('/')"
-      width="50px"
-      height="50px"
-      class="ma-1 home-btn">
-        <v-icon size="30px">mdi-home</v-icon>
-      </v-btn>
 
-      <div class="mt-13 ml-2">
+      <div class="mt-13 ml-2 centering-column mb-15 mt-15">
 
+        <nuxt-link
+        class="mb-8"
+        :to="localePath('/')"
+        @click.stop="drawer=false"
+        exact>
+          <v-img
+          style="cursor: pointer;"
+          src="/HeadLogo.png"
+          width="73px"
+          height="90px"
+          >
+          </v-img>
+        </nuxt-link>
+
+        <hr class="ma-0 mb-1 ml-2"/>
         <div
         v-for="navItem in navItems"
         :key="navItem.name"
+        class="centering-column"
         >
-          <hr v-if="navItem.id > 1" class="ma-0 mb-1 ml-2"/>
-          <div class="ma-2 my-3">
+          <div class="ma-2 my-5 text-center">
             <nuxt-link
             class="nuxt-link text-uppercase text--text"
             :to="localePath(navItem.path)"
-            @click="drawer=false"
+            @click.stop="drawer=false"
             exact>
               {{ $t(`navigation.${navItem.name}`) }}
             </nuxt-link>
           </div>
+          <hr class="ma-0 mb-1 ml-2"/>
         </div>
       </div>
 
@@ -72,9 +83,7 @@
 
 <script lang="ts">
 
-import { defineComponent, ref } from 'vue'
-
-export default defineComponent({
+export default {
 
   name: 'MobileDrawer',
 
@@ -82,7 +91,7 @@ export default defineComponent({
     head: Boolean
   },
 
-  setup () {
+  data () {
     const drawer = ref(false)
 
     const localePath = useLocalePath()
@@ -110,20 +119,33 @@ export default defineComponent({
       }
     ]
 
+    const goHome = () => {
+      const path = this.$router.currentRoute.value.path
+      if (path == '/' || path == '/en') {
+        window.scrollTo(0,0);
+      } else {
+        this.$router.push({ path: localePath('/') })
+      }
+      drawer.value = false
+    }
+
     return {
       drawer,
       navItems,
-      localePath
+      goHome
     }
   }
-})
+}
 
 </script>
 
 <style scoped>
 
 hr{
-  width: 30px;
+  width: 40px;
+  border: none;
+  border-top: 5px solid #9f8c4e;
+  color: #9f8c4e;
 }
 
 .drawer-btn{
@@ -142,8 +164,8 @@ transition: 0.5sec;
 
 .drawer-cross{
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 25px;
+  left: 25px;
 }
 
 .v-navigation-drawer{
@@ -151,19 +173,21 @@ transition: 0.5sec;
 }
 
 .nuxt-link{
-  font-family:'Montserrat';
-  font-size: 13pt;
-  letter-spacing: 2px;
+  font-family:'Yeseva One';
+  font-size: 14pt;
+  letter-spacing: 8px;
   font-weight: lighter;
   text-decoration: none;
   color: black;
   transition: 0.1s ease-out;
 }
 
-.home-btn{
-  position: absolute;
-  top: 10px;
-  left: 10px;
+.nuxt-link:hover, .router-link-active{
+  font-weight: 900;
+}
+
+.drawer-mobile{
+  height: auto !important;
 }
 
 </style>

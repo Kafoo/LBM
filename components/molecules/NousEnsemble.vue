@@ -42,7 +42,7 @@ export default {
   position: absolute;
   letter-spacing: 4px;
   bottom: 380px;
-  z-index: 3;
+  z-index: 1;
 }
 .ensemble-text{
   font-family: 'Yeseva One';

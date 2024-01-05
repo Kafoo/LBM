@@ -53,7 +53,10 @@
     :class="mobile?'':'text-center justify-space-around'"
     >
       <div>
-        {{ $t('footer.legal') }}<u>{{ $t('footer.uLegal') }}</u>
+        {{ $t('footer.legal') }}
+        <u>
+          <nuxt-link to="/legals" @click.stop="scrollUp">{{ $t('footer.uLegal') }}</nuxt-link>
+        </u>
       </div>
     </v-footer>
   </v-sheet>
@@ -71,7 +74,7 @@ export default defineComponent({
   components: { SocialsIcons, FooterImage, FooterInfosDesktop },
 
   name: 'DefaultLayout',
-  setup () {
+  data () {
     const mobile = isMobile()
     const { t } = useI18n()
     const activities = [
@@ -87,9 +90,18 @@ export default defineComponent({
       { name: t('footer.activities[9]') },
     ]
 
+    const scrollUp = () => {
+      const path = this.$router.currentRoute.value.path
+      const localePath = useLocalePath()
+      if (path == localePath('/legals')) {
+        window.scrollTo(0, 0)
+      }
+    }
+
     return {
       mobile,
-      activities
+      activities,
+      scrollUp
     }
   }
 })

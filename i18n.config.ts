@@ -382,7 +382,7 @@ export default defineI18nConfig(() => ({
         form: {
           success : 'Votre formulaire de contact a bien été envoyé.',
           error : {
-            general : 'Erreur lors de l’envoie du formulaire.',
+            general : 'Erreur lors de l’envoi du formulaire.',
             basicInfo: 'Vous pouvez réessayer, ou nous contacter par téléphone et mail.'
           },
         }

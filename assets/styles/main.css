@@ -3,3 +3,7 @@
 @import url("texts.css");
 @import url("carousels.css");
 @import url("form.css");
+
+.v-dialog .v-overlay__content{
+  max-height: 100% !important;
+}

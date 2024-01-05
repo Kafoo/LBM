@@ -52,7 +52,7 @@
       />
 
       <!--------- CAROUSEL POPUP --------->
-      <v-dialog v-model="popup">
+      <v-dialog v-if="popup" v-model="popup">
         <CarouselPopup
         @close="popup = false"
         :images="carouselImages"

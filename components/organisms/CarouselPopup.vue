@@ -1,12 +1,14 @@
 <template>
   <v-card
-  :height="mobile?'95vh':'80vh'"
+  :height="mobile?'100vh':'80vh'"
   class="pop-up-container">
 
 
     <v-btn
       class="close"
       variant="text"
+      icon
+      :size="mobile?'70px':'40px'"
       @click="$emit('close')"
     >
       <v-icon color="white" :size="mobile?'x-large':''">mdi-close</v-icon>
@@ -99,12 +101,12 @@ export default {
 <style scoped>
 
 .pop-up-container{
-    background-color: #000000a8 !important;
+    background-color: #000000ab !important;
     border-radius: 0 !important;
 }
 .close {
   position: absolute;
-  right: 10px;
+  right: 20px;
   top: 20px;
   z-index: 3;
 }
@@ -116,8 +118,8 @@ export default {
 
 @media (max-width:600px) {
   .popup-carousel{
-    height: 90%;
-    width: 90%;
+    height: 85%;
+    width: 95%;
   }
 }
 

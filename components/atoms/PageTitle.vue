@@ -11,7 +11,8 @@
         class="my-4"
         :text="[text]"
         :class="mobile?'medium':''"
-        :left="mobile"/>
+        :left="mobile"
+        letterSpaced/>
         <HorizontalDivider/>
 
     </v-sheet>

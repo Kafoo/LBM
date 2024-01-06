@@ -9,7 +9,9 @@
       height="100%"
       cover
       src="/pictures/Home.jpg"
-      ></v-img>
+      >
+        <template v-slot:placeholder><AtomsProgress/></template>
+      </v-img>
       <ClassicTitle
       style="position: absolute;"
       color='white'

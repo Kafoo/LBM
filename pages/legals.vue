@@ -6,6 +6,8 @@
     letterSpaced
     />
 
+    <hr class="mb-10"/>
+
     <p class="classic-text">
     Les présentes Conditions Générales d'Utilisation (ci-après dénommées "les Conditions") régissent l'utilisation du site web de Les Bonnes Manières (ci-après dénommé "le Site") et l'accès à son contenu. En accédant au Site, vous acceptez sans réserve les présentes Conditions. Si vous n'acceptez pas ces Conditions, veuillez ne pas utiliser le Site.
     </p>
@@ -56,7 +58,7 @@
     </p>
 
     <p class="classic-text">
-    En utilisant le Site, vous reconnaissez avoir lu, compris et accepté ces Conditions Générales d'Utilisation. Si vous avez des questions concernant ces Conditions, veuillez nous contacter à paris@creativespirit.eu
+    En utilisant le Site, vous reconnaissez avoir lu, compris et accepté ces Conditions Générales d'Utilisation. Si vous avez des questions concernant ces Conditions, veuillez nous contacter à nadia@lesbonnesmanieres.paris  
     </p>
 
 
@@ -98,6 +100,12 @@ p{
   margin: 20px;
   line-height: 22px;
   letter-spacing: 1px;
+}
+
+hr{
+  border-top: 2px solid black;
+  width: 200px;
+
 }
 
 </style>

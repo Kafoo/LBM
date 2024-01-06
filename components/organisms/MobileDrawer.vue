@@ -54,6 +54,7 @@
           width="73px"
           height="90px"
           >
+            <template v-slot:placeholder><AtomsProgress/></template>
           </v-img>
         </nuxt-link>
 
@@ -174,8 +175,8 @@ transition: 0.5sec;
 
 .nuxt-link{
   font-family:'Yeseva One';
-  font-size: 14pt;
-  letter-spacing: 8px;
+  font-size: 12pt;
+  letter-spacing: 7px;
   font-weight: lighter;
   text-decoration: none;
   color: black;

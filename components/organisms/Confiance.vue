@@ -39,7 +39,7 @@
       <swiper
         :slidesPerView="'auto'"
         :autoplay="{
-          delay: 2000,
+          delay: 2150,
           disableOnInteraction: false,
         }"
         :modules="modules"

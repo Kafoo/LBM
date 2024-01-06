@@ -11,7 +11,10 @@
       height="100%"
       cover
       src="/pictures/Home.jpg"
-      ></v-img>
+      >
+        <template v-slot:placeholder><Progress/></template>
+      </v-img>
+      
       <div style="position: absolute;" class="d-flex flex-column align-center">
         <ClassicTitle
         v-if="mobile"
@@ -56,11 +59,14 @@ import { defineComponent } from 'vue'
 import ArrowIcon from '~/components/atoms/ArrowIcon.vue'
 import ClassicTitle from '~/components/atoms/ClassicTitle.vue'
 import ClassicButton from '~/components/molecules/ClassicButton.vue'
+import Progress from '../atoms/Progress.vue'
 import { isMobile } from '~/ts/functions/composition/displayHelpers'
 
 export default defineComponent({
 
-  name: '',
+  name: 'HomePicture',
+
+  components: { ClassicTitle, ClassicButton, ArrowIcon, Progress },
 
   setup () {
     const mobile = isMobile()
@@ -70,7 +76,6 @@ export default defineComponent({
       localePath
     }
   },
-  components: { ClassicTitle, ClassicButton, ArrowIcon }
 })
 
 </script>

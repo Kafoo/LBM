@@ -7,7 +7,9 @@
     cover
     :position="windowWidth>900?'0 40%':windowWidth>600?'0 48%':'0 58%'"
     src="/pictures/contact.jpg"
-    ></v-img>
+    >
+      <template v-slot:placeholder><AtomsProgress/></template>
+    </v-img>
   <v-sheet
   class="d-flex flex-column justify-center canvas backgrounded text--text ma-auto"
   :class="mobile?'align-left pa-2 mt-3 mb-8 mx-auto':'align-center text-center pa-10 mb-8'"

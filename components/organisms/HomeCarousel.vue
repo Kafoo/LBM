@@ -4,6 +4,7 @@
     :slidesPerView="mobile?'auto':'auto'"
     :spaceBetween="mobile?0:30"
     :loop="mobile"
+    :allowTouchMove="false"
     :pagination="{
       clickable: true
     }"

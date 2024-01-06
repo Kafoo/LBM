@@ -9,7 +9,9 @@
         cover
         :width="short&&mobile?'100%':'240px'"
         :height="short&&mobile?'460px':short?'320px':'400px'"
-        ></v-img>
+        >
+          <template v-slot:placeholder><AtomsProgress/></template>
+        </v-img>
         <v-sheet
         :class="mobile?'px-6 mt-2':sm?'mt-1':'mt-3'">
           <p class="text-uppercase Yeseva--text sous-image backgrounded mt-3">{{ text }}</p>

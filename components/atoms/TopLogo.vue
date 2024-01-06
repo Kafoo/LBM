@@ -10,11 +10,13 @@
     <router-link :to="localePath('/')">
       <v-img
         :width="mobile?'170':'200'"
+        aspect-ratio="2.6"
         :max-width="200"
         cover
         src="/TextLogo.png"
         to="/"
         >
+          <template v-slot:placeholder><AtomsProgress/></template>
       </v-img>
     </router-link>
   </v-card>
@@ -24,7 +26,6 @@
 <script lang="ts">
 
 import { isMobile } from '~/ts/functions/composition/displayHelpers';
-
 export default {
 
   name: 'TopLogo',

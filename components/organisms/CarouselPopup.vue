@@ -3,7 +3,6 @@
   :height="mobile?'100vh':'80vh'"
   class="pop-up-container">
 
-
     <v-btn
       class="close"
       variant="text"
@@ -32,14 +31,7 @@
       >
         <swiper-slide v-for="image in images">
           <v-img :src="image" height="100%">
-            <template v-slot:placeholder>
-              <v-row class="fill-height ma-0" align="center" justify="center">
-                <v-progress-circular
-                  indeterminate
-                  color="white"
-                ></v-progress-circular>
-              </v-row>
-            </template>
+            <template v-slot:placeholder><AtomsProgress/></template>
           </v-img>
         </swiper-slide>
       </swiper>
@@ -60,6 +52,7 @@
     align="center"
     justify="center">
       <video
+      v-if="technique"
       class="technique-video"
       src="/expertise-carousels/technique.mp4"
       autoplay

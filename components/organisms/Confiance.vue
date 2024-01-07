@@ -38,6 +38,7 @@
 
       <swiper
         :slidesPerView="'auto'"
+        :loop="true"
         :autoplay="{
           delay: 2150,
           disableOnInteraction: false,
@@ -45,8 +46,8 @@
         :modules="modules"
       >
         <swiper-slide
+        class="brand-slide"
         v-for="brand in brands"
-        style="width: 150px;"
         >
           <v-img
           :src="'/brands/'+brand.name+'.svg'"
@@ -137,5 +138,9 @@ hr{
 .confiance-mobile-title{
   font-weight: bold;
   font-size: 15px;
+}
+
+.brand-slide{
+  width: 50%;
 }
 </style>

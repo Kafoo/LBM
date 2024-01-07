@@ -56,7 +56,7 @@
         <CarouselPopup
         @close="popup = false"
         :images="carouselImages"
-        :technique="technique"/>
+        :ephemere="ephemere"/>
       </v-dialog>
 
     </v-sheet>
@@ -95,7 +95,7 @@ export default {
     reverse: { type:Boolean, default: false},
     carouselName: { type:String, default: ''},
     carouselAmount: { type:String, default: ''},
-    technique: { type:Boolean, default: false}
+    ephemere: { type:Boolean, default: false}
   },
 
   setup (props) {

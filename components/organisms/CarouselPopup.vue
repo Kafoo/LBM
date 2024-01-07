@@ -13,8 +13,8 @@
       <v-icon color="white" :size="mobile?'x-large':''">mdi-close</v-icon>
     </v-btn>
 
-    <!---------- IF OTHER THAN TECHNIQUE ---------->
-    <v-card v-if="!technique" class="pa-2 centering" height="100%">
+    <!---------- IF OTHER THAN EPHEMERE ---------->
+    <v-card v-if="!ephemere" class="pa-2 centering" height="100%">
       <swiper
         class="popup-carousel mx-0"
         :slidesPerView="1"
@@ -37,8 +37,8 @@
       </swiper>
     </v-card>
 
-    <!---------- IF TECHNIQUE ---------->
-      <div v-if="technique" class="progress-circle centering">
+    <!---------- IF EPHEMERE ---------->
+      <div v-if="ephemere" class="progress-circle centering">
         <v-progress-circular
         indeterminate
         color="white"
@@ -47,18 +47,18 @@
 
 
     <v-row
-    v-if="technique"
+    v-if="ephemere"
     class="fill-height ma-0"
     align="center"
     justify="center">
       <video
-      v-if="technique"
-      class="technique-video"
-      src="/expertise-carousels/technique.mp4"
+      v-if="ephemere"
+      class="ephemere-video"
+      src="/expertise-carousels/ephemere.mp4"
       autoplay
       loop
       :controls="false">
-        <source src="/expertise-carousels/technique.mp4" type="video/mp4" />
+        <source src="/expertise-carousels/ephemere.mp4" type="video/mp4" />
       </video>
     </v-row>
 
@@ -76,8 +76,8 @@ export default {
   name: 'CarouselPopup',
 
   props: {
-    images: {type: Array, default: []},
-    technique: { type:Boolean, default: false}
+    images: {type: Array<string>, default: []},
+    ephemere: { type:Boolean, default: false}
   },
 
   setup () {
@@ -94,7 +94,7 @@ export default {
 <style scoped>
 
 .pop-up-container{
-    background-color: #000000ab !important;
+    background-color: #000000dd !important;
     border-radius: 0 !important;
 }
 .close {
@@ -116,7 +116,7 @@ export default {
   }
 }
 
-.technique-video{
+.ephemere-video{
   height: 60vw;
   max-height: 100%;
   z-index: 2;

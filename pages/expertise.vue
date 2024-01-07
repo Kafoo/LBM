@@ -24,7 +24,7 @@
     :carouselName="$t('expertise.blocs['+(n-1)+'].carousel.name')"
     :carouselAmount="$t('expertise.blocs['+(n-1)+'].carousel.amount')"
     :reverse="n%2==0"    
-    :technique="$t('expertise.blocs['+(n-1)+'].carousel.name') == 'technique'"
+    :ephemere="$t('expertise.blocs['+(n-1)+'].carousel.name') == 'animations'"
     />
 
     <!--------- SQUARE --------->

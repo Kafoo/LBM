@@ -94,9 +94,16 @@ export default {
 <style scoped>
 
 .pop-up-container{
-    background-color: #000000dd !important;
+    background-color: #000000ab !important;
     border-radius: 0 !important;
 }
+
+@media (max-width:600px) {
+  .pop-up-container{
+    background-color: #000000dd !important;
+  }
+}
+
 .close {
   position: absolute;
   right: 20px;

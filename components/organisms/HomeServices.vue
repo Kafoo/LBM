@@ -44,17 +44,17 @@
       }"
       :modules="modules"
     >
-      <swiper-slide class="slide"><v-img width="100%" height="100%" cover eager src="/pictures/Dior-303-crop.jpg"></v-img>
+      <swiper-slide class="slide"><v-img width="100%" height="100%" cover src="/pictures/Dior-303-crop.jpg"></v-img>
         <div class="carousel-title-container d-flex justify-center align-center">
           <div class="carousel-title text-uppercase text-center">{{ $t('home.services.picture1') }}</div>
         </div>
       </swiper-slide>
-      <swiper-slide class="slide"><v-img width="100%" height="100%" cover eager src="/pictures/Dior-784.jpg"></v-img>
+      <swiper-slide class="slide"><v-img width="100%" height="100%" cover src="/pictures/Dior-784.jpg"></v-img>
         <div class="carousel-title-container d-flex justify-center align-center">
           <div class="carousel-title text-uppercase text-center">{{ $t('home.services.picture2') }}</div>
         </div>
       </swiper-slide>
-      <swiper-slide class="slide"><v-img width="100%" height="100%" cover eager src="/pictures/alban_pichon_107.jpg"></v-img>
+      <swiper-slide class="slide"><v-img width="100%" height="100%" cover src="/pictures/alban_pichon_107.jpg"></v-img>
         <div class="carousel-title-container d-flex justify-center align-center">
           <div class="carousel-title text-uppercase text-center">{{ $t('home.services.picture3') }}</div>
         </div>

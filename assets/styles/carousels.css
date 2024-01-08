@@ -3,7 +3,8 @@
 }
 
 .home-carousel .swiper-pagination,
-.engagements-carousel .swiper-pagination {
+.engagements-carousel .swiper-pagination,
+.home-services-carousel .swiper-pagination {
     position: absolute;
     bottom: -40px !important;
 }

@@ -131,9 +131,10 @@ export default {
 
 @media (max-width:600px) {
   .bloc-text{
-    font-size: 18px;
+    font-size: 17px;
     line-height: 28px;
     text-align: start !important;
+    letter-spacing: 0.5px;
   }
 
   .bloc-title-text{

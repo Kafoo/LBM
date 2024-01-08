@@ -17,7 +17,7 @@
       :width="mobile?'95%':'415px'"
       class="d-flex flex-column ma-auto pa-2 backgrounded"
       :class="[windowWidth<826?'align-center':reverse?'align-end':'align-start',
-      mobile?'mb-5':'mt-8']">
+      mobile?'mb-6':'mt-8']">
 
         <!--------- TITLE --------->
         <HorizontalDivider v-if="!mobile"/>
@@ -130,8 +130,8 @@ export default {
 
 @media (max-width:600px) {
 .bloc-text{
-  font-size: 20px;
-  line-height: 35px;
+  font-size: 18px;
+  line-height: 30px;
 }
 }
 

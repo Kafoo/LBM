@@ -22,7 +22,7 @@
     :class="mobile?'mx-8':'mx-auto'"
     max-width="400px">
       <p
-      class="text-black"
+      class="text-black mb-3"
       :class="mobile?'text-left':''"
       >{{ $t('creations.text') }}
         <br> <b>{{ $t('creations.last') }}</b>

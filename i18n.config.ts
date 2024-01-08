@@ -20,7 +20,7 @@ export default defineI18nConfig(() => ({
           text: 'Les Bonnes Manières is an event agency that collaborates with the biggest players in the luxury industry to create extraordinary, memorable events. Our commitment lies in the art of thinking and shaping each events into an unforgettable experience, carefully curated and including the customer at the heart of every experience.',
           last: 'Discover the art of celebration with Les Bonnes Manières!',
           picture1: 'Corporate events and product launches',
-          picture2: 'Corporate seminars',
+          picture2: 'Seminars / Team building',
           picture3: 'Ephemeral spaces / booths',
         },
         square: {
@@ -28,7 +28,7 @@ export default defineI18nConfig(() => ({
           why: 'Why should we work together ?',
           reason1 : 'For our in-depth commitment to  the codes and requirements of the sector.',
           reason2: 'For our strong knowledge and expertise of the travel retail industry.',
-          reason3 : 'For our reliability and legitimacy AS an agency recognized for over 25 years.'
+          reason3 : 'For our reliability and legitimacy as an agency recognized for over 25 years.'
         }
       },
 
@@ -36,7 +36,7 @@ export default defineI18nConfig(() => ({
         title: 'We create exclusive experiences that transcend borders and combine unique refinement and creativity.',
         blocs:[
           {
-            title: 'Corporate seminars', 
+            title: 'Seminars / Team building', 
             text: 'We create  exclusive experiences tailored around your needs and products and your company DNA that transcend borders and combine refinement and uniqueness . From the concept to the execution, we organize corporate seminars that reflect your image, where elegance and conviviality come together to create outstanding memorable experiences.',
             image: '/pictures/soiree-terrasse.jpg',
             cta: 'Discover our seminars'
@@ -49,7 +49,7 @@ export default defineI18nConfig(() => ({
           },
           {
             title: 'Ephemeral spaces', 
-            text: 'We design elegant, custom-made stands and pop-up stores for every one of our customers. No matter what the occasion , we are committed to sublimate your spaces to leave a lasting impression in the mind of your guests.',
+            text: 'We design elegant, custom-made stands and pop-up stores for every one of our customers. No matter what the occasion is, we are committed to sublimate your spaces to leave a lasting impression in the mind of your guests.',
             image: '/pictures/scooter.jpg',
             cta: 'Discover our activations'
           },
@@ -57,7 +57,7 @@ export default defineI18nConfig(() => ({
             title: 'Our technical expertise', 
             text: 'Our team takes care of all the services required for your event, from the technical to the artistic, location, catering… Nothing is left to chance. Our aim is to offer you a high-performance scenography and optimal rendering.',
             image: '/pictures/regie.jpg',
-            cta: 'Discover our corporate events'
+            cta: 'Discover our expertise'
           },
         ],
         square: {
@@ -133,7 +133,7 @@ export default defineI18nConfig(() => ({
           line2: 'for your',
           line3: 'project ?'
         },
-        text: 'We’ll be delighted to work with you, whether your project is defined or not! Just fill in our form share your ideas and we will get back to you as soon as possible.',
+        text: 'We’ll be delighted to work with you, whether your project is defined or not! Just fill in our form, share your ideas and we will get back to you as soon as possible.',
         form: {
           name: 'Surname - First name',
           email: 'Email',
@@ -209,8 +209,8 @@ export default defineI18nConfig(() => ({
           title: 'Nos services',
           text: 'Les Bonnes Manières est une agence événementielle qui s’associe aux plus grands acteurs du luxe pour créer des événements hors du commun. Notre engagement réside dans l’art de penser et de façonner chacun de vos événements en une expérience inoubliable, plaçant avec soin le client au coeur de chacun de nos choix.',
           last: 'Découvrez l’art de la célébration avec Les Bonnes Manières !',
-          picture1: 'Soirées d’entreprise et lancement de produits',
-          picture2: 'Séminaires d’entreprise',
+          picture1: 'Corporate events et lancement de produits',
+          picture2: 'Séminaires / Team Building',
           picture3: 'Lieux éphémères / Stands',
         },
         square: {
@@ -226,7 +226,7 @@ export default defineI18nConfig(() => ({
         title: 'Nous concevons des expériences exclusives qui transcendent les frontières et allient raffinement et créativité.',
         blocs:[
           {
-            title: 'Séminaires d’entreprise', 
+            title: 'Séminaires / Team building', 
             text: 'Nous concevons des expériences exclusives qui transcendent les frontières et allient raffinement et créativité. De la conception à l’exécution, nous créons des séminaires d’entreprise à votre image où élégance et convivialité se rencontrent pour des expériences professionnelles hors du commun.',
             image: '/pictures/soiree-terrasse.jpg',
             cta: 'Découvrez nos séminaires',

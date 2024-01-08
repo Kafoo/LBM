@@ -2,7 +2,7 @@
     <v-container class="d-flex justify-center flex-wrap">
       <div
       class="parent"
-      :class="mobile?'mb-8':'mr-10 mb-10'"
+      :class="mobile?'mb-8 mt-5':'mr-10 mb-10'"
       >
         <div
         class="child"
@@ -27,7 +27,7 @@
     <ClassicButton class="ml-0 mt-5 backgrounded"
     :text="$t('cta.contact')"
     :to="localePath('/contact')"
-    small
+    :small="!mobile"
     bold/>
       </v-sheet>
     </v-container>
@@ -105,7 +105,7 @@ export default {
 }
 
 .nous-description{
-  font-size: 14px;
+  font-size: 15px;
 }
 
 </style>

@@ -16,7 +16,7 @@
     </v-sheet>
 
     <!--------- TEXT --------->
-    <v-sheet class="centering text-center backgrounded ma-6 mb-12">
+    <v-sheet class="centering text-center backgrounded ma-6 mb-15 services-text">
       <p
       class="text-black"
       :class="mobile?'text-left':''"
@@ -25,10 +25,47 @@
       </p>
     </v-sheet>
 
+
+
     <!--------- MOBILE CAROUSEL --------->
+
+    <swiper
+      v-if="mobile"
+      class="home-services-carousel mb-10"
+      :slidesPerView="1"
+      :spaceBetween="10"
+      loop
+      :pagination="{
+        clickable: false
+      }"
+      :autoplay="{
+        delay: 2000,
+        disableOnInteraction: false
+      }"
+      :modules="modules"
+    >
+      <swiper-slide class="slide"><v-img width="100%" height="100%" cover src="/pictures/Dior-303-crop.jpg"></v-img>
+        <div class="carousel-title-container d-flex justify-center align-center">
+          <div class="carousel-title text-uppercase text-center">{{ $t('home.services.picture1') }}</div>
+        </div>
+      </swiper-slide>
+      <swiper-slide class="slide"><v-img width="100%" height="100%" cover src="/pictures/Dior-784.jpg"></v-img>
+        <div class="carousel-title-container d-flex justify-center align-center">
+          <div class="carousel-title text-uppercase text-center">{{ $t('home.services.picture2') }}</div>
+        </div>
+      </swiper-slide>
+      <swiper-slide class="slide"><v-img width="100%" height="100%" cover src="/pictures/alban_pichon_107.jpg"></v-img>
+        <div class="carousel-title-container d-flex justify-center align-center">
+          <div class="carousel-title text-uppercase text-center">{{ $t('home.services.picture3') }}</div>
+        </div>
+      </swiper-slide>
+    </swiper>
+
+
+
     <v-carousel
-    v-if="mobile"
-    height="600px"
+    v-if="false"
+    height="550px"
     :show-arrows="false"
     cycle
     >
@@ -63,7 +100,7 @@
 
     <!--------- DESKTOP IMAGES --------->
     <v-sheet
-    v-else
+    v-if="!mobile"
     class="d-flex justify-center align-start mt-8"
     :class="mobile ?'flex-column':''">
 
@@ -83,6 +120,7 @@ import HorizontalDivider from '~/components/atoms/HorizontalDivider.vue'
 import LabeledPicture from '~/components/molecules/LabeledPicture.vue'
 import ClassicTitle from '~/components/atoms/ClassicTitle.vue'
 import { isMobile } from '~/ts/functions/composition/displayHelpers'
+import { Pagination, Autoplay } from 'swiper/modules';
 
 export default defineComponent({
 
@@ -93,7 +131,8 @@ export default defineComponent({
   setup () {
     const mobile = isMobile()
     return {
-      mobile
+      mobile,
+      modules: [Pagination, Autoplay]
     }
   }
 })
@@ -102,16 +141,38 @@ export default defineComponent({
 
 <style scoped>
 
+.services-text{
+  font-size: 14px;
+  line-height: 23px;
+}
+
+.home-services-carousel{
+  width: 100%;
+  height: 600px;
+}
+
+.slide{
+  height: 100%;
+  width: 100%;
+}
+
 .carousel-title{
   font-family: 'Yeseva One';
-  font-size: 30px;
-  letter-spacing: 3px;
+  font-size: 28px;
+  letter-spacing: 2px;
   padding: 25px;
-  max-width: 85%;
+  max-width: 75%;
   background-color: rgba(255, 255, 255, 0.593);
 }
 
 .carousel-title-container{
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+img{
   height: 100%;
 }
 

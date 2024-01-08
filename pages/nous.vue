@@ -118,24 +118,38 @@ export default {
   setup () {
 
     const mobile = isMobile()
-    const { t } = useI18n()
-    const engagements = [
-      {
-        name: t('nous.engagements.engag1'),
-        image: '/pictures/innovation.jpg',
-        slug: 'innovation'
+
+    const engagements = computed({
+
+      get() {
+
+        const { t } = useI18n()
+
+        return [
+          {
+            name: t('nous.engagements.engag1'),
+            image: '/pictures/innovation.jpg',
+            slug: 'innovation'
+          },
+          {
+            name: t('nous.engagements.engag2'),
+            image: '/pictures/precision.jpg',
+            slug: 'precision'
+          },
+          {
+            name: t('nous.engagements.engag3'),
+            image: '/pictures/emerveillement.jpg',
+            slug: 'emerveillement'
+          },
+        ]
       },
-      {
-        name: t('nous.engagements.engag2'),
-        image: '/pictures/precision.jpg',
-        slug: 'precision'
-      },
-      {
-        name: t('nous.engagements.engag3'),
-        image: '/pictures/emerveillement.jpg',
-        slug: 'emerveillement'
-      },
-    ]
+      // setter
+      set(newValue) {
+      
+      }
+
+
+    })
 
     return {
       mobile,

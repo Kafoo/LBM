@@ -242,7 +242,7 @@ export default defineI18nConfig(() => ({
             cta: 'Découvrez nos soirées d’entreprise',
             carousel: {
               name:'soirees',
-              amount: '7'
+              amount: '8'
             }
           },
           {

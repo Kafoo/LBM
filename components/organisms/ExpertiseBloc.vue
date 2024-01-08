@@ -15,7 +15,7 @@
       <!--------- TITLE + TEXT --------->
       <v-sheet
       :width="mobile?'95%':'415px'"
-      class="d-flex flex-column ma-auto pa-2 backgrounded"
+      class="d-flex flex-column ma-auto pa-2"
       :class="[windowWidth<826?'align-center':reverse?'align-end':'align-start',
       mobile?'mb-6':'mt-8']">
 
@@ -27,7 +27,8 @@
         :text="[title]"
         :class="mobile?'medium':''"
         :left="!reverse&&windowWidth>825"
-        :right="reverse&&windowWidth>825"/>
+        :right="reverse&&windowWidth>825"
+        backgrounded/>
         <HorizontalDivider v-if="!mobile"/>
 
         <!--------- TEXT --------->
@@ -36,7 +37,9 @@
         :class="[windowWidth<826&&!mobile?'text-center':reverse&&!mobile?'text-right':'text-left',
         mobile?'mt-4':'mt-8']"
         >
-          {{ text }}
+          <span class="backgrounded">
+            {{ text }}
+          </span>
         </p>
 
       </v-sheet>

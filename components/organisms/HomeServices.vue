@@ -44,17 +44,17 @@
       }"
       :modules="modules"
     >
-      <swiper-slide class="slide"><v-img width="100%" height="100%" cover src="/pictures/Dior-303-crop.jpg"></v-img>
+      <swiper-slide class="slide"><v-img width="100%" height="100%" cover eager src="/pictures/Dior-303-crop.jpg"></v-img>
         <div class="carousel-title-container d-flex justify-center align-center">
           <div class="carousel-title text-uppercase text-center">{{ $t('home.services.picture1') }}</div>
         </div>
       </swiper-slide>
-      <swiper-slide class="slide"><v-img width="100%" height="100%" cover src="/pictures/Dior-784.jpg"></v-img>
+      <swiper-slide class="slide"><v-img width="100%" height="100%" cover eager src="/pictures/Dior-784.jpg"></v-img>
         <div class="carousel-title-container d-flex justify-center align-center">
           <div class="carousel-title text-uppercase text-center">{{ $t('home.services.picture2') }}</div>
         </div>
       </swiper-slide>
-      <swiper-slide class="slide"><v-img width="100%" height="100%" cover src="/pictures/alban_pichon_107.jpg"></v-img>
+      <swiper-slide class="slide"><v-img width="100%" height="100%" cover eager src="/pictures/alban_pichon_107.jpg"></v-img>
         <div class="carousel-title-container d-flex justify-center align-center">
           <div class="carousel-title text-uppercase text-center">{{ $t('home.services.picture3') }}</div>
         </div>
@@ -65,7 +65,7 @@
 
     <v-carousel
     v-if="false"
-    height="550px"
+    height="600px"
     :show-arrows="false"
     cycle
     >
@@ -148,7 +148,7 @@ export default defineComponent({
 
 .home-services-carousel{
   width: 100%;
-  height: 600px;
+  height: 525px;
 }
 
 .slide{
@@ -158,11 +158,11 @@ export default defineComponent({
 
 .carousel-title{
   font-family: 'Yeseva One';
-  font-size: 28px;
+  font-size: 27px;
   letter-spacing: 2px;
-  padding: 25px;
+  padding: 22px;
   max-width: 75%;
-  background-color: rgba(255, 255, 255, 0.593);
+  background-color: rgba(255, 255, 255, 0.695);
 }
 
 .carousel-title-container{

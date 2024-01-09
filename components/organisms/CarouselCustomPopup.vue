@@ -1,6 +1,9 @@
 <template>
+  <div class="custom-container centering-column">
+
   <v-card
   :height="mobile?'100vh':'80vh'"
+  width="100%"
   class="pop-up-container">
 
     <v-btn
@@ -62,8 +65,9 @@
       </video>
     </v-row>
 
-
   </v-card>
+  
+  </div>
 </template>
 
 <script lang="ts">
@@ -73,8 +77,6 @@ import { Pagination, Navigation } from 'swiper/modules';
 import { useDisplay } from 'vuetify';
 
 export default {
-
-  name: 'CarouselPopup',
 
   props: {
     images: {type: Array<string>, default: []},
@@ -95,14 +97,23 @@ export default {
 
 <style scoped>
 
+.custom-container{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 2000;  
+}
+
 .pop-up-container{
-    background-color: #000000ab !important;
+    background-color: #000000c1 !important;
     border-radius: 0 !important;
 }
 
 @media (max-width:600px) {
   .pop-up-container{
-    background-color: #000000dd !important;
+    background-color: #000000e7 !important;
   }
 }
 

@@ -54,13 +54,23 @@
       @click.stop="popup=true"
       />
 
-      <!--------- CAROUSEL POPUP --------->
+      <!--------- CAROUSEL POPUP OLD --------->
       <v-dialog v-if="popup" v-model="popup">
         <CarouselPopup
         @close="popup = false"
         :images="carouselImages"
         :ephemere="ephemere"/>
       </v-dialog>
+
+      <!--------- CAROUSEL POPUP OLD --------->
+      <!--
+      <CarouselCustomPopup
+        v-if="popup"
+        @close="popup = false"
+        :images="carouselImages"
+        :ephemere="ephemere"
+      />
+      -->
 
     </v-sheet>
 
@@ -84,13 +94,14 @@ import ClassicTitle from '../atoms/ClassicTitle.vue';
 import HorizontalDivider from '../atoms/HorizontalDivider.vue';
 import ClassicButton from '../molecules/ClassicButton.vue';
 import CarouselPopup from '../organisms/CarouselPopup.vue'
+import CarouselCustomPopup from '../organisms/CarouselCustomPopup.vue'
 import { useDisplay } from 'vuetify';
 
 export default {
 
   name: 'ExpertiseBloc',
 
-  components: { ClassicTitle, HorizontalDivider, ClassicButton, CarouselPopup },
+  components: { ClassicTitle, HorizontalDivider, ClassicButton, CarouselPopup, CarouselCustomPopup },
 
   props: {
     title: { type: String, default: '' },
@@ -132,6 +143,7 @@ export default {
 .bloc-text{
   font-size: 15px;
   line-height: 20px;
+  letter-spacing: 0.5px;
 }
 
 @media (max-width:600px) {

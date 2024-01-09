@@ -50,7 +50,7 @@ import HomeServices from '~/components/organisms/HomeServices.vue'
 import HomeSquare from '~/components/organisms/HomeSquare.vue'
 import HomeCarousel from '~/components/organisms/HomeCarousel.vue'
 import Confiance from '~/components/organisms/Confiance.vue'
-
+import { useDisplay } from 'vuetify';
 import { isMobile } from '~/ts/functions/composition/displayHelpers'
 
 export default{
@@ -74,7 +74,8 @@ export default{
   },
 
   setup () {
-    const mobile = isMobile()
+    const display = useDisplay()
+const mobile = isMobile(display)
     const localePath = useLocalePath()
     return {
       mobile,

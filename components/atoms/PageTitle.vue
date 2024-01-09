@@ -40,6 +40,8 @@
 import { isMobile } from '~/ts/functions/composition/displayHelpers';
 import ClassicTitle from './ClassicTitle.vue';
 import HorizontalDivider from './HorizontalDivider.vue';
+import { useDisplay } from 'vuetify';
+
 export default {
 
   name: 'PageTitle',
@@ -51,7 +53,8 @@ export default {
   components: { ClassicTitle, HorizontalDivider },
 
   setup () {
-    const mobile = isMobile()
+    const display = useDisplay()
+const mobile = isMobile(display)
     return {
       mobile
     }

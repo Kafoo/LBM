@@ -26,21 +26,22 @@
 <script lang="ts">
 
 import { isMobile } from '~/ts/functions/composition/displayHelpers';
+import { useDisplay } from 'vuetify';
+
 export default {
 
   name: 'TopLogo',
 
   setup (props, { emit }) {
-    const mobile = isMobile()
-    const localePath = useLocalePath()
+    const display = useDisplay()
+    const mobile = isMobile(display)
 
     // To know if HeadLogo has to be shown in Navigation
     function onIntersect (isIntersecting:any) { emit('visibleHead', !isIntersecting)}
 
     return {
       mobile,
-      onIntersect,
-      localePath
+      onIntersect
     }
   }
 }

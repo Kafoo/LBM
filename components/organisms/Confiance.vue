@@ -68,13 +68,15 @@
 import { defineComponent } from 'vue'
 import { isMobile } from '~/ts/functions/composition/displayHelpers';
 import { Autoplay } from 'swiper/modules';
+import { useDisplay } from 'vuetify';
 
 export default defineComponent({
 
   name: 'Confiance',
 
   setup () {
-    const mobile = isMobile()
+    const display = useDisplay()
+const mobile = isMobile(display)
 
     const brands = [
       {name:'givenchy', size:1},

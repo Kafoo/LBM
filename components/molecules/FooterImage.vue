@@ -27,6 +27,7 @@
 import { defineComponent } from 'vue'
 import ClassicTitle from '../atoms/ClassicTitle.vue'
 import { isMobile } from '~/ts/functions/composition/displayHelpers'
+import { useDisplay } from 'vuetify';
 
 export default defineComponent({
 
@@ -35,7 +36,8 @@ export default defineComponent({
   name: '',
 
   setup () {
-    const mobile = isMobile()
+    const display = useDisplay()
+const mobile = isMobile(display)
 
     return {
       mobile

@@ -67,12 +67,14 @@ import ClassicTitle from '~/components/atoms/ClassicTitle.vue';
 import ExpertiseBloc from '~/components/organisms/ExpertiseBloc.vue';
 import ClassicButton from '~/components/molecules/ClassicButton.vue';
 import { isMobile } from '~/ts/functions/composition/displayHelpers';
+import { useDisplay } from 'vuetify';
 
 export default {
     name: 'ExpertisePage',
     components: { ClassicTitle, ExpertiseBloc, ClassicButton },
     setup() {
-        const mobile = isMobile();
+        const display = useDisplay()
+        const mobile = isMobile(display);
         const localePath = useLocalePath()
         return {
             mobile,

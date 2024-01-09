@@ -61,6 +61,7 @@ import ClassicTitle from '~/components/atoms/ClassicTitle.vue'
 import ClassicButton from '~/components/molecules/ClassicButton.vue'
 import Progress from '../atoms/Progress.vue'
 import { isMobile } from '~/ts/functions/composition/displayHelpers'
+import { useDisplay } from 'vuetify';
 
 export default defineComponent({
 
@@ -69,7 +70,8 @@ export default defineComponent({
   components: { ClassicTitle, ClassicButton, ArrowIcon, Progress },
 
   setup () {
-    const mobile = isMobile()
+    const display = useDisplay()
+    const mobile = isMobile(display)
     const localePath = useLocalePath()
     return {
       mobile,

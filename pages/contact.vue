@@ -26,8 +26,8 @@
 <script lang="ts">
 
 import ContactForm from '~/components/organisms/ContactForm.vue'
-
 import { isMobile, useWindowWidth } from '~/ts/functions/composition/displayHelpers'
+import { useDisplay } from 'vuetify';
 
 export default{
 
@@ -39,8 +39,9 @@ export default{
   },
 
   setup () {
-    const mobile = isMobile()
-    const windowWidth = useWindowWidth()
+    const display = useDisplay()
+    const mobile = isMobile(display)
+    const windowWidth = useWindowWidth(display)
     return {
       mobile,
       windowWidth

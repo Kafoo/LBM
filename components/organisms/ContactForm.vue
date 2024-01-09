@@ -175,6 +175,7 @@ import ClassicButton from '../molecules/ClassicButton.vue'
 import ClassicTitle from '../atoms/ClassicTitle.vue'
 import Alert from '../molecules/Alert.vue'
 import { isMobile } from '~/ts/functions/composition/displayHelpers'
+import { useDisplay } from 'vuetify';
 
 export default defineComponent({
 
@@ -196,7 +197,8 @@ export default defineComponent({
     const eventDate = ref(undefined)
     const message = ref(undefined)
 
-    const mobile = isMobile()
+    const display = useDisplay()
+const mobile = isMobile(display)
     const { t } = useI18n()
 
     const form = ref(false)

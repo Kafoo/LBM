@@ -91,6 +91,7 @@ import { isMobile } from '~/ts/functions/composition/displayHelpers';
 import ClassicTitle from '../atoms/ClassicTitle.vue';
 import HorizontalDivider from '../atoms/HorizontalDivider.vue';
 import { Pagination, Autoplay } from 'swiper/modules';
+import { useDisplay } from 'vuetify';
 
 export default {
 
@@ -99,7 +100,8 @@ export default {
   components: { ClassicTitle, HorizontalDivider },
 
   setup () {
-    const mobile = isMobile()
+    const display = useDisplay()
+    const mobile = isMobile(display)
     return {
       mobile,
       modules: [Pagination, Autoplay]

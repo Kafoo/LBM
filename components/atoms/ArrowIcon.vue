@@ -13,6 +13,7 @@ d="m480-320 160-160-56-56-64 64v-168h-80v168l-64-64-56 56 160 160Zm0 240q-83 0-1
 
 import { defineComponent } from 'vue'
 import { isMobile } from '~/ts/functions/composition/displayHelpers';
+import { useDisplay } from 'vuetify';
 
 export default defineComponent({
 
@@ -23,7 +24,8 @@ export default defineComponent({
   },
 
   setup () {
-    const mobile = isMobile()
+    const display = useDisplay()
+const mobile = isMobile(display)
     return {
       mobile
     }

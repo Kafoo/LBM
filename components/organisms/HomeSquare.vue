@@ -62,11 +62,13 @@ import HorizontalDivider from '../atoms/HorizontalDivider.vue'
 import ClassicTitle from '../atoms/ClassicTitle.vue'
 import ClassicButton from '../molecules/ClassicButton.vue'
 import { isMobile } from '~/ts/functions/composition/displayHelpers'
+import { useDisplay } from 'vuetify';
 
 export default {
   name: 'HomeSquare',
   setup () {
-    const mobile = isMobile()
+    const display = useDisplay()
+    const mobile = isMobile(display)
     const localePath = useLocalePath()
     return {
       mobile,

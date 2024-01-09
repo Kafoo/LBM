@@ -121,6 +121,7 @@ import LabeledPicture from '~/components/molecules/LabeledPicture.vue'
 import ClassicTitle from '~/components/atoms/ClassicTitle.vue'
 import { isMobile } from '~/ts/functions/composition/displayHelpers'
 import { Pagination, Autoplay } from 'swiper/modules';
+import { useDisplay } from 'vuetify';
 
 export default defineComponent({
 
@@ -129,7 +130,8 @@ export default defineComponent({
   components: { LabeledPicture, HorizontalDivider, ClassicTitle },
 
   setup () {
-    const mobile = isMobile()
+    const display = useDisplay()
+    const mobile = isMobile(display)
     return {
       mobile,
       modules: [Pagination, Autoplay]

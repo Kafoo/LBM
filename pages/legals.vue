@@ -69,6 +69,7 @@
 
 import ClassicTitle from '~/components/atoms/ClassicTitle.vue';
 import { isMobile } from '~/ts/functions/composition/displayHelpers';
+import { useDisplay } from 'vuetify';
 
 export default {
     
@@ -77,7 +78,8 @@ export default {
     components: { ClassicTitle },
     
     setup() {
-        const mobile = isMobile();
+        const display = useDisplay()
+        const mobile = isMobile(display);
         return {
             mobile
         };

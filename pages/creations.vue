@@ -112,6 +112,7 @@ import LabeledPicture from '~/components/molecules/LabeledPicture.vue';
 import HorizontalDivider from '~/components/atoms/HorizontalDivider.vue';
 import ClassicButton from '~/components/molecules/ClassicButton.vue';
 import PageTitle from '~/components/atoms/PageTitle.vue';
+import { useDisplay } from 'vuetify';
 
 export default {
 
@@ -120,7 +121,8 @@ export default {
   components: { ClassicTitle, ArrowIcon, LabeledPicture, HorizontalDivider, ClassicButton, PageTitle },
 
   setup () {
-    const mobile = isMobile()
+    const display = useDisplay()
+    const mobile = isMobile(display)
     return {
       mobile
     }

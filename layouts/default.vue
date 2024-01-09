@@ -27,6 +27,7 @@ import TopLogo from '~/components/atoms/TopLogo.vue'
 import MobileDrawer from '~/components/organisms/MobileDrawer.vue'
 import ChooseLocation from '~/components/atoms/ChooseLocation.vue'
 import { isMobile } from '~/ts/functions/composition/displayHelpers'
+import { useDisplay } from 'vuetify';
 
 export default {
   components: { HeaderVue, FooterVue, TopLogo, MobileDrawer, ChooseLocation },
@@ -38,9 +39,9 @@ export default {
     const isHeadVisible = (isVisible:boolean) => {
       head.value = isVisible
     }
-
-
-    const mobile = isMobile()
+    
+    const display = useDisplay()
+    const mobile = isMobile(display)
 
     return {
       head,

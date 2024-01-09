@@ -1,18 +1,16 @@
-import { useDisplay } from 'vuetify';
-
-export const isMobile = () =>
+export const isMobile = (display:any) =>
   computed(() => {
-    const breakpoint = useDisplay().name.value
+    const breakpoint = display.name.value
     return breakpoint === 'xs'
   })
 
-export const isSm = () =>
+export const isSm = (display:any) =>
   computed(() => {
-    const breakpoint = useDisplay().name.value
+    const breakpoint = display.name.value
     return breakpoint === 'sm'
   })
 
-export const useWindowWidth = () =>
+export const useWindowWidth = (display:any) =>
   computed(() => {
-    return useDisplay().width.value
+    return display.width.value
   })

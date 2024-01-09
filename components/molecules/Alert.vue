@@ -25,6 +25,7 @@
 <script lang="ts">
 
 import { isMobile } from '~/ts/functions/composition/displayHelpers';
+import { useDisplay } from 'vuetify';
 
 export default {
 
@@ -35,7 +36,8 @@ export default {
   },
 
   setup () {
-    const mobile = isMobile()
+    const display = useDisplay()
+const mobile = isMobile(display)
 
     return {
       mobile

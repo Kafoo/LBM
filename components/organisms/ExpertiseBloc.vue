@@ -84,6 +84,8 @@ import ClassicTitle from '../atoms/ClassicTitle.vue';
 import HorizontalDivider from '../atoms/HorizontalDivider.vue';
 import ClassicButton from '../molecules/ClassicButton.vue';
 import CarouselPopup from '../organisms/CarouselPopup.vue'
+import { useDisplay } from 'vuetify';
+
 export default {
 
   name: 'ExpertiseBloc',
@@ -102,8 +104,9 @@ export default {
   },
 
   setup (props) {
-    const mobile = isMobile()
-    const windowWidth = useWindowWidth()
+    const display = useDisplay()
+    const mobile = isMobile(display)
+    const windowWidth = useWindowWidth(display)
 
     const popup = ref(false)
 

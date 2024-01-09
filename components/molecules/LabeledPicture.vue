@@ -23,6 +23,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { isSm, isMobile } from '~/ts/functions/composition/displayHelpers'
+import { useDisplay } from 'vuetify';
 
 export default {
   props: {
@@ -31,8 +32,9 @@ export default {
     short: { type:Boolean, default: false }
   },
   setup () {
-    const sm = isSm()
-    const mobile = isMobile()
+    const display = useDisplay()
+    const sm = isSm(display)
+    const mobile = isMobile(display)
     return {
       sm,
       mobile

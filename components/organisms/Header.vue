@@ -38,6 +38,7 @@ import NavigationVue from '~/components/molecules/Navigation.vue'
 import SocialsIcons from '~/components/atoms/SocialsIcons.vue'
 import ChooseLocation from '~/components/atoms/ChooseLocation.vue'
 import { isMobile } from '~/ts/functions/composition/displayHelpers'
+import { useDisplay } from 'vuetify';
 
 export default {
 
@@ -51,7 +52,8 @@ export default {
 
   data () {
 
-    const mobile = isMobile()
+    const display = useDisplay()
+    const mobile = isMobile(display)
     const localePath = useLocalePath()
 
     const goHome = () => {

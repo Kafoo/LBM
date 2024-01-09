@@ -108,6 +108,7 @@ import NousPerson from '~/components/organisms/NousPerson.vue';
 import NousEnsemble from '~/components/molecules/NousEnsemble.vue';
 import NousEquipe from '~/components/organisms/NousEquipe.vue';
 import { Pagination, Autoplay } from 'swiper/modules';
+import { useDisplay } from 'vuetify';
 
 export default {
 
@@ -117,7 +118,8 @@ export default {
 
   setup () {
 
-    const mobile = isMobile()
+    const display = useDisplay()
+    const mobile = isMobile(display)
 
     const engagements = computed({
 

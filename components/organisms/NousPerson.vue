@@ -36,6 +36,7 @@
 <script lang="ts">
 
 import { isMobile } from '~/ts/functions/composition/displayHelpers';
+import { useDisplay } from 'vuetify';
 import ClassicButton from '~/components/molecules/ClassicButton.vue';
 
 export default {
@@ -52,7 +53,8 @@ export default {
   },
 
   setup () {
-    const mobile = isMobile()
+    const display = useDisplay()
+    const mobile = isMobile(display)
     return {
       mobile
     }

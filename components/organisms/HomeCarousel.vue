@@ -28,13 +28,15 @@
 import { defineComponent } from 'vue'
 import { isMobile } from '~/ts/functions/composition/displayHelpers';
 import { Pagination, Autoplay } from 'swiper/modules';
+import { useDisplay } from 'vuetify';
 
 export default defineComponent({
 
   name: '',
 
   setup () {
-    const mobile = isMobile()
+    const display = useDisplay()
+    const mobile = isMobile(display)
     return {
       mobile,
       modules: [Pagination, Autoplay]

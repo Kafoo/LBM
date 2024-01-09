@@ -68,6 +68,7 @@ import SocialsIcons from '../atoms/SocialsIcons.vue'
 import FooterImage from '../molecules/FooterImage.vue'
 import FooterInfosDesktop from '../molecules/FooterInfosDesktop.vue'
 import { isMobile } from '~/ts/functions/composition/displayHelpers'
+import { useDisplay } from 'vuetify';
 
 export default defineComponent({
 
@@ -75,7 +76,8 @@ export default defineComponent({
 
   name: 'DefaultLayout',
   data () {
-    const mobile = isMobile()
+    const display = useDisplay()
+const mobile = isMobile(display)
     const { t } = useI18n()
     const localePath = useLocalePath()
 
@@ -95,8 +97,6 @@ export default defineComponent({
     const scrollUp = () => {
       const path = this.$router.currentRoute.value.path
       const localePath = useLocalePath()
-      console.log(path)
-      console.log(localePath('/legals'))
       if (path == localePath('/legals')) {
         window.scrollTo(0, 0)
       }
@@ -105,8 +105,7 @@ export default defineComponent({
     return {
       mobile,
       activities,
-      scrollUp,
-      localePath
+      scrollUp
     }
   }
 })

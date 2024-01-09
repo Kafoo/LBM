@@ -27,7 +27,7 @@ export default{
                agent.indexOf('FxiOS') == -1;
 
 
-    const position = agent.indexOf('Safari')
+    const position = agent.indexOf('ersion')
 
     const version = agent.substring(position+7,position+9)
 

@@ -55,7 +55,7 @@
       <div>
         {{ $t('footer.legal') }}
         <u>
-          <nuxt-link to="/legals" @click.stop="scrollUp">{{ $t('footer.uLegal') }}</nuxt-link>
+          <nuxt-link :to="localePath('/legals')" @click.stop="scrollUp">{{ $t('footer.uLegal') }}</nuxt-link>
         </u>
       </div>
     </v-footer>
@@ -77,6 +77,8 @@ export default defineComponent({
   data () {
     const mobile = isMobile()
     const { t } = useI18n()
+    const localePath = useLocalePath()
+
     const activities = [
       { name: t('footer.activities[0]') },
       { name: t('footer.activities[1]') },
@@ -93,6 +95,8 @@ export default defineComponent({
     const scrollUp = () => {
       const path = this.$router.currentRoute.value.path
       const localePath = useLocalePath()
+      console.log(path)
+      console.log(localePath('/legals'))
       if (path == localePath('/legals')) {
         window.scrollTo(0, 0)
       }
@@ -101,7 +105,8 @@ export default defineComponent({
     return {
       mobile,
       activities,
-      scrollUp
+      scrollUp,
+      localePath
     }
   }
 })

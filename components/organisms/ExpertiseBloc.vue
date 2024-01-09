@@ -55,22 +55,22 @@
       />
 
       <!--------- CAROUSEL POPUP OLD --------->
+      <!--
       <v-dialog v-if="popup" v-model="popup">
         <CarouselPopup
         @close="popup = false"
         :images="carouselImages"
         :ephemere="ephemere"/>
       </v-dialog>
+      -->
 
-      <!--------- CAROUSEL POPUP OLD --------->
-      <!--
+      <!--------- CAROUSEL POPUP --------->
       <CarouselCustomPopup
         v-if="popup"
         @close="popup = false"
         :images="carouselImages"
         :ephemere="ephemere"
       />
-      -->
 
     </v-sheet>
 

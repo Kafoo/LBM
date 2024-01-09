@@ -4,6 +4,7 @@
   <h3>Safari : {{ isSafari?'yes':'no' }}</h3>
   <h3>Version : {{ version }}</h3>
   <h3>Too old : {{ isTooOld?'yes':'no' }}</h3>
+  <span>{{ agent }}</span>
 </div>
 
 </template>

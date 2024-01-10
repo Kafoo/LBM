@@ -47,12 +47,6 @@ export default defineNuxtConfig({
     '@nuxtjs/sitemap'
   ],
 
-  router: {
-    options:{
-      strict: true
-    }
-  },
-
   i18n: {
     baseUrl: 'https://lesbonnesmanières.paris',
     locales: [

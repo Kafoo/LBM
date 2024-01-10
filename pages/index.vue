@@ -8,7 +8,7 @@
       <HomePicture/>
     </v-container>
 
-    <v-container>
+    <v-container :class="mobile?'mt-12':''">
 
       <HomeServices/>
 
@@ -22,7 +22,7 @@
 
     </v-container>
 
-    <HomeSquare/>
+    <HomeSquare :class="mobile?'mt-15':''"/>
 
     <v-container v-if="!mobile" class="mb-15">
       <ContactForm backgrounded/>
@@ -32,7 +32,7 @@
 
     <Confiance/>
 
-    <v-container v-if="mobile" class="mb-3">
+    <v-container v-if="mobile" class="mb-3 mt-8">
       <ContactForm backgrounded/>
     </v-container>
 

@@ -20,16 +20,32 @@
       mobile?'mb-6':'mt-8']">
 
         <!--------- TITLE --------->
+
+        <HorizontalDivider v-if="!mobile"/>
+        <h3
+        v-if="!mobile"
+        class="my-3 small line-spaced backgrounded"
+        :class="[mobile?'medium':'',
+        !reverse&&windowWidth>825?'text-left':'',
+        reverse&&windowWidth>825?'text-right':''
+        ]"
+        >
+          {{ title }}
+        </h3>
+        <HorizontalDivider v-if="!mobile"/>
+
+        <!--
         <HorizontalDivider v-if="!mobile"/>
         <ClassicTitle
         v-if="!mobile"
-        class="my-3 small"
+        class="my-3 small expertise-title"
         :text="[title]"
         :class="mobile?'medium':''"
         :left="!reverse&&windowWidth>825"
         :right="reverse&&windowWidth>825"
         backgrounded/>
         <HorizontalDivider v-if="!mobile"/>
+        -->
 
         <!--------- TEXT --------->
         <p
@@ -55,18 +71,16 @@
       />
 
       <!--------- CAROUSEL POPUP OLD --------->
-      <!--
-      <v-dialog v-if="popup" v-model="popup">
+      <v-dialog v-if="popup&&!isTooOld" v-model="popup">
         <CarouselPopup
         @close="popup = false"
         :images="carouselImages"
         :ephemere="ephemere"/>
       </v-dialog>
-      -->
 
-      <!--------- CAROUSEL POPUP --------->
+      <!--------- CAROUSEL POPUP FOR OLD SAFARI VERSION --------->
       <CarouselCustomPopup
-        v-if="popup"
+        v-if="popup&&isTooOld"
         @close="popup = false"
         :images="carouselImages"
         :ephemere="ephemere"
@@ -127,11 +141,31 @@ export default {
       carouselImages.push('/expertise-carousels/'+props.carouselName+'/'+(i+1)+'.jpg')
     }
 
+    // ------ FOR OLF SAFARI USERS ------
+    const agent = navigator.userAgent
+    var isSafari = navigator.vendor && navigator.vendor.indexOf('Apple') > -1 &&
+               agent &&
+               agent.indexOf('CriOS') == -1 &&
+               agent.indexOf('FxiOS') == -1;
+    const position = agent.indexOf('ersion')
+    const version = agent.substring(position+7,position+9)
+    const isTooOld = isSafari && parseInt(version) < 16
+    if (isTooOld) {      
+      watch(popup, (newValue) => {
+        if (newValue == true) {
+          document.documentElement.style.overflow = "hidden"
+        } else {
+          document.documentElement.style.overflow = "auto"
+        }
+      })
+    }
+
     return {
       mobile,
       popup,
       carouselImages,
-      windowWidth
+      windowWidth,
+      isTooOld
     }
   }
 }
@@ -151,6 +185,10 @@ export default {
   font-size: 18px;
   line-height: 30px;
 }
+}
+
+.expertise-title{
+  line-height: 37px;
 }
 
 .mobile-expertise-title{

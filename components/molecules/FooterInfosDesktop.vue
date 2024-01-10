@@ -99,8 +99,8 @@ p{
 
 .footer-activities{
   font-family: 'Montserrat';
-  font-size: 15px;
-  line-height: 22px;
+  font-size: 14px;
+  line-height: 21px;
   margin-bottom: 0px;
   letter-spacing: 1px;
 }

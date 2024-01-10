@@ -1,12 +1,12 @@
 <template>
+  <!--------- TITLE + TEXT + IMAGE --------->
   <v-sheet
   class="centering mx-auto flex-wrap flex-wrap-reverse"
   :class="mobile?'':'mb-15'"
   color="blue">
 
-    <!--------- TITLE + TEXT + IMAGE --------->
     <v-sheet
-    class="mb-8 d-flex flex-column backgrounded"
+    class="mb-8 d-flex flex-column"
     :class="mobile?'align-center':'pa-2'"
     position="relative"
     >
@@ -16,25 +16,37 @@
       :width="mobile?'85%':'450px'"
       class="d-flex flex-column bloc-title-text"
       :class="[mobile?'align-start':'align-end',
-      mobile?'mb-5':'ma-auto pr-10']">
+      mobile?'mb-5':'ma-auto pr-5']">
 
         <!--------- TITLE --------->
         <HorizontalDivider/>
+        <h2 
+        class="mt-2 mb-3 equipe-title backgrounded"
+        :class="mobile?'text-left medium':'text-right'">
+          {{ $t('nous.equipe.title') }}
+        </h2>
+        <HorizontalDivider/>
+
+        <!--
         <ClassicTitle
         class="mt-3 mb-4"
         :text="[$t('nous.equipe.title')]"
         :class="mobile?'medium':''"
         :left="mobile"
         :right="!mobile"/>
-        <HorizontalDivider/>
+        -->
 
         <!--------- TEXT --------->
         <p
-        class="bloc-text mt-8"
+        class="bloc-text backgrounded mt-8"
         :class="mobile?'text-left':'text-right'"
-        >{{ $t('nous.equipe.text') }}</p>
+        >{{ $t('nous.equipe.text1') }}</p>
         <p
-        class="bloc-text mt-1"
+        class="bloc-text backgrounded"
+        :class="mobile?'my-6 text-left':'my-3 text-right'"
+        >{{ $t('nous.equipe.text2') }}</p>
+        <p
+        class="bloc-text backgrounded mt-1"
         :class="mobile?'text-left':'text-right'"
         ><b>{{ $t('nous.equipe.last') }}</b></p>
 
@@ -114,9 +126,9 @@ export default {
 <style scoped>
 
 .bloc-text{
-  font-size: 13px;
-  line-height: 18px;
-  letter-spacing: 1px;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0px;
 }
 
 @media (max-width:982px) {
@@ -133,8 +145,8 @@ export default {
 
 @media (max-width:600px) {
   .bloc-text{
-    font-size: 17px;
-    line-height: 28px;
+    font-size: 15px;
+    line-height: 25px;
     text-align: start !important;
     letter-spacing: 0.5px;
   }

@@ -8,11 +8,18 @@
     <v-sheet class="mx-8 mt-0 mb-0 d-flex flex-column"
     position="relative"
     :class="mobile?'':'align-center'">
+        <h2 class="my-4"
+        :class="mobile?'text-left medium':'small'">
+          {{ $t('creations.subtitle') }}
+        </h2>
+
+        <!--
         <ClassicTitle
         class="my-4 small"
         :text="[$t('creations.subtitle')]"
         :class="mobile?'medium':''"
         :left="mobile"/>
+        -->
 
     </v-sheet>
 
@@ -85,10 +92,19 @@
     class="ma-6 d-flex flex-column creations-catch"
     position="relative"
     :class="mobile?'canvas backgrounded mt-3 mb-5 pa-4':'mb-0 mt-10 align-center'">
+        <h2
+        class="my-5 small line-spaced"
+        :class="!mobile?'backgrounded':''"
+        >
+          {{ $t('creations.catch') }}
+        </h2>
+
+        <!--
         <ClassicTitle
         class="my-4 small"
         :class="!mobile?'backgrounded':''"
         :text="[$t('creations.catch')]"/>
+        -->
 
     </v-sheet>
 

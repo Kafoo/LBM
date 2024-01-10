@@ -16,17 +16,23 @@
       </v-img>
       
       <div style="position: absolute;" class="d-flex flex-column align-center">
-        <ClassicTitle
-        v-if="mobile"
-        color='white'
-        spaced
-        :text="['Anything,', 'Anytime,', 'Anywhere']"
-        />
 
-        <ClassicTitle
-        v-else
-        color='white'
-        :text="['Anything, Anytime, Anywhere']"/>
+        <h1
+        v-if="mobile"
+        class="text-white mb-1"
+        >
+          <span style="display: block;" class="my-4">Anything,</span>
+          <span style="display: block;" class="my-4">Anytime,</span>
+          <span style="display: block;" class="my-4">Anywhere</span>
+        </h1>
+
+        <h1
+        v-if="!mobile"
+        class="text-white mb-1"
+        >
+          Anything, Anytime, Anywhere
+        </h1>
+
 
         <ClassicButton
         class="mt-7"

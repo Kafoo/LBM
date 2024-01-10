@@ -6,12 +6,22 @@
     position="relative"
     :class="mobile?'':'align-center'">
         <HorizontalDivider/>
+
+        <h2
+        class="mt-3 mb-4 pa-1 backgrounded"
+        :class="mobile?'medium text-left':''"
+        >
+          {{ $t('home.services.title') }}
+        </h2>
+        <HorizontalDivider/>
+
+        <!--
         <ClassicTitle
         class="my-3 pa-1 backgrounded"
         :text="[$t('home.services.title')]"
         :class="mobile?'medium':''"
         :left="mobile"/>
-        <HorizontalDivider/>
+        -->
 
     </v-sheet>
 

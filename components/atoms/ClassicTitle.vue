@@ -3,7 +3,7 @@
     <h1 v-for="line in text"
     v-bind:key="line"
     :class="['text-'+color,
-    letterSpaced?'lettter-spaced':'',
+    letterSpaced?'letter-spaced':'',
     wrap?'':'text-no-wrap',
     right?'text-right':
     left?'text-left':
@@ -55,10 +55,6 @@ export default {
 
 .classic-title{
   letter-spacing: 1px;
-}
-
-.classic-title.lettter-spaced{
-  letter-spacing: 3px;
 }
 
 </style>

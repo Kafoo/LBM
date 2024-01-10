@@ -30,12 +30,19 @@
     <!--------- ENGAGEMENTS --------->
     <div class="centering-column">
       <HorizontalDivider/>
+      <h2 class="mt-3 mb-4 small backgrounded"
+      :class="mobile?'text-left':''">
+        {{ $t('nous.engagements.title') }}
+      </h2>
+      <HorizontalDivider/>
+
+      <!--
       <ClassicTitle
       class="my-4 small"
       :text="[$t('nous.engagements.title')]"
       :class="mobile?'medium':''"
       :left="mobile"/>
-      <HorizontalDivider/>
+      -->
     </div>
 
     <!--------- ENGAGEMENTS IMAGES DESKTOP --------->
@@ -87,9 +94,9 @@
     class="d-flex flex-column nous-catch"
     :max-width="mobile?'':'600px'"
     :class="mobile?'canvas backgrounded mx-6 pa-4':'mx-auto mb-0 mt-10 align-center'">
-        <ClassicTitle
-        class="my-4 small"
-        :text="[$t('nous.end')]"/>
+        <h3 class="my-4 small">
+          {{ $t('nous.end') }}
+        </h3>
 
     </v-sheet>
 

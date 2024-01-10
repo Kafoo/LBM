@@ -7,12 +7,18 @@
       class="ma-6 mt-15 mb-10 d-flex flex-column align-center"
       position="relative">
         <HorizontalDivider/>
+        <h1 class="mt-4 mb-5 letter-spaced">
+          {{ text }}
+        </h1>
+
+        <!--
         <ClassicTitle
         class="my-4"
         :text="[text]"
         :class="mobile?'medium':''"
         :left="mobile"
         letterSpaced/>
+        -->
         <HorizontalDivider/>
 
     </v-sheet>

@@ -4,7 +4,17 @@
   :class="mobile?'align-left':'align-center text-center mb-8'"
   width="100%"
   >
-    <HorizontalDivider class="mt-5 mb-2"/>
+
+    <HorizontalDivider class="mt-5 mb-1"/>
+    <h2
+    class="medium my-2 line-spaced"
+    :class="mobile?'text-left':''"
+    >
+      We think out of the box
+    </h2>
+    <HorizontalDivider class="mt-2 mb-5"/>
+
+    <!--
     <ClassicTitle
     color='text'
     :text="['We think out of the box']"
@@ -12,10 +22,19 @@
     wrap
     :left="mobile"
     />
-    <HorizontalDivider class="mt-1 mb-5"/>
+    -->
+
     <span class="classic-text py-5 mb-5">
       {{ $t('home.square.text') }}
     </span>
+
+    <h3
+    class="xsmall mt-3 mb-5 text-left"
+    >
+      {{ $t('home.square.why') }}
+    </h3>
+
+    <!--
     <ClassicTitle
     color='text'
     left
@@ -23,6 +42,8 @@
     class="xsmall mt-3 mb-5 wrap-text"
     wrap
     />
+    -->
+    
     <v-sheet
     class="d-flex justify-center mt-5 canvas"
     max-width="900px"
@@ -90,9 +111,6 @@ export default {
 .checked-text{
   line-height: 25px;
 }
-}
-.wrap-text{
-  line-height: 34px;
 }
 
 </style>

@@ -51,12 +51,11 @@ export default {
   padding: 5px;
   line-height: 20px;
   margin-left: -5px;
-  margin-top: 0 !important;
 }
 
 .short .sous-image{
-  letter-spacing: 2px;
-  font-size: 15px;
+  letter-spacing: 3px;
+  font-size: 12px;
 }
 
 .picture-container{
@@ -93,6 +92,11 @@ export default {
   .picture-container.short{
     margin: 0;
     max-width: 100%;
+  }
+
+  .short .sous-image{
+    letter-spacing: 2px;
+    font-size: 15px;
   }
 
 }

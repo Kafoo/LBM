@@ -2,9 +2,20 @@
 
   <div>
 
+    <!-- SEO TITLE -->
+    <h1 style="display: none;">Notre Expertise</h1>
+
     <!--------- TITLE --------->
 
     <v-container :class="mobile?'mb-8 mt-4 line-height-2 px-0':'mb-15 mt-8'">
+      <h2
+      class="expertise-title mx-auto pa-3 line-spaced"
+      :class="mobile?'small text-left':''"
+      >
+        “{{ $t('expertise.title') }}“
+      </h2>
+
+      <!--
       <ClassicTitle
       class="title-container mx-auto pa-1"
       :class="mobile?'small':''"
@@ -12,6 +23,8 @@
       :left="mobile"
       quote
       />
+      -->
+
     </v-container>
 
     <!--------- BLOCS --------->
@@ -121,13 +134,19 @@ export default {
 
 }
 
+.expertise-title{
+  max-width: 1300px;
+  letter-spacing: 1.1;
+}
+
+
 
 .title-container{
   max-width: 1300px;
 }
 
 @media (max-width:600px) {
-.title-container{
+.title-container, .expertise-title{
   max-width: 90% !important;  
 }
 }

@@ -11,6 +11,24 @@
     :max-width="mobile?'350px':''"
     class="mt-8 d-flex flex-column"
     :class="!mobile?'align-end mr-5':'align-start'">
+
+      <h2
+      class="pa-1"
+      :class="[backgrounded?'backgrounded':'',
+      mobile?'small line-spaced text-left':'medium text-right']"
+      >
+        <span style="display: inline-block;">
+          {{ $t('contact.title.line1') }}
+        </span>
+        <span style="display: inline-block;">
+          {{ $t('contact.title.line2') }}
+        </span>
+        <span style="display: inline-block;">
+          {{ $t('contact.title.line3') }}
+        </span>
+      </h2>
+
+      <!--
       <ClassicTitle
       class="pa-1"
       :class="[backgrounded?'backgrounded':'',mobile?'small line-height-2':'medium']"
@@ -18,6 +36,8 @@
       :left="mobile"
       :text="[$t('contact.title.line1'), $t('contact.title.line2'), $t('contact.title.line3')]"
       />
+      -->
+      
       <p
       class="classic-text pa-1 mt-4"
       :class="[backgrounded?'backgrounded':'',mobile?'text-left break-max':'text-right']">
@@ -353,7 +373,8 @@ svg{
 }
 
 .classic-text{
-  max-width: 200px;
+  max-width: 250px;
+  line-height: 22px;
 }
 
 .break-max{

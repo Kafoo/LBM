@@ -12,12 +12,24 @@
       >
         <template v-slot:placeholder><AtomsProgress/></template>
       </v-img>
+
+      <h3
+      style="position: absolute;"
+      class="text-white line-spaced"
+      :class="mobile?'xsmall':'small'"
+      >
+        <span>Let's share who we are</span><br>
+        <span>watch what we do.</span>
+      </h3>
+
+      <!--
       <ClassicTitle
       style="position: absolute;"
       color='white'
       :class="mobile?'xsmall':'small'"
       :text="['Let\'s share who we are', 'watch what we do.']"
       />
+      -->
 
     </v-sheet>
 </template>

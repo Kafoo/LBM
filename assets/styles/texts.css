@@ -2,27 +2,47 @@ h1{
   font-weight: normal;
   font-family: 'Yeseva One';
   font-size: 48px;
-  margin-bottom: 5px;
+  color: #3A3D51;
   line-height: 1;
   margin: 0;
+  text-align: center;
 }
 
-h2{
+h2, h3{
+  font-weight: normal;
   font-family: 'Yeseva One';
-  font-size: 52pt;
-}
-
-h3{
-  font-family: 'Yeseva One';
-  font-size: 21pt;
-}
-
-p, .classic-text{
-  font-family: 'Montserrat';
-  font-size: 15px;
-  line-height: 26px;
-  max-width: 550px;
+  font-size: 45px;
   color: #3A3D51;
+  line-height: 1;
+  margin: 0;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+h2.medium, h3.medium{
+  font-size: 40px;
+}
+
+h2.small, h3.small{
+  font-size: 33px;
+}
+
+h2.xsmall, h3.xsmall{
+  font-size: 25px;
+}
+
+@media (max-width:600px) {
+  h2{
+    font-size: 40px;
+  }
+}
+
+.line-spaced{
+  line-height: 1.2;
+}
+
+.letter-spaced{
+  letter-spacing: 3px;
 }
 
 .classic-title{
@@ -46,10 +66,12 @@ p, .classic-text{
   line-height: 1.3;
 }
 
-.bold-text{
+p, .classic-text{
   font-family: 'Montserrat';
-  font-size: 19pt;
-  font-weight: bold;
+  font-size: 15px;
+  line-height: 26px;
+  max-width: 550px;
+  color: #3A3D51;
 }
 
 .Montserrat--text{

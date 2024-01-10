@@ -1,5 +1,9 @@
 <template>
   <div :class="mobile?'mt-0':'mt-8'">
+
+    <!-- SEO TITLE -->
+    <h1 style="display: none;">Contact</h1>
+
     <v-img
     :width="mobile?'95%':'100%'"
     :height="windowWidth<750?'200px':'300px'"

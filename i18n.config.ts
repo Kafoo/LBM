@@ -115,7 +115,8 @@ export default defineI18nConfig(() => ({
         ensemble: 'Together they created Les Bonnes Manières',
         equipe: {
           title: 'The team',
-          text: 'Les Bonnes Manières agency stands out for its values and a unique state of mind. Our sense of commitment and service, shared by a close-knit team, guarantees you total involvement in your project, both in France and abroad. Each member of our team makes it a priority to honor and build a privileged relationship with the customer, because we are convinced that the best projects are the result of a collaboration based on trust, transparency, and mutual goodwill.',
+          text1: 'Les Bonnes Manières agency stands out for its values and a unique state of mind. Our sense of commitment and service, shared by a close-knit team, guarantees you total involvement in your project, both in France and abroad.',
+          text2: 'Each member of our team makes it a priority to honor and build a privileged relationship with the customer, because we are convinced that the best projects are the result of a collaboration based on trust, transparency, and mutual goodwill.',
           last: 'At Les Bonnes Manières, you’ll find a team spirit like nowhere else.'
         },
         engagements: {
@@ -321,7 +322,8 @@ export default defineI18nConfig(() => ({
         ensemble: 'ensemble ils fondent les bonnes manières',
         equipe: {
           title: 'L’équipe',
-          text: 'L’Agence « Les Bonnes Manières » se démarque grâce à ses valeurs et son état d’esprit unique. Notre sens de l’engagement et du service, partagé par une équipe unie et soudée, vous garantit une implication totale dans votre projet tant en France qu’à l’international. Chaque membre de l’équipe met un point d’honneur à tisser des liens privilégiés et de confiance avec son client car nous sommes convaincus que les meilleurs projets résultent d’une collaboration dans la confiance, la transparence, et la bienveillance mutuelle.',
+          text1: 'L’Agence « Les Bonnes Manières » se démarque grâce à ses valeurs et son état d’esprit unique. Notre sens de l’engagement et du service, partagé par une équipe unie et soudée, vous garantit une implication totale dans votre projet tant en France qu’à l’international.',
+          text2: 'Chaque membre de l’équipe met un point d’honneur à tisser des liens privilégiés et de confiance avec son client car nous sommes convaincus que les meilleurs projets résultent d’une collaboration dans la confiance, la transparence, et la bienveillance mutuelle.',
           last: 'Chez Les Bonnes Manières, vous trouverez un esprit d’équipe comme nulle part ailleurs.'
         },
         engagements: {

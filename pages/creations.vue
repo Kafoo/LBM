@@ -25,14 +25,19 @@
 
     <!--------- TEXT --------->
     <v-sheet
-    class="centering text-center mt-0 mb-2 creations-text"
+    class="centering-column text-center mt-0 mb-2 creations-text"
     :class="mobile?'mx-8':'mx-auto'"
     max-width="400px">
       <p
-      class="text-black mb-3"
+      class="text-black mb-2"
       :class="mobile?'text-left':''"
       >{{ $t('creations.text') }}
-        <br> <b>{{ $t('creations.last') }}</b>
+      </p>
+      <p
+      class="text-black mb-3"
+      :class="mobile?'text-left align-self-start':''"
+      >
+        <b>{{ $t('creations.last') }}</b>
       </p>
     </v-sheet>
 
@@ -91,10 +96,10 @@
     <v-sheet
     class="ma-6 d-flex flex-column creations-catch"
     position="relative"
-    :class="mobile?'canvas backgrounded mt-3 mb-5 pa-4':'mb-0 mt-10 align-center'">
+    :class="mobile?'canvas backgrounded mt-10 mb-5 pa-4':'mb-0 mt-10 align-center'">
         <h2
-        class="my-5 small line-spaced"
-        :class="!mobile?'backgrounded':''"
+        class="my-5 line-spaced"
+        :class="!mobile?'small backgrounded':'ssmall'"
         >
           {{ $t('creations.catch') }}
         </h2>
@@ -164,17 +169,13 @@ export default {
   }
 
   .arrow-container{
-    margin: 30px auto 50px auto;
+    margin: 20px auto 50px auto;
   }
   
   
   .creations-text p{
     line-height: 27px;
     font-size: 17px;
-  }
-
-  .creations-catch{
-    font-size: 30px;
   }
 
 }

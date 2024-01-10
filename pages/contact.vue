@@ -16,12 +16,12 @@
     </v-img>
   <v-sheet
   class="d-flex flex-column justify-center canvas backgrounded text--text ma-auto"
-  :class="mobile?'align-left pa-2 mt-3 mb-8 mx-auto':'align-center text-center pa-10 mb-8'"
+  :class="mobile?'align-left pa-0 mt-3 mb-8 mx-auto':'align-center text-center pa-10 mb-8'"
   :width="mobile?'95%':'100%'"
   >
-    <v-container class="mb-3">
+    <div class="mb-3">
       <ContactForm/>
-    </v-container>
+    </div>
   </v-sheet>
   </div>
 

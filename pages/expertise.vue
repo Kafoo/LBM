@@ -7,9 +7,12 @@
 
     <!--------- TITLE --------->
 
-    <v-container :class="mobile?'mb-8 mt-4 line-height-2 px-0':'mb-15 mt-8'">
+    <v-container
+    :class="mobile?'mb-8 mt-4 line-height-2 px-0':'mb-15 mt-8'"
+    >
       <h2
-      class="expertise-title mx-auto pa-3 line-spaced"
+      style="max-width: 1100px;"
+      class="expertise-title mx-auto pa-3 line-spaced backgrounded"
       :class="mobile?'small text-left':''"
       >
         “{{ $t('expertise.title') }}“
@@ -43,11 +46,11 @@
     <!--------- SQUARE --------->
     <v-sheet
     class="text-text centering flex-column text-center canvas backgrounded"
-    :class="mobile?'mb-8 mx-5 pa-4':'mx-auto mb-10 pa-12'"
+    :class="mobile?'mb-8 mx-5 pa-6':'mx-auto mb-10 pa-12'"
     max-width="550px">
       <span
-      class="mb-1 canvas-title"
-      :class="mobile?'':'text-uppercase'">
+      class="mb-3 canvas-title"
+      :class="mobile?'mb-1':'text-uppercase'">
         {{ $t('expertise.square.title') }}
       </span>
       <span class="Montserrat--text canvas-text">{{ $t('expertise.square.text') }}</span>
@@ -63,7 +66,7 @@
     <div class="centering">
       <ClassicButton
       v-if="mobile"
-      class="mt-0 mb-15 mx-auto"
+      class="mt-3 mb-15 mx-auto"
       bold
       :text="$t('cta.contact')"
       :to="localePath('/contact')"/>
@@ -124,7 +127,7 @@ export default {
   }
 
   .canvas-text{
-    font-size: 18px;
+    font-size: 17px;
     line-height: 26px;
   }
 

@@ -7,13 +7,13 @@
 
     <!----------- TITLE ----------->
     <v-sheet
-    :width="mobile?'90%':'350px'"
-    :max-width="mobile?'350px':''"
+    :width="mobile?'90%':''"
+    :max-width="mobile?'350px':'355px'"
     class="mt-8 d-flex flex-column"
     :class="!mobile?'align-end mr-5':'align-start'">
 
       <h2
-      class="pa-1"
+      class="pa-1 line-spaced"
       :class="[backgrounded?'backgrounded':'',
       mobile?'small line-spaced text-left':'medium text-right']"
       >
@@ -50,6 +50,7 @@
     <v-sheet
     :width="mobile?'90%':'300px'"
     :max-width="mobile?'350px':''"
+    min-width="250px"
     class="Montserrat--text text--text font-weight-bold mt-6"
     >
       <v-form @submit.prevent v-model="form">

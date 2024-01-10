@@ -27,6 +27,10 @@ h2.small, h3.small{
   font-size: 33px;
 }
 
+h2.ssmall, h3.ssmall{
+  font-size: 30px;
+}
+
 h2.xsmall, h3.xsmall{
   font-size: 25px;
 }

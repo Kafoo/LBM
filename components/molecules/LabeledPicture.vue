@@ -13,7 +13,7 @@
           <template v-slot:placeholder><AtomsProgress/></template>
         </v-img>
         <v-sheet
-        :class="mobile?'px-6 mt-2':sm?'mt-1':'mt-3'">
+        :class="mobile?'px-4 mt-2':sm?'mt-1':'mt-3'">
           <p class="text-uppercase Yeseva--text sous-image backgrounded mt-3">{{ text }}</p>
         </v-sheet>
       </v-sheet>
@@ -96,7 +96,7 @@ export default {
 
   .short .sous-image{
     letter-spacing: 2px;
-    font-size: 15px;
+    font-size: 17px;
   }
 
 }

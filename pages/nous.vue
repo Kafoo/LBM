@@ -93,8 +93,8 @@
     <v-sheet
     class="d-flex flex-column nous-catch"
     :max-width="mobile?'':'600px'"
-    :class="mobile?'canvas backgrounded mx-6 pa-4':'mx-auto mb-0 mt-10 align-center'">
-        <h3 class="my-4 small">
+    :class="mobile?'canvas backgrounded mx-6 pa-4':'mx-auto mb-0 mt-10 align-center line-spaced'">
+        <h3 class="my-4 ssmall">
           {{ $t('nous.end') }}
         </h3>
 
@@ -238,7 +238,7 @@ export default {
 }
 
 .nous-catch{
-  margin-top: 100px;
+  margin-top: 150px;
   margin-bottom: 80px;
   font-size: 30px;
 }

@@ -32,9 +32,9 @@
 
     <Confiance/>
 
-    <v-container v-if="mobile" class="mb-3 mt-8">
+    <div v-if="mobile" class="mb-3 mt-8 mx-2">
       <ContactForm backgrounded/>
-    </v-container>
+    </div>
 
   </div>
 

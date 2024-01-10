@@ -14,6 +14,7 @@
     src="/ensemble.svg"
     height="100%"
     max-width="90%"
+    alt="together"
     ></v-img>
   </v-sheet>
 </template>

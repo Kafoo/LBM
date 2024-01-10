@@ -15,6 +15,7 @@
         cover
         src="/TextLogo.png"
         to="/"
+        alt="logo"
         >
           <template v-slot:placeholder><AtomsProgress/></template>
       </v-img>

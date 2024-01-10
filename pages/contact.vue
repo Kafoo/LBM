@@ -11,6 +11,7 @@
     cover
     :position="windowWidth>900?'0 40%':windowWidth>600?'0 48%':'0 58%'"
     src="/pictures/contact.jpg"
+    alt="contact"
     >
       <template v-slot:placeholder><AtomsProgress/></template>
     </v-img>

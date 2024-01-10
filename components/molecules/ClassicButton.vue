@@ -1,6 +1,6 @@
 <template>
     <v-btn
-    class="rounded-lg ma-5"
+    class="rounded-lg ma-5 classic-button"
     :class="[bold?'font-weight-bold':'',
     small?'small-button':'']"
     variant="outlined"
@@ -47,6 +47,10 @@ export default {
   }
 }
   
+.classic-button{
+  padding-top: 1px;
+}
+
 .small-button{
   font-size: 11px;
 }

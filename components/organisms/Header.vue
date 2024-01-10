@@ -19,6 +19,7 @@
       width="40px"
       height="60px"
       @click.stop="goHome"
+      alt="headlogo"
       >
       </v-img>
       <SocialsIcons class="hideOn920"/>

@@ -9,6 +9,7 @@
         cover
         :width="short&&mobile?'100%':'240px'"
         :height="short&&mobile?'460px':short?'320px':'400px'"
+        alt="creations"
         >
           <template v-slot:placeholder><AtomsProgress/></template>
         </v-img>

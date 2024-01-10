@@ -53,6 +53,7 @@ export default defineComponent({
 
 .v-icon:hover{
   cursor: pointer;
+  color: rgb(109, 109, 109) !important;
 }
 
 </style>

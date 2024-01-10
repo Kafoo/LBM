@@ -4,13 +4,12 @@
         class="d-flex justify-center flex-grow-1 align-center my-3"
         >
           <v-sheet class="mr-5">
-            <nuxt-link to="/version">
             <v-img
             src="/HeadTextLogo.png"
             width="120px"
+            alt="headlogo"
             >
             </v-img>
-            </nuxt-link>
           </v-sheet>
 
           <v-sheet class='footer-contact mx-3'>

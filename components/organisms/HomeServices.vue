@@ -2,7 +2,7 @@
   <div>
 
     <!--------- TITLE --------->
-    <v-sheet class="ma-6 mb-8 d-flex flex-column"
+    <v-sheet class="ma-6 mb-9 d-flex flex-column"
     position="relative"
     :class="mobile?'':'align-center'">
         <HorizontalDivider/>
@@ -31,7 +31,7 @@
       class="text-black"
       :class="mobile?'text-left':''"
       >{{ $t('home.services.text') }}
-        <br> <b>{{ $t('home.services.last') }}</b>
+        <br><br> <b>{{ $t('home.services.last') }}</b>
       </p>
     </v-sheet>
 
@@ -54,17 +54,17 @@
       }"
       :modules="modules"
     >
-      <swiper-slide class="slide"><v-img width="100%" height="100%" cover src="/pictures/Dior-303-crop.jpg"></v-img>
+      <swiper-slide class="slide"><v-img width="100%" height="100%" cover src="/pictures/Dior-303-crop.jpg" alt="dior"></v-img>
         <div class="carousel-title-container d-flex justify-center align-center">
           <div class="carousel-title text-uppercase text-center">{{ $t('home.services.picture1') }}</div>
         </div>
       </swiper-slide>
-      <swiper-slide class="slide"><v-img width="100%" height="100%" cover src="/pictures/Dior-784.jpg"></v-img>
+      <swiper-slide class="slide"><v-img width="100%" height="100%" cover src="/pictures/Dior-784.jpg" alt="dior"></v-img>
         <div class="carousel-title-container d-flex justify-center align-center">
           <div class="carousel-title text-uppercase text-center">{{ $t('home.services.picture2') }}</div>
         </div>
       </swiper-slide>
-      <swiper-slide class="slide"><v-img width="100%" height="100%" cover src="/pictures/alban_pichon_107.jpg"></v-img>
+      <swiper-slide class="slide"><v-img width="100%" height="100%" cover src="/pictures/alban_pichon_107.jpg" alt="pichon"></v-img>
         <div class="carousel-title-container d-flex justify-center align-center">
           <div class="carousel-title text-uppercase text-center">{{ $t('home.services.picture3') }}</div>
         </div>

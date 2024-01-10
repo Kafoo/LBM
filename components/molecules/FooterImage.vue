@@ -9,6 +9,7 @@
       height="100%"
       cover
       src="/pictures/Home.jpg"
+      alt="footer"
       >
         <template v-slot:placeholder><AtomsProgress/></template>
       </v-img>

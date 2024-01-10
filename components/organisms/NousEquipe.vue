@@ -69,27 +69,27 @@
         :modules="modules"
       >
         <swiper-slide>
-          <v-img class="equipe-image" src="/pictures/equipe-1.jpg">
+          <v-img class="equipe-image" src="/pictures/equipe-1.jpg" alt="team">
           </v-img>
         </swiper-slide>
         <swiper-slide>
-          <v-img class="equipe-image" src="/pictures/equipe-2.jpg">
+          <v-img class="equipe-image" src="/pictures/equipe-2.jpg" alt="team">
           </v-img>
         </swiper-slide>
         <swiper-slide>
-          <v-img class="equipe-image" src="/pictures/equipe-3.jpg">
+          <v-img class="equipe-image" src="/pictures/equipe-3.jpg" alt="team">
           </v-img>
         </swiper-slide>
         <swiper-slide>
-          <v-img class="equipe-image" src="/pictures/equipe-4.jpg">
+          <v-img class="equipe-image" src="/pictures/equipe-4.jpg" alt="team">
           </v-img>
         </swiper-slide>
         <swiper-slide>
-          <v-img class="equipe-image" src="/pictures/equipe-5.jpg">
+          <v-img class="equipe-image" src="/pictures/equipe-5.jpg" alt="team">
           </v-img>
         </swiper-slide>
         <swiper-slide>
-          <v-img class="equipe-image" src="/pictures/equipe-6.jpg">
+          <v-img class="equipe-image" src="/pictures/equipe-6.jpg" alt="team">
           </v-img>
         </swiper-slide>
       </swiper>

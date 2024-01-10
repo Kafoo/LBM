@@ -15,6 +15,7 @@
           src="/HeadLogo.png')"
           width="50px"
           class="mr-3"
+          alt="headlogo"
           >
           </v-img>
           <SocialsIcons class="mediumScreen"/>

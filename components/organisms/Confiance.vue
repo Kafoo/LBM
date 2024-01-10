@@ -20,6 +20,7 @@
         class="flex-grow-0"
         :src="'/brands/'+brand.name+'.svg'"
         :width="brand.size*150"
+        alt="brand"
         ></v-img>
       </div>
     </v-sheet>
@@ -53,6 +54,7 @@
           :src="'/brands/'+brand.name+'.svg'"
           :height="brand.size*88"
           :width="brand.size*150"
+          alt="brand"
           ></v-img>
         </swiper-slide>
       </swiper>

@@ -83,7 +83,9 @@
         <v-img
         width="100%"
         aspect-ratio="1.6"
-        :src="engagement.image"></v-img>
+        :src="engagement.image"
+        alt="commitment">
+        </v-img>
         <span class="engagement-title engagement-mobile-title">{{engagement.name}}</span>
       </swiper-slide>
     </swiper>
@@ -93,8 +95,9 @@
     <v-sheet
     class="d-flex flex-column nous-catch"
     :max-width="mobile?'':'600px'"
-    :class="mobile?'canvas backgrounded mx-6 pa-4':'mx-auto mb-0 mt-10 align-center line-spaced'">
-        <h3 class="my-4 ssmall">
+    :class="mobile?'canvas backgrounded mx-6 pa-4':'mx-auto mb-0 mt-10 align-center'">
+        <h3 
+        class="my-4 ssmall line-spaced">
           {{ $t('nous.end') }}
         </h3>
 

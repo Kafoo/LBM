@@ -33,7 +33,7 @@
         :modules="modules"
       >
         <swiper-slide v-for="image in images">
-          <v-img :src="image" height="100%">
+          <v-img :src="image" height="100%" alt="expertise">
             <template v-slot:placeholder><AtomsProgress/></template>
           </v-img>
         </swiper-slide>

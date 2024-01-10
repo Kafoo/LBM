@@ -34,10 +34,13 @@
       elevation="0"
       @click.stop="drawer = false"
       >
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path fill="black" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+        <!--
         <v-icon
         color="black"
         size="50px"
         >mdi-close</v-icon>
+        -->
       </v-btn>
 
 
@@ -53,6 +56,7 @@
           src="/HeadLogo.png"
           width="73px"
           height="90px"
+          alt="headlogo"
           >
             <template v-slot:placeholder><AtomsProgress/></template>
           </v-img>

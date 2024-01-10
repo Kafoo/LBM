@@ -47,8 +47,14 @@ export default defineNuxtConfig({
     '@nuxtjs/sitemap'
   ],
 
+  router: {
+    options:{
+      strict: true
+    }
+  },
+
   i18n: {
-    baseUrl: 'https://lesbonnesmanières.paris/',
+    baseUrl: 'https://lesbonnesmanières.paris',
     locales: [
       {
         code: 'fr',
@@ -62,7 +68,6 @@ export default defineNuxtConfig({
     defaultLocale: 'fr',
     detectBrowserLanguage: false,
     skipSettingLocaleOnNavigate: true,
-    //strategy: "prefix",
     vueI18n: './i18n.config.ts'
   },
 

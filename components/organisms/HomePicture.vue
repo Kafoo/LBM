@@ -11,6 +11,7 @@
       height="100%"
       cover
       src="/pictures/Home.jpg"
+      alt="home"
       >
         <template v-slot:placeholder><Progress/></template>
       </v-img>

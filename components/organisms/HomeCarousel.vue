@@ -13,12 +13,12 @@
     }"
     :modules="modules"
   >
-    <swiper-slide class="slide" v-if="!mobile"><img src="/pictures/dior-ailes.jpg"></swiper-slide>
-    <swiper-slide class="slide" v-if="mobile"><img src="/pictures/bar.jpg"></swiper-slide>
-    <swiper-slide class="slide"><img src="/pictures/parachute.jpg"></swiper-slide>
-    <swiper-slide class="slide"><img src="/pictures/soiree-rose.jpg"></swiper-slide>
-    <swiper-slide class="slide"><img src="/pictures/fingers.jpg"></swiper-slide>
-    <swiper-slide class="slide"><img src="/pictures/fish.jpg"></swiper-slide>
+    <swiper-slide class="slide" v-if="!mobile"><img src="/pictures/dior-ailes.jpg" alt="dior"></swiper-slide>
+    <swiper-slide class="slide" v-if="mobile"><img src="/pictures/bar.jpg" alt="bar"></swiper-slide>
+    <swiper-slide class="slide"><img src="/pictures/parachute.jpg" alt="parachute"></swiper-slide>
+    <swiper-slide class="slide"><img src="/pictures/soiree-rose.jpg" alt="party"></swiper-slide>
+    <swiper-slide class="slide"><img src="/pictures/fingers.jpg" alt="fingers"></swiper-slide>
+    <swiper-slide class="slide"><img src="/pictures/fish.jpg" alt="fish"></swiper-slide>
   </swiper>
 </template>
 

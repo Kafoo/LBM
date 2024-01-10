@@ -22,6 +22,9 @@
         :size="mobile?40:25"
         >mdi-instagram</v-icon>
       </a>
+      <a href="https://www.linkedin.com/company/les-bonnes-mani%C3%A8res-paris/"
+      target="_blank"
+      rel="noreferrer noopener">
       <v-icon
       class="ma-0 backgrounded"
       :class="mobile?'mx-2':'mr-1'"
@@ -29,6 +32,7 @@
       style="position: relative;"
       :size="mobile?40:25"
       >mdi-linkedin</v-icon>
+      </a>
   </div>
 </template>
 

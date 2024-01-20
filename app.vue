@@ -1,12 +1,16 @@
 <template>
   <v-app :class="backgroundClass" light>
-    <NuxtLayout>
+    <OrganismsMaintenance v-if="maintenance"/>
+    <NuxtLayout v-else>
       <NuxtPage/>
     </NuxtLayout>
   </v-app>
 </template>
 
 <script setup lang="ts">
+
+const mode = useRuntimeConfig().public.mode
+const maintenance = mode === 'maintenance'
 
 const i18nHead = useLocaleHead({
   addSeoAttributes: {}
@@ -27,7 +31,10 @@ const backgroundClass = computed({
     const localePath = useLocalePath()
     const page = localePath(route.value.path, 'fr')
 
-    if (page == '/') {
+
+    if (maintenance) {
+      return null
+    } else if (page == '/') {
       return 'home'
     } else if (page == '/expertise') {
       return 'expertise'
@@ -43,7 +50,6 @@ const backgroundClass = computed({
   set(newValue) {
   
   }
-
 
 })
 

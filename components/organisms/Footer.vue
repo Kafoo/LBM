@@ -16,6 +16,7 @@
         <v-img
         src="/HeadTextLogo.png"
         width="160px"
+        height="160px"
         alt="headlogo"
         >
         </v-img>

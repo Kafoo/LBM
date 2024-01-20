@@ -21,7 +21,7 @@
         <!--------- TITLE --------->
         <HorizontalDivider/>
         <h2 
-        class="mt-2 mb-3 equipe-title backgrounded"
+        class="my-3 equipe-title backgrounded"
         :class="mobile?'text-left medium':'text-right'">
           {{ $t('nous.equipe.title') }}
         </h2>

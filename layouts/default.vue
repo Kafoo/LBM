@@ -1,5 +1,6 @@
 <template>
 
+
   <MobileDrawer :head= "head"/>
 
   <ChooseLocation
@@ -12,7 +13,9 @@
   <HeaderVue :head= "head" />
 
     <v-main>
-      <slot />
+
+      <slot/>
+
     </v-main>
 
   <FooterVue/>
@@ -28,9 +31,10 @@ import MobileDrawer from '~/components/organisms/MobileDrawer.vue'
 import ChooseLocation from '~/components/atoms/ChooseLocation.vue'
 import { isMobile } from '~/ts/functions/composition/displayHelpers'
 import { useDisplay } from 'vuetify';
+import Maintenance from '~/components/organisms/maintenance.vue'
 
 export default {
-  components: { HeaderVue, FooterVue, TopLogo, MobileDrawer, ChooseLocation },
+  components: { HeaderVue, FooterVue, TopLogo, MobileDrawer, ChooseLocation, Maintenance },
   name: 'Default',
 
   setup () {

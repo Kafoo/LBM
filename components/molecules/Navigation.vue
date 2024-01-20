@@ -11,13 +11,21 @@
         <v-divider class="ma-0 mb-1" color="#00000070" vertical></v-divider>
       </v-card>
 
-      <nuxt-link
-      class="nuxt-link backgrounded text-uppercase ma-2 text-no-wrap"
-      :to="localePath(navItem.path)"
-      exact
-      >
-        {{ $t(`navigation.${navItem.name}`) }}
-      </nuxt-link>
+      <div style="position: relative;">
+        <span class="invisible-item text-uppercase ma-2 text-no-wrap">
+          {{ $t(`navigation.${navItem.name}`) }}
+        </span>
+        <div class="item-container">
+          <nuxt-link
+          class="nuxt-link backgrounded text-uppercase  text-no-wrap"
+          :to="localePath(navItem.path)"
+          exact
+          >
+            {{ $t(`navigation.${navItem.name}`) }}
+          </nuxt-link>
+        </div>
+      </div>
+
 
     </div>
 
@@ -64,14 +72,25 @@ export default {
 
 <style scoped>
 
+.invisible-item{
+  visibility: hidden;
+}
 
-.nuxt-link{
+.nuxt-link, .invisible-item{
   font-family:'Montserrat';
   font-size: 11pt;
   padding: 5px;
   font-weight: lighter;
   text-decoration: none;
   color: black;
+}
+
+.item-container{
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-align: center;
 }
 
 @media (max-width: 750px) {

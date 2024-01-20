@@ -10,12 +10,13 @@
       width="100%"
       height="100%"
       cover
-      src="/pictures/Home.jpg"
+      lazy-src="/pictures/lowHome.jpg"
+      src="/pictures/Home3.jpg"
       alt="home"
       >
         <template v-slot:placeholder><Progress/></template>
       </v-img>
-      
+
       <div style="position: absolute;" class="d-flex flex-column align-center">
 
         <h1

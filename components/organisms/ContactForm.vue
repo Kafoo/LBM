@@ -219,7 +219,7 @@ export default defineComponent({
     const message = ref(undefined)
 
     const display = useDisplay()
-const mobile = isMobile(display)
+    const mobile = isMobile(display)
     const { t } = useI18n()
 
     const form = ref(false)
@@ -234,6 +234,27 @@ const mobile = isMobile(display)
       guests.value = undefined
       eventDate.value = undefined
       message.value = undefined
+    }
+
+    const logit = (status:string, errors?:Object) => {
+      useFetch('https://lbmapi.fr/api/logit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: {
+          status,
+          errors,
+          name: name.value,
+          email: email.value,
+          phone: phoneNumber.value,
+          eventtype: eventType.value,
+          guests: guests.value,
+          eventdate: eventDate.value,
+          message: message.value,
+        },
+      });
+
     }
 
     const submitForm = () => {
@@ -261,16 +282,18 @@ const mobile = isMobile(display)
 
           // ------ SUCCESS ------ 
           if (response.status.value == 'success') {
+            logit('success')
             alert.value = {msg:t('alerts.form.success'), type:'success'}
             resetValues()
 
           // ------ ERRORS ------ 
           } else {
             const errors = response.error.value.data.errors
-            if (errors.mail) {              
+            logit('error', errors)
+            if (errors.email) {              
               alert.value = {
                 msg: t('alerts.form.error.general'),
-                info: t(errors.mail[0]),
+                info: t(errors.email[0]),
                 type: 'error'
               }
             } else if (errors.name) {              
@@ -301,6 +324,7 @@ const mobile = isMobile(display)
 
       // ------ FAIL ------
       } catch (error) {
+        logit('error', 'catch')
         alert.value = {
           msg:t('alerts.form.error.general'),
           info:t('alerts.form.error.basicInfo'),

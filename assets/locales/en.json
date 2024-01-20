@@ -1,0 +1,189 @@
+{
+
+      "navigation": {
+        "expertise": "our expertise",
+        "creations": "our creations",
+        "nous": "who are we",
+        "contact": "contact"
+      },
+
+      "home": {
+        "services": {
+          "title": "Our services",
+          "text": "Les Bonnes Manières is an event agency that collaborates with the biggest players in the luxury industry to create extraordinary, memorable events. Our commitment lies in the art of thinking and shaping each events into an unforgettable experience, carefully curated and including the customer at the heart of every experience.",
+          "last": "Discover the art of celebration with Les Bonnes Manières!",
+          "picture1": "Corporate events and product launches",
+          "picture2": "Seminars / Team building",
+          "picture3": "Ephemeral spaces / booths"
+        },
+        "square": {
+          "text": "We make your dreams come true, with a special commitment to exceed your expectations. Our collaborative approach allows us to create events that reflect the essence of our customers while surprising them at the same time.",
+          "why": "Why should we work together ?",
+          "reason1": "For our in-depth commitment to  the codes and requirements of the sector.",
+          "reason2": "For our strong knowledge and expertise of the travel retail industry.",
+          "reason3": "For our reliability and legitimacy as an agency recognized for over 25 years."
+        }
+      },
+
+      "expertise":{
+        "title": "We create exclusive experiences that transcend borders and combine unique refinement and creativity.",
+        "blocs":[
+          {
+            "title": "Seminars / Team building", 
+            "text": "We create  exclusive experiences tailored around your needs and products and your company DNA that transcend borders and combine refinement and uniqueness . From the concept to the execution, we organize corporate seminars that reflect your image, where elegance and conviviality come together to create outstanding memorable experiences.",
+            "image": "/pictures/soiree-terrasse.jpg",
+            "cta": "Discover our seminars"
+          },
+          {
+            "title": "Corporate events and product launches", 
+            "text": "We handle every step of your event with integrity, passion and precision. Our dedicated team is committed to creating exceptional moments where professionalism, creativity and uniqueness come together to create an unforgettable experience.",
+            "image": "/pictures/caviar.jpg",
+            "cta": "Discover our corporate events"
+          },
+          {
+            "title": "Ephemeral spaces", 
+            "text": "We design elegant, custom-made stands and pop-up stores for every one of our customers. No matter what the occasion is, we are committed to sublimate your spaces to leave a lasting impression in the mind of your guests.",
+            "image": "/pictures/scooter.jpg",
+            "cta": "Discover our activations"
+          },
+          {
+            "title": "Our technical expertise", 
+            "text": "Our team takes care of all the services required for your event, from the technical to the artistic, location, catering… Nothing is left to chance. Our aim is to offer you a high-performance scenography and optimal rendering.",
+            "image": "/pictures/regie.jpg",
+            "cta": "Discover our expertise"
+          }
+        ],
+        "square": {
+          "title": "Our little extra ?",
+          "text": "We put exceptional locations at your disposal, frequently offering you the privilege of being among the first to experience it."
+        }
+      },
+
+      "creations": {
+        "title": "Our creations",
+        "subtitle": "A picture is worth a thousand words.",
+        "text": "Every collaboration is unique, and that’s what we focus on.",
+        "last": "Discover our latest events",
+        "images":[
+          {
+            "title": "Unique artistic creation",
+            "src": "/pictures/couple.jpg"
+          },
+          {
+            "title": "Executing priceless memories",
+            "src": "/pictures/villa.jpg"
+          },
+          {
+            "title": "Immersive sensorial experience",
+            "src": "/pictures/dessert.jpg"
+          },
+          {
+            "title": "The sky is the limit",
+            "src": "/pictures/feux.jpg"
+          },
+          {
+            "title": "A unique decor that stimulates the senses",
+            "src": "/pictures/fleurs.jpg"
+          },
+          {
+            "title": "Detail oriented",
+            "src": "/pictures/livres.jpg"
+          }
+        ],
+        "catch": "Exclusive events, priceless memories"
+      },
+
+      "nous": {
+        "title": "Who are we ?",
+        "nadia": {
+          "name": "Nadia Skouri",
+          "fonction": "Founder and President",
+          "description": "With more than 20 years’ experience in marketing, travel retail and the luxury sector at an international scale, Nadia understands and masters the imperatives of high standards, innovation and perfection that the luxury industry requires."
+        },
+        "marc": {
+          "name": "Marc Ruiz",
+          "fonction": "Partner",
+          "description": "Thanks to his unique approach and meticulous execution, Marc has successfully developed, for more than 20 years, a recognized group in the event industry: Creative spirit has produced over 1000 events to date."
+        },
+        "ensemble": "Together they created Les Bonnes Manières",
+        "equipe": {
+          "title": "The team",
+          "text1": "Les Bonnes Manières agency stands out for its values and a unique state of mind. Our sense of commitment and service, shared by a close-knit team, guarantees you total involvement in your project, both in France and abroad.",
+          "text2": "Each member of our team makes it a priority to honor and build a privileged relationship with the customer, because we are convinced that the best projects are the result of a collaboration based on trust, transparency, and mutual goodwill.",
+          "last": "At Les Bonnes Manières, you’ll find a team spirit like nowhere else."
+        },
+        "engagements": {
+          "title": "Our commitments",
+          "engag1": "Innovation",
+          "engag2": "Precision",
+          "engag3": "Wonders"
+        },
+        "end": "“We use our signature as a guarantee of quality.“"
+      },
+
+      "contact": {
+        "title": {
+          "line1": "Need a quote",
+          "line2": "for your",
+          "line3": "project ?"
+        },
+        "text": "We’ll be delighted to work with you, whether your project is defined or not! Just fill in our form, share your ideas and we will get back to you as soon as possible.",
+        "form": {
+          "name": "Surname - First name",
+          "email": "Email",
+          "phone": "Phone number",
+          "eventType": "Event type",
+          "guests": "Number of Guests",
+          "date": "Date of the event",
+          "message": "Your message",
+          "submit": "Send",
+          "dateplaceholder": "DD / MM / YYYY"
+        }
+      },
+
+      "confiance": "They trusted us",
+      "cta": {
+        "expertise": "discover our expertise",
+        "creations": "discover our creations",
+        "contact": "contact us"
+      },
+
+      "footer": {
+        "activities":[
+          "Creative concept",
+          "Digital, physical, hybrid strategy",
+          "Content creation",
+          "Graphic design",
+          "Pop-up store",
+          "Scenography and space design",
+          "Logistics and Production",
+          "Technical",
+          "Corporate events",
+          "Corporate seminars"
+        ],
+        "legal": "Official website: Les Bonnes Manières. All rights reserved - © 2023 - ",
+        "uLegal": "legal notice"
+      },
+
+      "alerts": {
+        "form": {
+          "success": "Your contact form has been sent.",
+          "error": {
+            "general": "Sorry, something went wrong",
+            "basicInfo": "You can try again, or contact us by phone or email."
+          }
+        }
+      },
+
+      "404": {
+        "title": "Oops",
+        "text": "It seems you got lost !",
+        "home": "go to homepage"
+      },
+
+      "The email field is required": "The email field is required.",
+      "The message field is required": "The message field is required.",
+      "The name field is required": "The name field is required.",
+      "The email must be a valid email address": "The email must be a valid email address."
+
+    }

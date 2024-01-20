@@ -7,6 +7,7 @@
             <v-img
             src="/HeadTextLogo.png"
             width="120px"
+            height="120px"
             alt="headlogo"
             >
             </v-img>
@@ -102,6 +103,11 @@ p{
   line-height: 21px;
   margin-bottom: 0px;
   letter-spacing: 1px;
+}
+
+.v-icon:hover{
+  cursor: pointer;
+  color: rgb(109, 109, 109) !important;
 }
 
 </style>

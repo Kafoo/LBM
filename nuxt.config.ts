@@ -25,6 +25,12 @@ export default defineNuxtConfig({
     pageTransition: { name: 'page', mode: 'out-in' }
   },
 
+  runtimeConfig: {
+    public: {
+      mode: process.env.MODE ?? 'production',
+    }
+  },
+
   ssr: false,
   devtools: { enabled: true },
 
@@ -52,11 +58,13 @@ export default defineNuxtConfig({
     locales: [
       {
         code: 'fr',
-        iso: 'fr-FR'
+        iso: 'fr-FR',
+        file: 'assets/locales/fr.json'
       },
       {
         code: 'en',
-        iso: 'en-US'
+        iso: 'en-US',
+        file: 'assets/locales/en.json'
       }
     ],
     defaultLocale: 'fr',
@@ -72,6 +80,7 @@ export default defineNuxtConfig({
   },
 
   googleFonts: {
+    preload: true,
     download: true,
     outputDir: 'assets/googlefonts',
     families: {

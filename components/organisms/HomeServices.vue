@@ -26,9 +26,9 @@
     </v-sheet>
 
     <!--------- TEXT --------->
-    <v-sheet class="centering text-center backgrounded ma-6 mb-15 services-text">
+    <v-sheet class="centering text-center ma-6 mb-15 services-text">
       <p
-      class="text-black"
+      class="text-black backgrounded"
       :class="mobile?'text-left':''"
       >{{ $t('home.services.text') }}
         <br><br> <b>{{ $t('home.services.last') }}</b>

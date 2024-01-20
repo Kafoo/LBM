@@ -64,7 +64,7 @@
 
     <!--------- ENGAGEMENTS IMAGES MOBILE --------->
     <swiper
-      v-else
+      v-if="mobile"
       class="engagements-carousel mx-5 mt-10 mb-15"
       slidesPerView="auto"
       spaceBetween="10"
@@ -130,12 +130,12 @@ export default {
 
     const display = useDisplay()
     const mobile = isMobile(display)
+    const { t } = useI18n()
 
     const engagements = computed({
 
       get() {
 
-        const { t } = useI18n()
 
         return [
           {

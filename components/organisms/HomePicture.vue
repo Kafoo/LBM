@@ -10,8 +10,7 @@
       width="100%"
       height="100%"
       cover
-      lazy-src="/pictures/lowHome.jpg"
-      src="/pictures/Home3.jpg"
+      src="/pictures/Home.jpg"
       alt="home"
       >
         <template v-slot:placeholder><Progress/></template>

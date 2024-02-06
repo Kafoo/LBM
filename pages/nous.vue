@@ -36,13 +36,6 @@
       </h2>
       <HorizontalDivider/>
 
-      <!--
-      <ClassicTitle
-      class="my-4 small"
-      :text="[$t('nous.engagements.title')]"
-      :class="mobile?'medium':''"
-      :left="mobile"/>
-      -->
     </div>
 
     <!--------- ENGAGEMENTS IMAGES DESKTOP --------->
@@ -110,7 +103,6 @@
 <script lang="ts">
 
 import { isMobile } from '~/ts/functions/composition/displayHelpers';
-import ClassicTitle from '~/components/atoms/ClassicTitle.vue';
 import HorizontalDivider from '~/components/atoms/HorizontalDivider.vue';
 import ClassicButton from '~/components/molecules/ClassicButton.vue';
 import PageTitle from '~/components/atoms/PageTitle.vue';
@@ -124,7 +116,7 @@ export default {
 
   name: 'CreationsPage',
 
-  components: { ClassicTitle, HorizontalDivider, ClassicButton, PageTitle, NousPerson, NousEnsemble, NousEquipe },
+  components: { HorizontalDivider, ClassicButton, PageTitle, NousPerson, NousEnsemble, NousEquipe },
 
   setup () {
 

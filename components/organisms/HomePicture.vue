@@ -10,6 +10,7 @@
       width="100%"
       height="100%"
       cover
+      lazy-src="/low/Home.jpg"
       src="/pictures/Home.jpg"
       alt="home"
       >
@@ -64,7 +65,6 @@
 
 import { defineComponent } from 'vue'
 import ArrowIcon from '~/components/atoms/ArrowIcon.vue'
-import ClassicTitle from '~/components/atoms/ClassicTitle.vue'
 import ClassicButton from '~/components/molecules/ClassicButton.vue'
 import Progress from '../atoms/Progress.vue'
 import { isMobile } from '~/ts/functions/composition/displayHelpers'
@@ -74,7 +74,7 @@ export default defineComponent({
 
   name: 'HomePicture',
 
-  components: { ClassicTitle, ClassicButton, ArrowIcon, Progress },
+  components: { ClassicButton, ArrowIcon, Progress },
 
   setup () {
     const display = useDisplay()

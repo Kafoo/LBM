@@ -11,14 +11,6 @@
           {{ text }}
         </h1>
 
-        <!--
-        <ClassicTitle
-        class="my-4"
-        :text="[text]"
-        :class="mobile?'medium':''"
-        :left="mobile"
-        letterSpaced/>
-        -->
         <HorizontalDivider/>
 
     </v-sheet>
@@ -44,7 +36,6 @@
 <script lang="ts">
 
 import { isMobile } from '~/ts/functions/composition/displayHelpers';
-import ClassicTitle from './ClassicTitle.vue';
 import HorizontalDivider from './HorizontalDivider.vue';
 import { useDisplay } from 'vuetify';
 
@@ -56,7 +47,7 @@ export default {
     text: { type: String, default: ''}
   },
 
-  components: { ClassicTitle, HorizontalDivider },
+  components: { HorizontalDivider },
 
   setup () {
     const display = useDisplay()

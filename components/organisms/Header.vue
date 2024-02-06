@@ -22,7 +22,7 @@
       alt="headlogo"
       >
       </v-img>
-      <SocialsIcons class="hideOn920"/>
+      <SocialsIcons class="header-socials"/>
     </v-toolbar-items>
 
     <NavigationVue/>
@@ -92,6 +92,12 @@ export default {
   visibility: visible;
   opacity: 1;
   transition: visibility 0.08s, opacity 0.08s linear;
+}
+
+@media (max-width: 860px) {
+  .header-socials{
+    display: none !important;
+  }
 }
 
 </style>

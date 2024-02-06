@@ -27,15 +27,6 @@
         </h2>
         <HorizontalDivider/>
 
-        <!--
-        <ClassicTitle
-        class="mt-3 mb-4"
-        :text="[$t('nous.equipe.title')]"
-        :class="mobile?'medium':''"
-        :left="mobile"
-        :right="!mobile"/>
-        -->
-
         <!--------- TEXT --------->
         <p
         class="bloc-text backgrounded mt-8"
@@ -100,7 +91,6 @@
 <script lang="ts">
 
 import { isMobile } from '~/ts/functions/composition/displayHelpers';
-import ClassicTitle from '../atoms/ClassicTitle.vue';
 import HorizontalDivider from '../atoms/HorizontalDivider.vue';
 import { Pagination, Autoplay } from 'swiper/modules';
 import { useDisplay } from 'vuetify';
@@ -109,7 +99,7 @@ export default {
 
   name: 'NousEquipe',
 
-  components: { ClassicTitle, HorizontalDivider },
+  components: { HorizontalDivider },
 
   setup () {
     const display = useDisplay()

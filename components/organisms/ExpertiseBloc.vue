@@ -34,19 +34,6 @@
         </h3>
         <HorizontalDivider v-if="!mobile"/>
 
-        <!--
-        <HorizontalDivider v-if="!mobile"/>
-        <ClassicTitle
-        v-if="!mobile"
-        class="my-3 small expertise-title"
-        :text="[title]"
-        :class="mobile?'medium':''"
-        :left="!reverse&&windowWidth>825"
-        :right="reverse&&windowWidth>825"
-        backgrounded/>
-        <HorizontalDivider v-if="!mobile"/>
-        -->
-
         <!--------- TEXT --------->
         <p
         class="bloc-text"
@@ -104,7 +91,6 @@
 <script lang="ts">
 
 import { isMobile, useWindowWidth } from '~/ts/functions/composition/displayHelpers';
-import ClassicTitle from '../atoms/ClassicTitle.vue';
 import HorizontalDivider from '../atoms/HorizontalDivider.vue';
 import ClassicButton from '../molecules/ClassicButton.vue';
 import CarouselPopup from '../organisms/CarouselPopup.vue'
@@ -115,7 +101,7 @@ export default {
 
   name: 'ExpertiseBloc',
 
-  components: { ClassicTitle, HorizontalDivider, ClassicButton, CarouselPopup, CarouselCustomPopup },
+  components: { HorizontalDivider, ClassicButton, CarouselPopup, CarouselCustomPopup },
 
   props: {
     title: { type: String, default: '' },

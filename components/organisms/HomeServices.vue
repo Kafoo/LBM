@@ -15,14 +15,6 @@
         </h2>
         <HorizontalDivider/>
 
-        <!--
-        <ClassicTitle
-        class="my-3 pa-1 backgrounded"
-        :text="[$t('home.services.title')]"
-        :class="mobile?'medium':''"
-        :left="mobile"/>
-        -->
-
     </v-sheet>
 
     <!--------- TEXT --------->
@@ -128,7 +120,6 @@
 import { defineComponent } from 'vue'
 import HorizontalDivider from '~/components/atoms/HorizontalDivider.vue'
 import LabeledPicture from '~/components/molecules/LabeledPicture.vue'
-import ClassicTitle from '~/components/atoms/ClassicTitle.vue'
 import { isMobile } from '~/ts/functions/composition/displayHelpers'
 import { Pagination, Autoplay } from 'swiper/modules';
 import { useDisplay } from 'vuetify';
@@ -137,7 +128,7 @@ export default defineComponent({
 
   name: '',
 
-  components: { LabeledPicture, HorizontalDivider, ClassicTitle },
+  components: { LabeledPicture, HorizontalDivider },
 
   setup () {
     const display = useDisplay()

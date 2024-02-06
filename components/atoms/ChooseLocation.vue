@@ -1,7 +1,6 @@
 <template>
     <v-toolbar-items
-    style="position: absolute; right: 15px;"
-    class="d-flex align-center Montserrat--text"
+    class="choose-location d-flex align-center Montserrat--text"
     >
 
       <p
@@ -65,6 +64,18 @@ export default {
 </script>
 
 <style scoped>
+
+.choose-location{
+  position: absolute;
+  right: 15px;
+}
+
+@media (max-width: 860px) {
+  .choose-location{
+    right: 0px;
+  }
+}
+
 .location {
   font-weight: bolder;
   text-shadow: none;

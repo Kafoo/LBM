@@ -14,16 +14,6 @@
     </h2>
     <HorizontalDivider class="mt-2 mb-5"/>
 
-    <!--
-    <ClassicTitle
-    color='text'
-    :text="['We think out of the box']"
-    class="medium wrap-text my-2"
-    wrap
-    :left="mobile"
-    />
-    -->
-
     <span class="classic-text py-5 mb-5">
       {{ $t('home.square.text') }}
     </span>
@@ -34,16 +24,6 @@
       {{ $t('home.square.why') }}
     </h3>
 
-    <!--
-    <ClassicTitle
-    color='text'
-    left
-    :text="[$t('home.square.why')]"
-    class="xsmall mt-3 mb-5 wrap-text"
-    wrap
-    />
-    -->
-    
     <v-sheet
     class="d-flex justify-center mt-5 canvas"
     max-width="900px"
@@ -80,7 +60,6 @@
 <script lang="ts">
 
 import HorizontalDivider from '../atoms/HorizontalDivider.vue'
-import ClassicTitle from '../atoms/ClassicTitle.vue'
 import ClassicButton from '../molecules/ClassicButton.vue'
 import { isMobile } from '~/ts/functions/composition/displayHelpers'
 import { useDisplay } from 'vuetify';
@@ -96,7 +75,7 @@ export default {
       localePath
     }
   },
-  components: { HorizontalDivider, ClassicTitle, ClassicButton }
+  components: { HorizontalDivider, ClassicButton }
 }
 
 </script>

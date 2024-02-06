@@ -18,16 +18,6 @@
         “{{ $t('expertise.title') }}“
       </h2>
 
-      <!--
-      <ClassicTitle
-      class="title-container mx-auto pa-1"
-      :class="mobile?'small':''"
-      :text="[$t('expertise.title')]"
-      :left="mobile"
-      quote
-      />
-      -->
-
     </v-container>
 
     <!--------- BLOCS --------->
@@ -79,7 +69,6 @@
 
 <script lang="ts">
 
-import ClassicTitle from '~/components/atoms/ClassicTitle.vue';
 import ExpertiseBloc from '~/components/organisms/ExpertiseBloc.vue';
 import ClassicButton from '~/components/molecules/ClassicButton.vue';
 import { isMobile } from '~/ts/functions/composition/displayHelpers';
@@ -87,7 +76,7 @@ import { useDisplay } from 'vuetify';
 
 export default {
     name: 'ExpertisePage',
-    components: { ClassicTitle, ExpertiseBloc, ClassicButton },
+    components: { ExpertiseBloc, ClassicButton },
     setup() {
         const display = useDisplay()
         const mobile = isMobile(display);

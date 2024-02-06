@@ -27,16 +27,6 @@
           {{ $t('contact.title.line3') }}
         </span>
       </h2>
-
-      <!--
-      <ClassicTitle
-      class="pa-1"
-      :class="[backgrounded?'backgrounded':'',mobile?'small line-height-2':'medium']"
-      :right="!mobile"
-      :left="mobile"
-      :text="[$t('contact.title.line1'), $t('contact.title.line2'), $t('contact.title.line3')]"
-      />
-      -->
       
       <p
       class="classic-text pa-1 mt-4"
@@ -193,7 +183,6 @@
 
 import { defineComponent } from 'vue'
 import ClassicButton from '../molecules/ClassicButton.vue'
-import ClassicTitle from '../atoms/ClassicTitle.vue'
 import Alert from '../molecules/Alert.vue'
 import { isMobile } from '~/ts/functions/composition/displayHelpers'
 import { useDisplay } from 'vuetify';
@@ -202,7 +191,7 @@ export default defineComponent({
 
   name: 'ContactForm',
 
-  components: { ClassicButton, ClassicTitle, Alert },
+  components: { ClassicButton, Alert },
 
   props: {
     backgrounded: { type:Boolean, default: false}
@@ -236,8 +225,8 @@ export default defineComponent({
       message.value = undefined
     }
 
-    const logit = (status:string, errors?:Object) => {
-      useFetch('https://lbmapi.fr/api/logit', {
+    const sendContact = (status:string, errors?:Object) => {
+      useFetch('https://lbmapi.fr/api/sendcontact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -282,31 +271,39 @@ export default defineComponent({
 
           // ------ SUCCESS ------ 
           if (response.status.value == 'success') {
-            logit('success')
+            sendContact('success')
             alert.value = {msg:t('alerts.form.success'), type:'success'}
             resetValues()
 
           // ------ ERRORS ------ 
           } else {
-            const errors = response.error.value.data.errors
-            logit('error', errors)
-            if (errors.email) {              
-              alert.value = {
-                msg: t('alerts.form.error.general'),
-                info: t(errors.email[0]),
-                type: 'error'
-              }
-            } else if (errors.name) {              
-              alert.value = {
-                msg: t('alerts.form.error.general'),
-                info: t(errors.name[0]),
-                type: 'error'
-              }
-            } else if (errors.message) {              
-              alert.value = {
-                msg: t('alerts.form.error.general'),
-                info: t(errors.message[0]),
-                type: 'error'
+            if (response.error.value.data) {              
+              const errors = response.error.value.data.errors
+              sendContact('error', errors)
+              if (errors.email) {              
+                alert.value = {
+                  msg: t('alerts.form.error.general'),
+                  info: t(errors.email[0]),
+                  type: 'error'
+                }
+              } else if (errors.name) {              
+                alert.value = {
+                  msg: t('alerts.form.error.general'),
+                  info: t(errors.name[0]),
+                  type: 'error'
+                }
+              } else if (errors.message) {              
+                alert.value = {
+                  msg: t('alerts.form.error.general'),
+                  info: t(errors.message[0]),
+                  type: 'error'
+                }
+              } else {
+                alert.value = {
+                  msg:t('alerts.form.error.general'),
+                  info:t('alerts.form.error.basicInfo'),
+                  type:'error'
+                }
               }
             } else {
               alert.value = {
@@ -324,7 +321,7 @@ export default defineComponent({
 
       // ------ FAIL ------
       } catch (error) {
-        logit('error', 'catch')
+        sendContact('error', 'catch')
         alert.value = {
           msg:t('alerts.form.error.general'),
           info:t('alerts.form.error.basicInfo'),

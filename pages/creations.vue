@@ -13,14 +13,6 @@
           {{ $t('creations.subtitle') }}
         </h2>
 
-        <!--
-        <ClassicTitle
-        class="my-4 small"
-        :text="[$t('creations.subtitle')]"
-        :class="mobile?'medium':''"
-        :left="mobile"/>
-        -->
-
     </v-sheet>
 
     <!--------- TEXT --------->
@@ -104,13 +96,6 @@
           {{ $t('creations.catch') }}
         </h2>
 
-        <!--
-        <ClassicTitle
-        class="my-4 small"
-        :class="!mobile?'backgrounded':''"
-        :text="[$t('creations.catch')]"/>
-        -->
-
     </v-sheet>
 
     <!--------- CTA CONTACT --------->
@@ -127,7 +112,6 @@
 <script lang="ts">
 
 import { isMobile } from '~/ts/functions/composition/displayHelpers';
-import ClassicTitle from '~/components/atoms/ClassicTitle.vue';
 import ArrowIcon from '~/components/atoms/ArrowIcon.vue';
 import LabeledPicture from '~/components/molecules/LabeledPicture.vue';
 import HorizontalDivider from '~/components/atoms/HorizontalDivider.vue';
@@ -139,7 +123,7 @@ export default {
 
   name: 'CreationsPage',
 
-  components: { ClassicTitle, ArrowIcon, LabeledPicture, HorizontalDivider, ClassicButton, PageTitle },
+  components: { ArrowIcon, LabeledPicture, HorizontalDivider, ClassicButton, PageTitle },
 
   setup () {
     const display = useDisplay()

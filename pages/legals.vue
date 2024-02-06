@@ -60,15 +60,12 @@
 
 <script lang="ts">
 
-import ClassicTitle from '~/components/atoms/ClassicTitle.vue';
 import { isMobile } from '~/ts/functions/composition/displayHelpers';
 import { useDisplay } from 'vuetify';
 
 export default {
     
     name: 'LegalsPage',
-    
-    components: { ClassicTitle },
     
     setup() {
         const display = useDisplay()

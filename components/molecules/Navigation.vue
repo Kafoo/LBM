@@ -11,11 +11,11 @@
         <v-divider class="ma-0 mb-1" color="#00000070" vertical></v-divider>
       </v-card>
 
-      <div style="position: relative;">
+      <div style="position: relative;" class="centering">
         <span class="invisible-item text-uppercase ma-2 text-no-wrap">
           {{ $t(`navigation.${navItem.name}`) }}
         </span>
-        <div class="item-container">
+        <div class="item-container centering">
           <nuxt-link
           class="nuxt-link backgrounded text-uppercase  text-no-wrap"
           :to="localePath(navItem.path)"
@@ -88,16 +88,15 @@ export default {
 .item-container{
   width: 100%;
   position: absolute;
-  left: 0;
-  top: 0;
   text-align: center;
 }
 
-@media (max-width: 750px) {
-.nuxt-link{
+@media (max-width: 780px) {
+.nuxt-link, .invisible-item{
   font-size: 10.9px;
   padding: 2px;
 }
+
 }
 
 .nuxt-link:hover, .router-link-active{

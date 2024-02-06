@@ -23,28 +23,16 @@
         <span>watch what we do.</span>
       </h3>
 
-      <!--
-      <ClassicTitle
-      style="position: absolute;"
-      color='white'
-      :class="mobile?'xsmall':'small'"
-      :text="['Let\'s share who we are', 'watch what we do.']"
-      />
-      -->
-
     </v-sheet>
 </template>
 
 <script lang="ts">
 
 import { defineComponent } from 'vue'
-import ClassicTitle from '../atoms/ClassicTitle.vue'
 import { isMobile } from '~/ts/functions/composition/displayHelpers'
 import { useDisplay } from 'vuetify';
 
 export default defineComponent({
-
-  components: { ClassicTitle },
 
   name: '',
 

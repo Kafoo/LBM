@@ -50,7 +50,8 @@ export default defineNuxtConfig({
     'nuxt-swiper',
     '@nuxtjs/i18n',
     '@nuxtjs/robots',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    'nuxt-mdi'
   ],
 
   i18n: {

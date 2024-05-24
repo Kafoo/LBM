@@ -215,15 +215,15 @@ export default {
 }
 
 .child.innovation{
-  background-image: url("public/pictures/innovation.jpg");
+  background-image: url("/pictures/innovation.jpg");
 }
 
 .child.precision{
-  background-image: url("public/pictures/precision.jpg");
+  background-image: url("/pictures/precision.jpg");
 }
 
 .child.emerveillement{
-  background-image: url("public/pictures/emerveillement.jpg");
+  background-image: url("/pictures/emerveillement.jpg");
 }
 
 .parent:hover .child,

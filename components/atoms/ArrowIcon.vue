@@ -1,8 +1,8 @@
 <template>
 <svg
 xmlns="http://www.w3.org/2000/svg"
-:height="mobile?'35':'20'"
-:width="mobile?'35':'20'"
+:height="mobile?'35':'25'"
+:width="mobile?'35':'25'"
 :class="color+'-icon'"
 viewBox="0 -960 960 960"
 ><path

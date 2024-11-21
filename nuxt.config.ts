@@ -1,6 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-
   site: {
     url: 'https://www.lesbonnesmanieres.paris/'
   },
@@ -59,12 +58,12 @@ export default defineNuxtConfig({
     locales: [
       {
         code: 'fr',
-        iso: 'fr-FR',
+        language: 'fr-FR',
         file: 'assets/locales/fr.json'
       },
       {
         code: 'en',
-        iso: 'en-US',
+        language: 'en-US',
         file: 'assets/locales/en.json'
       }
     ],
@@ -75,6 +74,13 @@ export default defineNuxtConfig({
   },
 
   vite: {
+    css: {
+      preprocessorOptions: {
+        sass: {
+          api: 'modern',
+        },
+      },
+    },
     define: {
       'process.env.DEBUG': false,
     }
@@ -88,5 +94,7 @@ export default defineNuxtConfig({
       Montserrat: true,
       'Yeseva One': true
     }
-  }
+  },
+
+  compatibilityDate: '2024-11-14'
 })

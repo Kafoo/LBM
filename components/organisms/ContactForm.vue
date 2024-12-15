@@ -226,7 +226,7 @@ export default defineComponent({
     }
 
     const sendContact = (status:string, errors?:Object) => {
-      useFetch('https://lbmapi.fr/api/sendcontact', {
+      useFetch('https://darkorange-oryx-971550.hostingersite.com/api/sendcontact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

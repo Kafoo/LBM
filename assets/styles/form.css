@@ -1,6 +1,7 @@
 .v-select__content{
   font-family: 'Montserrat';
   border-radius: 7px !important;
+  height: auto;
 }
 
 .v-input{

@@ -6,7 +6,7 @@
       <p
       min-width="0"
       text
-      class="px-1 ma-0 cursor location"
+      class="px-1 ma-0 mr-1 cursor location"
       :class="[mobile?'mobile-location':'',
       locale=='fr'?'active-location':'']"
       @click.stop="changeLocale('fr')"

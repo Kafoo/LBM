@@ -125,7 +125,6 @@ export default {
     const amount = parseInt(props.carouselAmount)
     for (let i = 0; i < amount; i++) {
       carouselImages.push('/expertise-carousels/'+props.carouselName+'/'+(i+1)+'.jpg')
-      console.log('/expertise-carousels/'+props.carouselName+'/'+(i+1)+'.jpg');
     }
 
     // ------ FOR OLF SAFARI USERS ------

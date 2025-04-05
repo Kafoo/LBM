@@ -13,7 +13,7 @@ export default {
 
   setup () {
     const display = useDisplay()
-const mobile = isMobile(display)
+    const mobile = isMobile(display)
     return {
       mobile
     }

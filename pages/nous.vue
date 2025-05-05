@@ -3,6 +3,13 @@
   
     <PageTitle class="nous-title" :text="$t('nous.title')"/>
 
+    <v-img
+    style="visibility: hidden;"
+    src="/pictures/nadia.jpg"
+    alt="together"
+    height="0"
+    ></v-img>
+
     <NousPerson
     :class="mobile?'mb-5':'mb-15'"
     :name="$t('nous.nadia.name')"

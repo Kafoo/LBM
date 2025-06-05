@@ -3,6 +3,7 @@
   
     <PageTitle class="nous-title" :text="$t('nous.title')"/>
 
+    <!-- Testing hidden image for Google result -->
     <v-img
     style="visibility: hidden;"
     src="/pictures/nadia.jpg"

@@ -16,11 +16,12 @@
     <!---------- IF OTHER THAN EPHEMERE ---------->
     <v-card v-if="!ephemere" class="pa-2 centering" height="100%">
       <swiper
-        class="popup-carousel mx-0"
-        :slidesPerView="1"
-        :spaceBetween="30"
-        :navigation="!mobile"
-        :pagination="{
+      class="popup-carousel mx-0"
+      :slidesPerView="1"
+      :spaceBetween="30"
+      :navigation="!mobile"
+      :keyboard="{ enabled: true, onlyInViewport: true }"
+      :pagination="{
           type: 'fraction'
         }"
         :autoplay="{
@@ -69,7 +70,7 @@
 <script lang="ts">
 
 import { isMobile } from '~/ts/functions/composition/displayHelpers';
-import { Pagination, Navigation } from 'swiper/modules';
+import { Pagination, Navigation, Keyboard } from 'swiper/modules';
 import { useDisplay } from 'vuetify';
 
 export default {
@@ -86,7 +87,7 @@ export default {
     const mobile = isMobile(display)
     return {
       mobile,
-      modules: [Pagination, Navigation]
+      modules: [Pagination, Navigation, Keyboard]
     }
   }
 }

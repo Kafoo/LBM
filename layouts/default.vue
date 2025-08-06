@@ -12,11 +12,11 @@
 
   <HeaderVue :head= "head" />
 
-    <v-main>
+  <v-main>
 
-      <slot/>
+    <slot/>
 
-    </v-main>
+  </v-main>
 
   <FooterVue/>
 

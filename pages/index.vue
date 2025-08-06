@@ -75,7 +75,7 @@ export default{
 
   setup () {
     const display = useDisplay()
-const mobile = isMobile(display)
+    const mobile = isMobile(display)
     const localePath = useLocalePath()
     return {
       mobile,

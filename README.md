@@ -1,5 +1,5 @@
-NODE VERSION : 18(.20.7)
-NPM VERSION : 10(.8.2)
+NODE VERSION : 20 (LTS)
+NPM VERSION : 10+
 
 Check compatibility version of : 
 nuxt

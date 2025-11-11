@@ -12,24 +12,26 @@
     ></v-img>
 
     <NousPerson
-    :class="mobile?'mb-5':'mb-15'"
+    :class="mobile?'mb-14':'mb-16'"
     :name="$t('nous.nadia.name')"
     :fonction="$t('nous.nadia.fonction')"
     :description="$t('nous.nadia.description')"
     image="nadia"
     />
 
+    <!-- Enlevé à la demande de Nadia le 10/11/2025 (par téléphone) -->
+    <!--
     <NousPerson
     class="mb-16"
     :name="$t('nous.marc.name')"
     :fonction="$t('nous.marc.fonction')"
     :description="$t('nous.marc.description')"
     image="marc"
-    />
-
+    
     <div class="mb-100">
       <NousEnsemble/>
     </div>
+    /> -->
 
     <div :class="mobile?'mb-10':'mb-100'">
       <NousEquipe/>

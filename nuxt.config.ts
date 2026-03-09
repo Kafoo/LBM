@@ -95,6 +95,11 @@ export default defineNuxtConfig({
       preprocessorOptions: {
         sass: {
           api: 'modern',
+          silenceDeprecations: ['if-function'],
+        },
+        scss: {
+          api: 'modern',
+          silenceDeprecations: ['if-function'],
         },
       },
     },
